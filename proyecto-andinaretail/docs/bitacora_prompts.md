@@ -1,5 +1,7 @@
-Prompts
-1.generar datos:  **Prompt**
+**Prompt**
+
+
+1.generar datos:  
 
 Actúa como ingeniero de datos senior especializado en generación de datos sintéticos para proyectos de analítica de datos.
 
