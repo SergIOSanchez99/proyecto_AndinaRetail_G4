@@ -1,0 +1,13 @@
+id_tienda,nombre,ciudad,region,tipo,area_m2,fecha_apertura
+1,AndinaRetail Lima Centro,Lima,Costa Centro,Física,950,2018-03-15
+2,AndinaRetail Lima Norte,Lima,Costa Centro,Física,870,2019-06-10
+3,AndinaRetail Lima Sur,Lima,Costa Centro,Física,820,2020-01-20
+4,AndinaRetail Arequipa Mall,Arequipa,Sur,Física,760,2019-08-12
+5,AndinaRetail Arequipa Cercado,Arequipa,Sur,Física,640,2021-02-05
+6,AndinaRetail Trujillo Centro,Trujillo,Norte,Física,700,2018-09-22
+7,AndinaRetail Trujillo Norte,Trujillo,Norte,Física,680,2020-11-18
+8,AndinaRetail Cusco Centro,Cusco,Sur Andino,Física,620,2021-04-14
+9,AndinaRetail Cusco Sur,Cusco,Sur Andino,Física,580,2022-07-09
+10,AndinaRetail Piura Centro,Piura,Norte,Física,690,2019-12-03
+11,AndinaRetail Piura Norte,Piura,Norte,Física,610,2022-03-21
+12,AndinaRetail Digital Nacional,Lima,Nacional,Virtual,0,2021-01-01
