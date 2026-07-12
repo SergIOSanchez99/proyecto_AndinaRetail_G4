@@ -1,801 +1,1001 @@
 id_producto,nombre,categoria,subcategoria,marca,precio_lista,costo_unitario,fecha_alta
-1,Arroz Qori 158,Abarrotes,Arroz,Qori,30.83,20.94,2021-09-14
-2,Lejía Wayra 813,Limpieza,Lejía,Wayra,29.5,21.93,2025-12-17
-3,Decoración InkaHome 998,Hogar,Decoración,InkaHome,312.89,222.2,2023-01-28
-4,Arroz SolRetail 698,Abarrotes,Arroz,SolRetail,26.71,17.85,2022-11-19
-5,Lavavajilla SolRetail 797,Limpieza,Lavavajilla,SolRetail,56.52,42.16,2021-08-01
-6,Vajilla Rumi 309,Hogar,Vajilla,Rumi,388.43,291.05,2024-11-25
-7,Menestras Altura 114,Abarrotes,Menestras,Altura,4.6,2.98,2022-08-25
-8,Vajilla Wayra 170,Hogar,Vajilla,Wayra,288.33,184.31,2025-01-23
-9,Suavizante CostaSur 753,Limpieza,Suavizante,CostaSur,11.51,7.5,2022-11-28
-10,Lavadora Pacífico 645,Electrohogar,Lavadora,Pacífico,1519.05,974.07,2025-07-08
-11,Jugos Andesol 568,Bebidas,Jugos,Andesol,4.75,3.01,2021-11-30
-12,Infusiones Kawsay 151,Bebidas,Infusiones,Kawsay,23.49,18.17,2025-12-24
-13,Gaseosas NortePlus 884,Bebidas,Gaseosas,NortePlus,26.32,19.77,2021-09-09
-14,Sábanas Pacífico 472,Hogar,Sábanas,Pacífico,245.69,148.78,2025-06-16
-15,Arroz InkaHome 940,Abarrotes,Arroz,InkaHome,5.75,3.8,2025-11-18
-16,Suavizante Pukara 557,Limpieza,Suavizante,Pukara,32.42,23.61,2024-10-12
-17,Desinfectante Sumaq 616,Limpieza,Desinfectante,Sumaq,7.9,6.19,2024-09-09
-18,Energizantes NortePlus 987,Bebidas,Energizantes,NortePlus,3.97,2.71,2024-12-08
-19,Crema Dental SolRetail 168,Cuidado Personal,Crema Dental,SolRetail,15.8,12.22,2024-01-09
-20,Toallas CostaSur 976,Hogar,Toallas,CostaSur,311.72,205.73,2021-08-28
-21,Conservas Misti 846,Abarrotes,Conservas,Misti,22.64,17.69,2024-10-09
-22,Menestras Pukara 978,Abarrotes,Menestras,Pukara,22.02,13.44,2024-09-07
-23,Gaseosas Misti 809,Bebidas,Gaseosas,Misti,34.44,27.02,2024-02-07
-24,Crema Dental Kawsay 320,Cuidado Personal,Crema Dental,Kawsay,82.89,55.23,2022-08-01
-25,Infusiones Wayra 819,Bebidas,Infusiones,Wayra,22.79,15.13,2025-11-04
-26,Toallas NortePlus 672,Hogar,Toallas,NortePlus,116.55,81.51,2024-11-16
-27,Conservas IntiMax 731,Abarrotes,Conservas,IntiMax,29.2,18.93,2023-05-28
-28,Harinas Misti 778,Abarrotes,Harinas,Misti,13.68,8.39,2022-12-12
-29,Lejía NortePlus 486,Limpieza,Lejía,NortePlus,4.67,3.06,2022-02-08
-30,Shampoo InkaHome 488,Cuidado Personal,Shampoo,InkaHome,83.94,51.45,2023-05-04
-31,Decoración Qori 766,Hogar,Decoración,Qori,133.2,98.55,2023-12-24
-32,Crema Dental Pacífico 344,Cuidado Personal,Crema Dental,Pacífico,114.74,76.39,2023-11-23
-33,Suavizante Kawsay 002,Limpieza,Suavizante,Kawsay,71.9,55.4,2023-05-20
-34,Suavizante SolRetail 978,Limpieza,Suavizante,SolRetail,64.02,48.92,2025-10-27
-35,Infusiones Wayra 753,Bebidas,Infusiones,Wayra,13.7,10.71,2024-09-27
-36,Suavizante InkaHome 477,Limpieza,Suavizante,InkaHome,56.6,44.9,2025-09-03
-37,Shampoo Altura 876,Cuidado Personal,Shampoo,Altura,116.66,76.69,2024-08-16
-38,Lejía CostaSur 804,Limpieza,Lejía,CostaSur,40.42,31.49,2023-04-25
-39,Menestras SolRetail 571,Abarrotes,Menestras,SolRetail,38.74,23.49,2025-10-09
-40,Suavizante Altura 784,Limpieza,Suavizante,Altura,26.58,20.29,2025-05-06
-41,Vajilla NortePlus 726,Hogar,Vajilla,NortePlus,269.25,162.5,2024-02-18
-42,Energizantes Rumi 714,Bebidas,Energizantes,Rumi,36.33,27.2,2023-02-23
-43,Conservas Wayra 751,Abarrotes,Conservas,Wayra,43.4,34.49,2023-01-02
-44,Infusiones CostaSur 362,Bebidas,Infusiones,CostaSur,3.56,2.7,2022-10-06
-45,Arroz Rumi 701,Abarrotes,Arroz,Rumi,23.24,16.6,2025-05-04
-46,Aceite CostaSur 079,Abarrotes,Aceite,CostaSur,32.17,21.09,2024-09-03
-47,Jabón InkaHome 819,Cuidado Personal,Jabón,InkaHome,99.56,65.18,2025-11-05
-48,Licuadora Misti 331,Electrohogar,Licuadora,Misti,2072.66,1518.68,2021-10-21
-49,Vajilla SolRetail 908,Hogar,Vajilla,SolRetail,135.65,104.15,2024-12-15
-50,Harinas Kawsay 452,Abarrotes,Harinas,Kawsay,2.6,1.84,2023-04-18
-51,Harinas Rumi 059,Abarrotes,Harinas,Rumi,35.3,24.33,2025-06-08
-52,Organizadores Pacífico 972,Hogar,Organizadores,Pacífico,256.24,190.74,2021-07-16
-53,Aceite Pacífico 837,Abarrotes,Aceite,Pacífico,17.3,11.74,2025-11-25
-54,Lavavajilla InkaHome 929,Limpieza,Lavavajilla,InkaHome,54.71,34.54,2025-08-02
-55,Arroz Pukara 841,Abarrotes,Arroz,Pukara,7.21,4.56,2022-05-07
-56,Desodorante Pukara 622,Cuidado Personal,Desodorante,Pukara,63.26,48.54,2022-02-05
-57,Organizadores Misti 948,Hogar,Organizadores,Misti,97.95,68.96,2024-08-24
-58,Lejía NortePlus 662,Limpieza,Lejía,NortePlus,66.53,47.54,2024-01-23
-59,Infusiones Altura 836,Bebidas,Infusiones,Altura,36.0,25.78,2022-04-17
-60,Crema Dental Wayra 016,Cuidado Personal,Crema Dental,Wayra,93.55,66.19,2022-03-14
-61,Papel Higiénico Misti 105,Cuidado Personal,Papel Higiénico,Misti,6.53,4.46,2025-10-09
-62,Desodorante CostaSur 500,Cuidado Personal,Desodorante,CostaSur,6.32,4.6,2025-03-23
-63,Desodorante Altura 875,Cuidado Personal,Desodorante,Altura,42.23,29.12,2024-08-08
-64,Aceite NortePlus 475,Abarrotes,Aceite,NortePlus,28.67,19.28,2024-11-23
-65,Toallas Andesol 177,Hogar,Toallas,Andesol,231.69,161.75,2025-10-16
-66,Shampoo IntiMax 992,Cuidado Personal,Shampoo,IntiMax,110.18,79.4,2025-08-23
-67,Infusiones Pacífico 298,Bebidas,Infusiones,Pacífico,35.76,28.21,2023-01-06
-68,Vajilla SolRetail 369,Hogar,Vajilla,SolRetail,362.5,230.6,2022-08-31
-69,Conservas Qori 579,Abarrotes,Conservas,Qori,9.81,6.64,2021-02-25
-70,Jugos NortePlus 318,Bebidas,Jugos,NortePlus,34.4,21.54,2021-05-05
-71,Suavizante Pacífico 603,Limpieza,Suavizante,Pacífico,40.68,30.81,2024-05-07
-72,Infusiones CostaSur 208,Bebidas,Infusiones,CostaSur,26.1,18.04,2025-06-10
-73,Suavizante CostaSur 073,Limpieza,Suavizante,CostaSur,65.93,45.08,2024-03-08
-74,Suavizante Wayra 702,Limpieza,Suavizante,Wayra,36.58,27.37,2021-05-07
-75,Gaseosas InkaHome 838,Bebidas,Gaseosas,InkaHome,37.54,24.36,2023-06-20
-76,Crema Dental Qori 222,Cuidado Personal,Crema Dental,Qori,36.92,26.35,2022-04-12
-77,Conservas SolRetail 646,Abarrotes,Conservas,SolRetail,39.61,25.4,2023-06-04
-78,Arroz Pacífico 861,Abarrotes,Arroz,Pacífico,20.06,12.45,2022-05-10
-79,Plancha Misti 642,Electrohogar,Plancha,Misti,1852.24,1328.62,2025-12-11
-80,Lavadora NortePlus 524,Electrohogar,Lavadora,NortePlus,1049.86,793.83,2023-09-21
-81,Energizantes SolRetail 776,Bebidas,Energizantes,SolRetail,11.13,6.74,2023-09-07
-82,Ollas Altura 472,Hogar,Ollas,Altura,176.44,127.55,2021-05-07
-83,Plancha Pacífico 587,Electrohogar,Plancha,Pacífico,2008.67,1374.55,2025-05-18
-84,Sábanas Pukara 718,Hogar,Sábanas,Pukara,173.41,108.18,2022-05-02
-85,Agua SolRetail 841,Bebidas,Agua,SolRetail,25.29,15.35,2023-06-08
-86,Conservas Qori 330,Abarrotes,Conservas,Qori,39.77,25.51,2023-01-02
-87,Gaseosas Sumaq 175,Bebidas,Gaseosas,Sumaq,32.16,22.37,2023-12-18
-88,Plancha InkaHome 682,Electrohogar,Plancha,InkaHome,658.22,439.13,2023-09-16
-89,Organizadores IntiMax 052,Hogar,Organizadores,IntiMax,192.21,129.9,2023-06-27
-90,Conservas SolRetail 589,Abarrotes,Conservas,SolRetail,22.12,17.41,2021-01-08
-91,Shampoo Kawsay 831,Cuidado Personal,Shampoo,Kawsay,85.49,57.54,2024-05-26
-92,Sábanas Pacífico 948,Hogar,Sábanas,Pacífico,397.27,268.36,2025-08-10
-93,Papel Higiénico Wayra 939,Cuidado Personal,Papel Higiénico,Wayra,50.84,35.44,2025-10-02
-94,Arroz Rumi 494,Abarrotes,Arroz,Rumi,41.31,33.02,2025-01-25
-95,Jabón Sumaq 821,Cuidado Personal,Jabón,Sumaq,98.79,76.89,2021-05-29
-96,Sábanas Rumi 416,Hogar,Sábanas,Rumi,625.17,490.95,2024-04-19
-97,Sábanas CostaSur 210,Hogar,Sábanas,CostaSur,376.27,270.3,2021-08-30
-98,Papel Higiénico NortePlus 521,Cuidado Personal,Papel Higiénico,NortePlus,16.36,12.91,2025-05-11
-99,Decoración CostaSur 854,Hogar,Decoración,CostaSur,458.9,319.89,2023-12-16
-100,Harinas Qori 914,Abarrotes,Harinas,Qori,34.45,22.91,2025-09-03
-101,Ollas Andesol 524,Hogar,Ollas,Andesol,47.51,33.29,2025-08-03
-102,Agua Pukara 410,Bebidas,Agua,Pukara,14.98,11.27,2021-01-15
-103,Vajilla Rumi 646,Hogar,Vajilla,Rumi,225.32,138.47,2023-09-24
-104,Suavizante Misti 001,Limpieza,Suavizante,Misti,31.05,23.54,2023-02-03
-105,Jugos Wayra 304,Bebidas,Jugos,Wayra,37.31,29.23,2023-02-18
-106,Jabón Pacífico 118,Cuidado Personal,Jabón,Pacífico,58.02,45.6,2025-01-18
-107,Papel Higiénico IntiMax 955,Cuidado Personal,Papel Higiénico,IntiMax,10.81,8.13,2024-12-19
-108,Papel Higiénico SolRetail 799,Cuidado Personal,Papel Higiénico,SolRetail,62.61,50.07,2021-01-10
-109,Papel Higiénico NortePlus 065,Cuidado Personal,Papel Higiénico,NortePlus,92.33,56.84,2023-03-21
-110,Detergente Altura 939,Limpieza,Detergente,Altura,64.37,39.8,2022-12-02
-111,Decoración IntiMax 761,Hogar,Decoración,IntiMax,107.17,84.37,2025-12-26
-112,Jabón CostaSur 584,Cuidado Personal,Jabón,CostaSur,23.64,16.51,2021-04-08
-113,Lejía NortePlus 645,Limpieza,Lejía,NortePlus,24.16,15.06,2025-12-13
-114,Papel Higiénico Altura 060,Cuidado Personal,Papel Higiénico,Altura,93.1,61.73,2024-02-17
-115,Organizadores CostaSur 454,Hogar,Organizadores,CostaSur,484.9,316.55,2023-10-16
-116,Aceite Wayra 146,Abarrotes,Aceite,Wayra,30.41,21.94,2023-09-04
-117,Jugos Altura 590,Bebidas,Jugos,Altura,24.16,15.51,2024-04-25
-118,Arroz Kawsay 853,Abarrotes,Arroz,Kawsay,32.25,20.03,2024-08-20
-119,Organizadores SolRetail 801,Hogar,Organizadores,SolRetail,395.52,272.72,2022-03-20
-120,Shampoo Andesol 291,Cuidado Personal,Shampoo,Andesol,109.75,69.11,2021-04-24
-121,Crema Dental Pukara 102,Cuidado Personal,Crema Dental,Pukara,9.13,7.0,2021-08-19
-122,Crema Dental SolRetail 859,Cuidado Personal,Crema Dental,SolRetail,84.82,51.04,2021-03-11
-123,Arroz Andesol 406,Abarrotes,Arroz,Andesol,6.19,3.72,2022-11-04
-124,Vajilla Pacífico 925,Hogar,Vajilla,Pacífico,520.26,368.36,2022-08-13
-125,Toallas Pukara 666,Hogar,Toallas,Pukara,323.53,224.63,2024-12-25
-126,Toallas Pacífico 363,Hogar,Toallas,Pacífico,358.8,228.58,2022-07-26
-127,Agua SolRetail 228,Bebidas,Agua,SolRetail,12.03,8.4,2024-07-08
-128,Gaseosas Pacífico 088,Bebidas,Gaseosas,Pacífico,33.47,24.36,2022-01-18
-129,Suavizante Rumi 642,Limpieza,Suavizante,Rumi,68.69,54.71,2022-11-03
-130,Vajilla CostaSur 300,Hogar,Vajilla,CostaSur,583.64,385.91,2024-10-03
-131,Aceite IntiMax 487,Abarrotes,Aceite,IntiMax,14.53,9.26,2021-07-30
-132,Lejía Wayra 645,Limpieza,Lejía,Wayra,67.11,49.83,2023-03-30
-133,Microondas Altura 291,Electrohogar,Microondas,Altura,2261.64,1463.22,2024-12-05
-134,Lavadora Qori 280,Electrohogar,Lavadora,Qori,3600.0,2824.95,2021-08-17
-135,Desodorante Rumi 845,Cuidado Personal,Desodorante,Rumi,13.2,10.21,2025-07-26
-136,Lavavajilla Pukara 850,Limpieza,Lavavajilla,Pukara,68.75,50.97,2025-08-13
-137,Shampoo Wayra 037,Cuidado Personal,Shampoo,Wayra,104.26,68.72,2025-06-19
-138,Energizantes Andesol 038,Bebidas,Energizantes,Andesol,33.96,26.55,2022-04-29
-139,Aceite Pukara 265,Abarrotes,Aceite,Pukara,19.96,13.56,2025-11-19
-140,Jugos Andesol 384,Bebidas,Jugos,Andesol,32.06,23.94,2024-04-14
-141,Papel Higiénico SolRetail 535,Cuidado Personal,Papel Higiénico,SolRetail,5.42,3.92,2022-05-27
-142,Gaseosas Pacífico 577,Bebidas,Gaseosas,Pacífico,10.68,7.84,2024-03-22
-143,Jugos Pacífico 879,Bebidas,Jugos,Pacífico,14.94,11.86,2024-12-09
-144,Harinas Pukara 432,Abarrotes,Harinas,Pukara,22.59,13.8,2023-10-29
-145,Licuadora IntiMax 627,Electrohogar,Licuadora,IntiMax,385.2,258.73,2024-08-09
-146,Harinas Wayra 058,Abarrotes,Harinas,Wayra,35.45,28.33,2025-10-24
-147,Jabón CostaSur 602,Cuidado Personal,Jabón,CostaSur,49.07,35.01,2023-12-02
-148,Lavadora SolRetail 145,Electrohogar,Lavadora,SolRetail,661.58,467.91,2021-01-15
-149,Jabón IntiMax 842,Cuidado Personal,Jabón,IntiMax,62.29,39.44,2021-08-26
-150,Jabón Altura 108,Cuidado Personal,Jabón,Altura,10.86,7.5,2025-02-08
-151,Refrigeradora Altura 394,Electrohogar,Refrigeradora,Altura,1537.51,940.71,2024-03-31
-152,Menestras Altura 906,Abarrotes,Menestras,Altura,27.32,21.78,2022-02-28
-153,Sábanas Altura 688,Hogar,Sábanas,Altura,54.02,40.42,2025-06-01
-154,Fideos IntiMax 281,Abarrotes,Fideos,IntiMax,3.17,2.36,2024-03-23
-155,Crema Dental IntiMax 126,Cuidado Personal,Crema Dental,IntiMax,88.48,59.96,2024-05-24
-156,Refrigeradora Pacífico 584,Electrohogar,Refrigeradora,Pacífico,890.69,595.24,2021-02-20
-157,Televisor CostaSur 409,Electrohogar,Televisor,CostaSur,1173.76,885.7,2021-10-15
-158,Suavizante NortePlus 324,Limpieza,Suavizante,NortePlus,50.33,32.42,2021-01-31
-159,Organizadores IntiMax 484,Hogar,Organizadores,IntiMax,276.78,169.06,2021-08-20
-160,Fideos Wayra 526,Abarrotes,Fideos,Wayra,20.46,15.12,2023-01-13
-161,Conservas Pacífico 309,Abarrotes,Conservas,Pacífico,32.53,25.87,2021-08-07
-162,Arroz Wayra 765,Abarrotes,Arroz,Wayra,18.15,11.45,2024-05-24
-163,Lejía CostaSur 828,Limpieza,Lejía,CostaSur,48.29,38.48,2025-02-09
-164,Toallas InkaHome 025,Hogar,Toallas,InkaHome,600.61,362.37,2024-10-05
-165,Shampoo InkaHome 822,Cuidado Personal,Shampoo,InkaHome,59.99,40.66,2022-02-04
-166,Jugos Sumaq 018,Bebidas,Jugos,Sumaq,19.89,14.63,2025-12-12
-167,Sábanas Kawsay 051,Hogar,Sábanas,Kawsay,558.28,425.76,2021-01-23
-168,Conservas Pukara 543,Abarrotes,Conservas,Pukara,15.5,11.37,2024-05-27
-169,Toallas Altura 829,Hogar,Toallas,Altura,476.59,286.35,2024-10-05
-170,Lejía CostaSur 932,Limpieza,Lejía,CostaSur,29.64,18.03,2022-07-18
-171,Jugos Andesol 157,Bebidas,Jugos,Andesol,30.17,19.02,2025-08-30
-172,Crema Dental InkaHome 116,Cuidado Personal,Crema Dental,InkaHome,90.74,72.06,2025-05-03
-173,Ollas Qori 494,Hogar,Ollas,Qori,185.68,132.13,2025-08-20
-174,Menestras Pukara 157,Abarrotes,Menestras,Pukara,13.69,9.21,2024-03-23
-175,Infusiones CostaSur 718,Bebidas,Infusiones,CostaSur,28.13,20.24,2023-07-20
-176,Vajilla Sumaq 835,Hogar,Vajilla,Sumaq,125.64,98.88,2021-11-19
-177,Sábanas Rumi 795,Hogar,Sábanas,Rumi,595.68,405.73,2025-08-05
-178,Crema Dental Wayra 111,Cuidado Personal,Crema Dental,Wayra,111.44,85.08,2023-06-11
-179,Vajilla Misti 744,Hogar,Vajilla,Misti,355.23,260.8,2022-09-20
-180,Aceite Rumi 325,Abarrotes,Aceite,Rumi,9.61,7.19,2022-06-08
-181,Fideos Rumi 688,Abarrotes,Fideos,Rumi,27.5,20.77,2024-04-29
-182,Agua Pukara 557,Bebidas,Agua,Pukara,17.83,13.03,2021-01-19
-183,Menestras IntiMax 652,Abarrotes,Menestras,IntiMax,37.81,26.08,2024-08-24
-184,Licuadora CostaSur 373,Electrohogar,Licuadora,CostaSur,3600.0,2174.42,2021-02-23
-185,Toallas Kawsay 556,Hogar,Toallas,Kawsay,192.02,118.23,2021-08-05
-186,Conservas IntiMax 963,Abarrotes,Conservas,IntiMax,4.62,3.04,2021-09-13
-187,Arroz Pukara 279,Abarrotes,Arroz,Pukara,26.88,18.51,2025-01-28
-188,Gaseosas CostaSur 264,Bebidas,Gaseosas,CostaSur,32.3,20.76,2024-01-19
-189,Toallas Misti 515,Hogar,Toallas,Misti,267.41,188.3,2025-05-09
-190,Jabón Pukara 474,Cuidado Personal,Jabón,Pukara,88.03,56.55,2025-02-11
-191,Decoración Kawsay 284,Hogar,Decoración,Kawsay,164.52,129.23,2023-10-11
-192,Menestras Qori 352,Abarrotes,Menestras,Qori,4.09,2.46,2024-03-02
-193,Fideos Rumi 814,Abarrotes,Fideos,Rumi,12.58,8.19,2023-07-07
-194,Arroz NortePlus 497,Abarrotes,Arroz,NortePlus,29.87,19.23,2024-01-22
-195,Toallas IntiMax 660,Hogar,Toallas,IntiMax,59.05,41.31,2021-03-20
-196,Desinfectante NortePlus 856,Limpieza,Desinfectante,NortePlus,11.9,8.4,2022-12-26
-197,Arroz Andesol 517,Abarrotes,Arroz,Andesol,30.17,22.2,2023-09-18
-198,Conservas InkaHome 883,Abarrotes,Conservas,InkaHome,5.66,3.92,2024-11-17
-199,Fideos Altura 655,Abarrotes,Fideos,Altura,35.39,22.56,2024-01-14
-200,Arroz Andesol 062,Abarrotes,Arroz,Andesol,14.25,9.32,2024-09-04
-201,Gaseosas Sumaq 048,Bebidas,Gaseosas,Sumaq,3.67,2.8,2024-11-22
-202,Licuadora NortePlus 425,Electrohogar,Licuadora,NortePlus,3600.0,2311.91,2024-08-18
-203,Arroz Kawsay 996,Abarrotes,Arroz,Kawsay,41.01,29.08,2025-10-22
-204,Harinas Wayra 775,Abarrotes,Harinas,Wayra,43.68,28.87,2022-05-06
-205,Menestras SolRetail 003,Abarrotes,Menestras,SolRetail,22.61,17.72,2022-06-11
-206,Toallas Qori 145,Hogar,Toallas,Qori,343.32,240.76,2025-09-06
-207,Televisor Rumi 037,Electrohogar,Televisor,Rumi,1497.61,1091.93,2021-05-21
-208,Harinas Pukara 849,Abarrotes,Harinas,Pukara,11.46,7.82,2023-08-20
-209,Plancha Rumi 518,Electrohogar,Plancha,Rumi,1177.37,865.49,2025-11-20
-210,Sábanas SolRetail 380,Hogar,Sábanas,SolRetail,618.88,422.43,2023-05-05
-211,Desodorante Qori 125,Cuidado Personal,Desodorante,Qori,16.58,10.83,2024-05-27
-212,Papel Higiénico Sumaq 373,Cuidado Personal,Papel Higiénico,Sumaq,63.06,47.07,2022-05-31
-213,Lejía Pacífico 924,Limpieza,Lejía,Pacífico,73.33,46.72,2023-06-22
-214,Energizantes Pukara 196,Bebidas,Energizantes,Pukara,2.67,2.12,2021-07-01
-215,Arroz Pukara 898,Abarrotes,Arroz,Pukara,37.51,27.72,2024-12-07
-216,Desinfectante InkaHome 210,Limpieza,Desinfectante,InkaHome,55.73,38.84,2023-03-18
-217,Lejía Pukara 460,Limpieza,Lejía,Pukara,60.34,44.3,2025-05-25
-218,Desinfectante Altura 288,Limpieza,Desinfectante,Altura,33.48,20.97,2022-03-16
-219,Fideos InkaHome 375,Abarrotes,Fideos,InkaHome,19.05,14.91,2024-08-31
-220,Agua Andesol 555,Bebidas,Agua,Andesol,11.62,7.93,2022-07-06
-221,Harinas Misti 974,Abarrotes,Harinas,Misti,4.46,3.0,2025-02-15
-222,Organizadores SolRetail 754,Hogar,Organizadores,SolRetail,82.03,53.86,2025-01-14
-223,Licuadora NortePlus 072,Electrohogar,Licuadora,NortePlus,1157.55,823.84,2025-03-22
-224,Crema Dental NortePlus 075,Cuidado Personal,Crema Dental,NortePlus,99.56,67.29,2025-11-14
-225,Gaseosas NortePlus 473,Bebidas,Gaseosas,NortePlus,11.22,8.09,2025-03-14
-226,Conservas Qori 548,Abarrotes,Conservas,Qori,11.99,8.78,2024-04-09
-227,Infusiones SolRetail 643,Bebidas,Infusiones,SolRetail,13.16,8.08,2022-03-05
-228,Licuadora Wayra 906,Electrohogar,Licuadora,Wayra,484.26,292.56,2023-09-29
-229,Desinfectante Sumaq 188,Limpieza,Desinfectante,Sumaq,24.94,19.42,2025-03-21
-230,Lejía Andesol 479,Limpieza,Lejía,Andesol,61.43,42.0,2024-08-09
-231,Shampoo IntiMax 188,Cuidado Personal,Shampoo,IntiMax,119.8,82.86,2022-11-19
-232,Menestras Kawsay 957,Abarrotes,Menestras,Kawsay,14.71,10.98,2021-02-02
-233,Arroz Andesol 555,Abarrotes,Arroz,Andesol,30.54,21.34,2023-01-04
-234,Jabón Wayra 218,Cuidado Personal,Jabón,Wayra,22.61,14.07,2022-01-07
-235,Desinfectante Rumi 248,Limpieza,Desinfectante,Rumi,26.96,21.24,2023-06-27
-236,Desinfectante Andesol 861,Limpieza,Desinfectante,Andesol,45.18,34.53,2025-09-28
-237,Conservas Rumi 930,Abarrotes,Conservas,Rumi,33.58,25.3,2025-07-03
-238,Lavavajilla Qori 733,Limpieza,Lavavajilla,Qori,45.87,28.32,2025-06-24
-239,Suavizante Altura 688,Limpieza,Suavizante,Altura,48.58,29.73,2023-10-15
-240,Desodorante Sumaq 283,Cuidado Personal,Desodorante,Sumaq,15.43,9.74,2024-01-11
-241,Desodorante Pukara 472,Cuidado Personal,Desodorante,Pukara,39.74,24.73,2025-12-05
-242,Jugos CostaSur 855,Bebidas,Jugos,CostaSur,37.02,24.36,2023-08-06
-243,Microondas IntiMax 689,Electrohogar,Microondas,IntiMax,1431.09,928.73,2021-01-11
-244,Papel Higiénico Andesol 832,Cuidado Personal,Papel Higiénico,Andesol,6.9,4.84,2025-03-29
-245,Papel Higiénico Pukara 982,Cuidado Personal,Papel Higiénico,Pukara,86.54,54.76,2024-12-22
-246,Infusiones Altura 229,Bebidas,Infusiones,Altura,19.77,12.56,2021-10-23
-247,Agua CostaSur 004,Bebidas,Agua,CostaSur,31.6,22.64,2021-02-24
-248,Microondas Sumaq 422,Electrohogar,Microondas,Sumaq,2235.84,1735.76,2022-12-23
-249,Arroz Andesol 485,Abarrotes,Arroz,Andesol,35.17,23.63,2025-06-26
-250,Toallas Wayra 272,Hogar,Toallas,Wayra,342.48,207.1,2022-05-17
-251,Energizantes Altura 202,Bebidas,Energizantes,Altura,3.08,2.04,2025-10-30
-252,Fideos Qori 269,Abarrotes,Fideos,Qori,41.93,29.75,2025-03-25
-253,Jabón Pukara 780,Cuidado Personal,Jabón,Pukara,108.22,82.06,2023-06-16
-254,Lavadora Kawsay 438,Electrohogar,Lavadora,Kawsay,1350.48,1058.19,2021-08-14
-255,Microondas Wayra 581,Electrohogar,Microondas,Wayra,1749.72,1070.77,2024-09-17
-256,Gaseosas Pukara 762,Bebidas,Gaseosas,Pukara,22.99,16.55,2023-11-13
-257,Lejía InkaHome 528,Limpieza,Lejía,InkaHome,72.6,53.44,2024-06-23
-258,Refrigeradora Qori 070,Electrohogar,Refrigeradora,Qori,707.83,557.66,2023-12-14
-259,Infusiones CostaSur 015,Bebidas,Infusiones,CostaSur,4.16,2.5,2022-03-09
-260,Plancha Qori 945,Electrohogar,Plancha,Qori,1744.6,1149.34,2025-10-26
-261,Shampoo Pukara 028,Cuidado Personal,Shampoo,Pukara,17.15,13.6,2023-05-03
-262,Sábanas Pukara 316,Hogar,Sábanas,Pukara,25.99,16.38,2021-07-01
-263,Aceite Pacífico 632,Abarrotes,Aceite,Pacífico,43.91,31.66,2025-01-16
-264,Sábanas Sumaq 337,Hogar,Sábanas,Sumaq,283.31,215.48,2021-07-02
-265,Infusiones InkaHome 352,Bebidas,Infusiones,InkaHome,32.37,22.49,2025-11-06
-266,Aceite SolRetail 866,Abarrotes,Aceite,SolRetail,5.23,3.98,2025-03-07
-267,Energizantes Misti 753,Bebidas,Energizantes,Misti,32.7,21.0,2021-03-04
-268,Desinfectante CostaSur 478,Limpieza,Desinfectante,CostaSur,43.06,28.55,2025-04-04
-269,Lavavajilla Wayra 971,Limpieza,Lavavajilla,Wayra,36.53,25.39,2022-05-04
-270,Desinfectante Qori 331,Limpieza,Desinfectante,Qori,59.04,36.43,2021-01-25
-271,Microondas Qori 159,Electrohogar,Microondas,Qori,1596.98,1207.14,2023-07-24
-272,Crema Dental Pacífico 212,Cuidado Personal,Crema Dental,Pacífico,28.18,17.93,2021-06-02
-273,Suavizante Wayra 363,Limpieza,Suavizante,Wayra,52.55,33.52,2021-04-27
-274,Suavizante SolRetail 608,Limpieza,Suavizante,SolRetail,32.92,20.59,2024-04-20
-275,Harinas Rumi 244,Abarrotes,Harinas,Rumi,29.23,17.61,2024-06-26
-276,Desinfectante Sumaq 560,Limpieza,Desinfectante,Sumaq,6.16,3.84,2023-10-10
-277,Aceite Pukara 787,Abarrotes,Aceite,Pukara,39.08,26.65,2024-01-09
-278,Organizadores IntiMax 457,Hogar,Organizadores,IntiMax,430.07,281.33,2023-04-29
-279,Conservas SolRetail 212,Abarrotes,Conservas,SolRetail,26.22,16.44,2024-12-15
-280,Sábanas Qori 835,Hogar,Sábanas,Qori,79.55,52.85,2021-05-06
-281,Infusiones Misti 769,Bebidas,Infusiones,Misti,3.61,2.25,2025-02-28
-282,Energizantes CostaSur 908,Bebidas,Energizantes,CostaSur,8.77,5.5,2025-06-16
-283,Shampoo Pukara 541,Cuidado Personal,Shampoo,Pukara,16.82,11.57,2025-08-17
-284,Lavavajilla Kawsay 775,Limpieza,Lavavajilla,Kawsay,67.09,41.41,2025-02-02
-285,Toallas Qori 888,Hogar,Toallas,Qori,494.57,297.43,2022-10-07
-286,Menestras Misti 144,Abarrotes,Menestras,Misti,30.73,23.45,2025-03-02
-287,Agua IntiMax 019,Bebidas,Agua,IntiMax,21.71,15.16,2024-08-07
-288,Gaseosas SolRetail 018,Bebidas,Gaseosas,SolRetail,12.82,8.85,2022-09-13
-289,Shampoo Wayra 791,Cuidado Personal,Shampoo,Wayra,69.42,44.24,2025-11-30
-290,Aceite InkaHome 697,Abarrotes,Aceite,InkaHome,27.3,18.57,2022-02-11
-291,Harinas Rumi 978,Abarrotes,Harinas,Rumi,4.08,2.69,2024-02-09
-292,Desinfectante Rumi 025,Limpieza,Desinfectante,Rumi,36.96,22.24,2022-08-23
-293,Sábanas Altura 201,Hogar,Sábanas,Altura,599.67,434.22,2025-05-31
-294,Televisor Wayra 612,Electrohogar,Televisor,Wayra,1830.3,1232.8,2021-10-08
-295,Infusiones CostaSur 840,Bebidas,Infusiones,CostaSur,15.47,9.86,2023-06-23
-296,Decoración Pukara 019,Hogar,Decoración,Pukara,160.12,126.66,2022-07-12
-297,Jugos Wayra 815,Bebidas,Jugos,Wayra,19.65,12.95,2024-08-30
-298,Shampoo Kawsay 247,Cuidado Personal,Shampoo,Kawsay,32.45,24.8,2023-02-18
-299,Microondas Misti 357,Electrohogar,Microondas,Misti,1019.02,752.93,2023-07-31
-300,Conservas Qori 363,Abarrotes,Conservas,Qori,13.78,8.88,2023-07-11
-301,Papel Higiénico NortePlus 856,Cuidado Personal,Papel Higiénico,NortePlus,63.54,44.89,2024-08-09
-302,Refrigeradora Andesol 073,Electrohogar,Refrigeradora,Andesol,719.28,521.42,2025-01-15
-303,Decoración Rumi 927,Hogar,Decoración,Rumi,83.0,57.01,2021-07-16
-304,Plancha CostaSur 319,Electrohogar,Plancha,CostaSur,1233.96,945.07,2022-03-02
-305,Aceite IntiMax 796,Abarrotes,Aceite,IntiMax,10.38,7.63,2023-07-03
-306,Toallas NortePlus 780,Hogar,Toallas,NortePlus,173.62,135.38,2022-03-05
-307,Papel Higiénico NortePlus 736,Cuidado Personal,Papel Higiénico,NortePlus,65.97,50.73,2024-04-10
-308,Refrigeradora IntiMax 087,Electrohogar,Refrigeradora,IntiMax,863.0,594.07,2024-06-16
-309,Desodorante Sumaq 243,Cuidado Personal,Desodorante,Sumaq,112.75,69.93,2024-04-07
-310,Gaseosas InkaHome 854,Bebidas,Gaseosas,InkaHome,33.13,26.0,2023-03-03
-311,Lavadora Pukara 690,Electrohogar,Lavadora,Pukara,1443.56,1002.08,2025-02-22
-312,Suavizante Altura 598,Limpieza,Suavizante,Altura,64.93,40.4,2021-12-14
-313,Fideos CostaSur 281,Abarrotes,Fideos,CostaSur,10.88,6.68,2022-04-12
-314,Papel Higiénico IntiMax 953,Cuidado Personal,Papel Higiénico,IntiMax,53.99,35.18,2021-01-01
-315,Harinas Wayra 918,Abarrotes,Harinas,Wayra,8.14,5.56,2025-10-27
-316,Arroz IntiMax 276,Abarrotes,Arroz,IntiMax,19.83,13.65,2022-10-04
-317,Crema Dental Wayra 116,Cuidado Personal,Crema Dental,Wayra,27.46,18.21,2022-10-22
-318,Aceite IntiMax 603,Abarrotes,Aceite,IntiMax,17.23,12.58,2024-07-24
-319,Gaseosas SolRetail 304,Bebidas,Gaseosas,SolRetail,19.52,14.64,2024-07-15
-320,Shampoo Wayra 284,Cuidado Personal,Shampoo,Wayra,23.09,15.07,2021-09-08
-321,Plancha SolRetail 514,Electrohogar,Plancha,SolRetail,600.9,412.13,2024-04-02
-322,Gaseosas InkaHome 203,Bebidas,Gaseosas,InkaHome,37.62,27.93,2021-12-16
-323,Fideos Kawsay 817,Abarrotes,Fideos,Kawsay,43.71,31.73,2021-06-01
-324,Fideos NortePlus 805,Abarrotes,Fideos,NortePlus,3.48,2.23,2025-10-22
-325,Jabón Wayra 780,Cuidado Personal,Jabón,Wayra,46.51,35.41,2022-09-25
-326,Lavavajilla Rumi 370,Limpieza,Lavavajilla,Rumi,45.38,34.38,2024-06-26
-327,Lavadora Sumaq 412,Electrohogar,Lavadora,Sumaq,3600.0,2662.03,2023-10-05
-328,Jabón Kawsay 143,Cuidado Personal,Jabón,Kawsay,75.36,56.95,2021-06-11
-329,Crema Dental Pacífico 049,Cuidado Personal,Crema Dental,Pacífico,69.08,47.56,2021-05-28
-330,Detergente InkaHome 074,Limpieza,Detergente,InkaHome,25.24,17.27,2022-02-18
-331,Shampoo Altura 182,Cuidado Personal,Shampoo,Altura,41.24,26.75,2022-04-25
-332,Toallas Rumi 889,Hogar,Toallas,Rumi,458.65,358.65,2024-11-12
-333,Crema Dental Pukara 837,Cuidado Personal,Crema Dental,Pukara,110.72,85.99,2022-07-12
-334,Sábanas Qori 085,Hogar,Sábanas,Qori,449.15,279.11,2023-10-09
-335,Suavizante SolRetail 386,Limpieza,Suavizante,SolRetail,11.8,7.33,2024-11-27
-336,Televisor Kawsay 713,Electrohogar,Televisor,Kawsay,508.67,315.22,2021-01-29
-337,Menestras Wayra 006,Abarrotes,Menestras,Wayra,31.34,22.02,2023-02-05
-338,Ollas InkaHome 681,Hogar,Ollas,InkaHome,408.35,294.05,2025-10-23
-339,Agua Pukara 792,Bebidas,Agua,Pukara,28.87,19.53,2023-01-14
-340,Conservas SolRetail 232,Abarrotes,Conservas,SolRetail,9.99,7.48,2024-09-12
-341,Menestras Qori 838,Abarrotes,Menestras,Qori,19.47,14.47,2022-11-19
-342,Shampoo Kawsay 564,Cuidado Personal,Shampoo,Kawsay,97.41,76.5,2023-08-10
-343,Shampoo CostaSur 271,Cuidado Personal,Shampoo,CostaSur,99.75,72.49,2024-01-13
-344,Organizadores CostaSur 051,Hogar,Organizadores,CostaSur,384.37,270.01,2021-10-30
-345,Crema Dental NortePlus 298,Cuidado Personal,Crema Dental,NortePlus,99.9,69.12,2024-07-12
-346,Jugos IntiMax 372,Bebidas,Jugos,IntiMax,5.76,3.5,2025-01-29
-347,Agua Altura 527,Bebidas,Agua,Altura,13.27,9.93,2021-03-30
-348,Menestras Wayra 812,Abarrotes,Menestras,Wayra,29.46,20.22,2025-03-18
-349,Toallas Qori 061,Hogar,Toallas,Qori,201.29,123.08,2021-10-13
-350,Energizantes Altura 769,Bebidas,Energizantes,Altura,18.7,12.79,2025-02-03
-351,Fideos IntiMax 585,Abarrotes,Fideos,IntiMax,25.78,16.74,2023-10-21
-352,Aceite CostaSur 190,Abarrotes,Aceite,CostaSur,24.0,16.1,2025-09-21
-353,Suavizante Sumaq 431,Limpieza,Suavizante,Sumaq,15.99,12.79,2022-08-11
-354,Desinfectante CostaSur 634,Limpieza,Desinfectante,CostaSur,34.85,23.71,2024-04-30
-355,Desinfectante Altura 999,Limpieza,Desinfectante,Altura,56.04,33.87,2021-08-21
-356,Lejía Altura 248,Limpieza,Lejía,Altura,58.53,46.69,2024-10-10
-357,Lavavajilla IntiMax 005,Limpieza,Lavavajilla,IntiMax,35.8,22.89,2025-01-09
-358,Desodorante Misti 279,Cuidado Personal,Desodorante,Misti,37.72,23.18,2022-07-29
-359,Lejía Pukara 137,Limpieza,Lejía,Pukara,54.03,34.74,2022-06-16
-360,Plancha IntiMax 298,Electrohogar,Plancha,IntiMax,1392.76,965.49,2024-03-26
-361,Energizantes NortePlus 711,Bebidas,Energizantes,NortePlus,24.35,18.56,2024-07-31
-362,Desinfectante InkaHome 209,Limpieza,Desinfectante,InkaHome,16.49,12.12,2021-10-02
-363,Arroz Qori 842,Abarrotes,Arroz,Qori,44.63,32.71,2024-05-09
-364,Desinfectante InkaHome 640,Limpieza,Desinfectante,InkaHome,6.94,4.17,2021-09-03
-365,Suavizante NortePlus 794,Limpieza,Suavizante,NortePlus,54.54,32.76,2024-07-20
-366,Jugos Wayra 260,Bebidas,Jugos,Wayra,11.68,8.32,2024-03-23
-367,Harinas NortePlus 791,Abarrotes,Harinas,NortePlus,23.35,18.17,2025-04-22
-368,Lavavajilla Qori 135,Limpieza,Lavavajilla,Qori,66.72,49.71,2022-01-04
-369,Jugos Wayra 716,Bebidas,Jugos,Wayra,20.87,14.39,2022-07-06
-370,Sábanas NortePlus 477,Hogar,Sábanas,NortePlus,310.37,187.17,2025-05-08
-371,Refrigeradora Rumi 447,Electrohogar,Refrigeradora,Rumi,934.0,633.16,2021-07-05
-372,Desodorante Pukara 967,Cuidado Personal,Desodorante,Pukara,114.99,70.91,2024-03-21
-373,Conservas Altura 452,Abarrotes,Conservas,Altura,38.13,27.23,2023-06-06
-374,Shampoo Wayra 198,Cuidado Personal,Shampoo,Wayra,78.65,55.84,2024-10-02
-375,Harinas Qori 033,Abarrotes,Harinas,Qori,33.35,22.24,2025-04-28
-376,Decoración Altura 463,Hogar,Decoración,Altura,465.56,343.36,2025-10-10
-377,Agua Kawsay 521,Bebidas,Agua,Kawsay,31.85,20.31,2024-04-17
-378,Plancha CostaSur 362,Electrohogar,Plancha,CostaSur,675.11,431.95,2022-06-07
-379,Suavizante SolRetail 958,Limpieza,Suavizante,SolRetail,50.32,34.74,2022-08-29
-380,Infusiones Wayra 639,Bebidas,Infusiones,Wayra,3.13,2.43,2021-01-10
-381,Lavavajilla Altura 848,Limpieza,Lavavajilla,Altura,42.59,28.77,2023-11-22
-382,Toallas Pukara 864,Hogar,Toallas,Pukara,218.3,156.69,2023-04-26
-383,Refrigeradora Andesol 573,Electrohogar,Refrigeradora,Andesol,3600.0,2615.57,2025-02-27
-384,Televisor Misti 284,Electrohogar,Televisor,Misti,771.85,571.69,2021-03-31
-385,Lavavajilla Andesol 093,Limpieza,Lavavajilla,Andesol,43.08,30.95,2025-06-04
-386,Agua Wayra 426,Bebidas,Agua,Wayra,34.35,25.39,2021-08-14
-387,Agua IntiMax 927,Bebidas,Agua,IntiMax,11.61,8.95,2025-03-06
-388,Refrigeradora Rumi 670,Electrohogar,Refrigeradora,Rumi,184.41,135.25,2025-06-27
-389,Decoración Rumi 940,Hogar,Decoración,Rumi,267.99,198.79,2024-07-24
-390,Desodorante InkaHome 985,Cuidado Personal,Desodorante,InkaHome,108.23,68.25,2023-08-13
-391,Televisor InkaHome 846,Electrohogar,Televisor,InkaHome,543.64,433.71,2024-09-11
-392,Suavizante Qori 388,Limpieza,Suavizante,Qori,67.86,47.83,2022-01-09
-393,Arroz Andesol 498,Abarrotes,Arroz,Andesol,39.92,31.64,2022-08-13
-394,Lavavajilla Pukara 556,Limpieza,Lavavajilla,Pukara,66.19,46.21,2023-03-18
-395,Shampoo Pukara 830,Cuidado Personal,Shampoo,Pukara,33.64,26.02,2021-03-05
-396,Fideos Qori 686,Abarrotes,Fideos,Qori,23.83,18.61,2024-03-25
-397,Detergente CostaSur 695,Limpieza,Detergente,CostaSur,56.22,44.97,2025-07-05
-398,Jugos CostaSur 389,Bebidas,Jugos,CostaSur,19.63,13.67,2021-12-17
-399,Organizadores Wayra 650,Hogar,Organizadores,Wayra,456.02,283.74,2024-07-30
-400,Toallas Rumi 133,Hogar,Toallas,Rumi,640.05,442.95,2021-08-31
-401,Decoración Qori 279,Hogar,Decoración,Qori,177.78,140.97,2021-06-19
-402,Shampoo Wayra 672,Cuidado Personal,Shampoo,Wayra,66.08,48.46,2025-12-25
-403,Plancha Sumaq 683,Electrohogar,Plancha,Sumaq,730.93,583.16,2021-05-18
-404,Vajilla CostaSur 508,Hogar,Vajilla,CostaSur,642.59,481.21,2021-05-28
-405,Shampoo Kawsay 111,Cuidado Personal,Shampoo,Kawsay,107.42,68.78,2024-06-17
-406,Aceite Qori 361,Abarrotes,Aceite,Qori,15.73,11.34,2024-03-24
-407,Jugos Pacífico 795,Bebidas,Jugos,Pacífico,33.02,23.16,2024-09-22
-408,Jugos Rumi 816,Bebidas,Jugos,Rumi,19.32,12.99,2025-09-21
-409,Jugos Misti 354,Bebidas,Jugos,Misti,24.38,18.68,2025-10-28
-410,Refrigeradora Kawsay 011,Electrohogar,Refrigeradora,Kawsay,378.77,299.6,2023-03-18
-411,Lavadora Altura 527,Electrohogar,Lavadora,Altura,2000.64,1575.27,2023-07-24
-412,Papel Higiénico Pukara 611,Cuidado Personal,Papel Higiénico,Pukara,71.18,43.9,2021-06-10
-413,Menestras Wayra 387,Abarrotes,Menestras,Wayra,16.54,11.57,2021-11-19
-414,Microondas Kawsay 592,Electrohogar,Microondas,Kawsay,1128.48,785.93,2021-05-15
-415,Shampoo NortePlus 115,Cuidado Personal,Shampoo,NortePlus,25.67,15.42,2024-09-11
-416,Desodorante Andesol 327,Cuidado Personal,Desodorante,Andesol,76.38,58.5,2024-09-26
-417,Aceite Wayra 718,Abarrotes,Aceite,Wayra,5.81,3.49,2022-08-16
-418,Decoración Wayra 621,Hogar,Decoración,Wayra,61.29,45.35,2021-04-23
-419,Ollas SolRetail 076,Hogar,Ollas,SolRetail,392.53,284.6,2023-03-22
-420,Conservas Pukara 177,Abarrotes,Conservas,Pukara,41.61,29.18,2024-01-12
-421,Agua Qori 077,Bebidas,Agua,Qori,27.68,20.76,2025-05-01
-422,Desinfectante Qori 510,Limpieza,Desinfectante,Qori,39.97,25.36,2024-11-15
-423,Lavadora Pacífico 626,Electrohogar,Lavadora,Pacífico,471.89,295.63,2023-02-10
-424,Toallas Pacífico 148,Hogar,Toallas,Pacífico,22.42,15.22,2022-03-12
-425,Fideos InkaHome 836,Abarrotes,Fideos,InkaHome,10.6,7.5,2023-05-04
-426,Agua Andesol 152,Bebidas,Agua,Andesol,27.75,18.4,2023-12-29
-427,Harinas Pacífico 029,Abarrotes,Harinas,Pacífico,20.34,12.99,2023-06-01
-428,Lavavajilla Andesol 944,Limpieza,Lavavajilla,Andesol,43.31,29.57,2021-02-28
-429,Energizantes CostaSur 613,Bebidas,Energizantes,CostaSur,22.91,17.45,2022-04-28
-430,Desinfectante NortePlus 516,Limpieza,Desinfectante,NortePlus,15.91,11.0,2023-03-19
-431,Desodorante Sumaq 199,Cuidado Personal,Desodorante,Sumaq,78.36,49.2,2022-10-03
-432,Desinfectante NortePlus 456,Limpieza,Desinfectante,NortePlus,26.77,17.47,2022-05-29
-433,Menestras InkaHome 994,Abarrotes,Menestras,InkaHome,10.55,6.73,2022-10-19
-434,Harinas Altura 398,Abarrotes,Harinas,Altura,26.92,17.38,2021-05-11
-435,Desinfectante Sumaq 286,Limpieza,Desinfectante,Sumaq,52.53,37.79,2021-06-09
-436,Papel Higiénico Andesol 408,Cuidado Personal,Papel Higiénico,Andesol,37.16,25.49,2022-07-24
-437,Energizantes InkaHome 948,Bebidas,Energizantes,InkaHome,33.42,23.3,2024-11-10
-438,Licuadora Misti 746,Electrohogar,Licuadora,Misti,2420.13,1620.11,2021-08-18
-439,Papel Higiénico Pukara 439,Cuidado Personal,Papel Higiénico,Pukara,32.75,23.62,2022-09-14
-440,Lejía CostaSur 725,Limpieza,Lejía,CostaSur,12.33,8.58,2025-12-28
-441,Refrigeradora Pacífico 844,Electrohogar,Refrigeradora,Pacífico,692.72,494.16,2024-03-05
-442,Papel Higiénico Kawsay 419,Cuidado Personal,Papel Higiénico,Kawsay,98.95,62.88,2021-03-20
-443,Vajilla Wayra 303,Hogar,Vajilla,Wayra,483.55,365.31,2022-12-10
-444,Papel Higiénico Qori 995,Cuidado Personal,Papel Higiénico,Qori,5.82,3.56,2024-06-16
-445,Energizantes Qori 515,Bebidas,Energizantes,Qori,15.68,10.22,2024-06-03
-446,Harinas Qori 669,Abarrotes,Harinas,Qori,21.0,13.82,2021-01-16
-447,Fideos IntiMax 796,Abarrotes,Fideos,IntiMax,30.28,23.64,2022-11-12
-448,Sábanas Wayra 156,Hogar,Sábanas,Wayra,608.66,459.9,2025-10-04
-449,Ollas CostaSur 795,Hogar,Ollas,CostaSur,544.82,333.42,2025-06-19
-450,Toallas InkaHome 965,Hogar,Toallas,InkaHome,110.49,72.29,2025-09-14
-451,Menestras Wayra 056,Abarrotes,Menestras,Wayra,25.22,17.37,2024-12-20
-452,Desodorante Pukara 547,Cuidado Personal,Desodorante,Pukara,71.68,52.13,2025-09-03
-453,Licuadora SolRetail 056,Electrohogar,Licuadora,SolRetail,2506.26,1526.19,2024-02-17
-454,Lavadora Sumaq 709,Electrohogar,Lavadora,Sumaq,2044.0,1394.24,2021-04-29
-455,Detergente Pacífico 048,Limpieza,Detergente,Pacífico,33.73,26.87,2024-06-27
-456,Aceite Sumaq 801,Abarrotes,Aceite,Sumaq,28.85,18.28,2024-11-20
-457,Suavizante Wayra 564,Limpieza,Suavizante,Wayra,47.56,32.51,2023-08-21
-458,Papel Higiénico IntiMax 644,Cuidado Personal,Papel Higiénico,IntiMax,26.23,17.93,2023-09-23
-459,Vajilla Sumaq 033,Hogar,Vajilla,Sumaq,630.25,406.27,2022-03-10
-460,Refrigeradora CostaSur 013,Electrohogar,Refrigeradora,CostaSur,2584.58,1775.93,2025-10-07
-461,Suavizante IntiMax 205,Limpieza,Suavizante,IntiMax,41.62,30.86,2024-05-24
-462,Lavadora Pukara 987,Electrohogar,Lavadora,Pukara,1114.89,770.72,2022-02-13
-463,Crema Dental Qori 198,Cuidado Personal,Crema Dental,Qori,101.83,63.11,2024-04-08
-464,Harinas Altura 890,Abarrotes,Harinas,Altura,16.68,10.44,2025-12-14
-465,Infusiones Rumi 421,Bebidas,Infusiones,Rumi,2.18,1.42,2022-07-14
-466,Infusiones Sumaq 631,Bebidas,Infusiones,Sumaq,31.97,23.8,2024-02-09
-467,Lavavajilla Rumi 111,Limpieza,Lavavajilla,Rumi,60.6,38.3,2022-11-18
-468,Lejía Misti 960,Limpieza,Lejía,Misti,19.94,12.65,2022-08-24
-469,Aceite Misti 278,Abarrotes,Aceite,Misti,35.92,27.93,2021-01-26
-470,Jugos IntiMax 046,Bebidas,Jugos,IntiMax,19.86,13.11,2025-12-01
-471,Infusiones Andesol 587,Bebidas,Infusiones,Andesol,16.54,12.7,2021-01-03
-472,Gaseosas NortePlus 306,Bebidas,Gaseosas,NortePlus,9.58,7.23,2024-07-11
-473,Refrigeradora InkaHome 424,Electrohogar,Refrigeradora,InkaHome,2641.46,1864.44,2022-05-30
-474,Aceite IntiMax 829,Abarrotes,Aceite,IntiMax,4.89,3.66,2025-08-13
-475,Crema Dental Wayra 601,Cuidado Personal,Crema Dental,Wayra,17.57,11.47,2025-06-02
-476,Decoración Qori 796,Hogar,Decoración,Qori,333.39,211.14,2024-02-09
-477,Lavavajilla Pacífico 772,Limpieza,Lavavajilla,Pacífico,45.78,33.56,2024-09-21
-478,Ollas IntiMax 041,Hogar,Ollas,IntiMax,520.73,342.96,2025-04-06
-479,Decoración Andesol 263,Hogar,Decoración,Andesol,323.49,241.43,2025-04-28
-480,Aceite Pukara 478,Abarrotes,Aceite,Pukara,25.02,19.2,2023-05-10
-481,Aceite Altura 923,Abarrotes,Aceite,Altura,21.23,15.06,2021-12-18
-482,Papel Higiénico Pacífico 524,Cuidado Personal,Papel Higiénico,Pacífico,25.0,19.09,2021-03-06
-483,Lejía Andesol 013,Limpieza,Lejía,Andesol,34.21,23.62,2021-09-23
-484,Fideos Sumaq 761,Abarrotes,Fideos,Sumaq,19.34,15.28,2023-11-26
-485,Menestras Qori 561,Abarrotes,Menestras,Qori,16.0,12.28,2025-09-24
-486,Menestras Kawsay 059,Abarrotes,Menestras,Kawsay,44.9,34.34,2023-08-20
-487,Desodorante Pukara 148,Cuidado Personal,Desodorante,Pukara,105.01,69.91,2023-03-07
-488,Suavizante IntiMax 335,Limpieza,Suavizante,IntiMax,23.45,14.22,2024-10-07
-489,Refrigeradora IntiMax 414,Electrohogar,Refrigeradora,IntiMax,934.45,605.02,2025-06-18
-490,Plancha Wayra 881,Electrohogar,Plancha,Wayra,2419.9,1912.65,2024-10-13
-491,Sábanas Pacífico 813,Hogar,Sábanas,Pacífico,184.19,135.79,2022-10-22
-492,Gaseosas Andesol 785,Bebidas,Gaseosas,Andesol,2.51,1.65,2021-01-26
-493,Detergente Qori 222,Limpieza,Detergente,Qori,20.6,13.62,2024-05-10
-494,Papel Higiénico InkaHome 384,Cuidado Personal,Papel Higiénico,InkaHome,41.47,31.19,2022-08-28
-495,Agua Qori 164,Bebidas,Agua,Qori,29.42,23.18,2022-12-07
-496,Shampoo IntiMax 975,Cuidado Personal,Shampoo,IntiMax,90.41,69.43,2023-08-09
-497,Vajilla Sumaq 332,Hogar,Vajilla,Sumaq,494.09,338.18,2025-05-31
-498,Arroz Altura 571,Abarrotes,Arroz,Altura,19.14,14.72,2025-10-14
-499,Energizantes Sumaq 929,Bebidas,Energizantes,Sumaq,7.45,4.61,2025-08-20
-500,Ollas Sumaq 480,Hogar,Ollas,Sumaq,578.06,391.5,2024-04-03
-501,Microondas Pukara 853,Electrohogar,Microondas,Pukara,2156.31,1550.38,2023-10-28
-502,Desodorante Sumaq 470,Cuidado Personal,Desodorante,Sumaq,33.35,21.15,2024-04-14
-503,Crema Dental IntiMax 424,Cuidado Personal,Crema Dental,IntiMax,44.65,31.98,2024-05-26
-504,Papel Higiénico InkaHome 761,Cuidado Personal,Papel Higiénico,InkaHome,105.59,81.26,2021-02-05
-505,Organizadores Misti 341,Hogar,Organizadores,Misti,620.62,443.72,2022-08-11
-506,Conservas Pacífico 461,Abarrotes,Conservas,Pacífico,39.71,24.73,2025-10-06
-507,Desinfectante Misti 754,Limpieza,Desinfectante,Misti,65.13,43.99,2022-11-12
-508,Aceite NortePlus 420,Abarrotes,Aceite,NortePlus,42.47,33.18,2022-04-18
-509,Desodorante SolRetail 146,Cuidado Personal,Desodorante,SolRetail,6.18,4.54,2021-04-28
-510,Papel Higiénico Rumi 133,Cuidado Personal,Papel Higiénico,Rumi,12.09,7.25,2025-10-25
-511,Organizadores Kawsay 800,Hogar,Organizadores,Kawsay,46.65,36.36,2022-04-03
-512,Microondas Misti 530,Electrohogar,Microondas,Misti,264.05,193.99,2022-11-05
-513,Aceite Kawsay 514,Abarrotes,Aceite,Kawsay,30.63,23.75,2022-11-24
-514,Gaseosas Qori 786,Bebidas,Gaseosas,Qori,22.48,17.39,2025-08-06
-515,Lejía Misti 589,Limpieza,Lejía,Misti,52.97,38.88,2021-03-06
-516,Ollas Kawsay 305,Hogar,Ollas,Kawsay,556.1,404.02,2024-01-06
-517,Aceite Sumaq 977,Abarrotes,Aceite,Sumaq,35.66,24.94,2024-09-02
-518,Energizantes Sumaq 605,Bebidas,Energizantes,Sumaq,14.84,11.61,2022-07-23
-519,Organizadores Andesol 538,Hogar,Organizadores,Andesol,53.8,34.93,2021-01-16
-520,Papel Higiénico IntiMax 488,Cuidado Personal,Papel Higiénico,IntiMax,100.07,61.51,2023-12-25
-521,Decoración SolRetail 568,Hogar,Decoración,SolRetail,132.08,97.14,2021-07-15
-522,Desinfectante NortePlus 106,Limpieza,Desinfectante,NortePlus,25.29,19.91,2024-02-22
-523,Decoración Qori 709,Hogar,Decoración,Qori,26.72,18.8,2021-08-11
-524,Conservas Andesol 072,Abarrotes,Conservas,Andesol,31.49,21.07,2023-07-06
-525,Conservas Wayra 761,Abarrotes,Conservas,Wayra,11.24,8.76,2025-04-04
-526,Televisor SolRetail 514,Electrohogar,Televisor,SolRetail,1840.72,1120.22,2025-04-25
-527,Crema Dental InkaHome 136,Cuidado Personal,Crema Dental,InkaHome,17.44,11.11,2022-08-21
-528,Desinfectante Pacífico 334,Limpieza,Desinfectante,Pacífico,50.43,31.25,2025-02-15
-529,Microondas Kawsay 370,Electrohogar,Microondas,Kawsay,1435.55,1133.14,2022-03-04
-530,Jabón Wayra 108,Cuidado Personal,Jabón,Wayra,119.97,95.09,2023-08-16
-531,Lavavajilla Qori 752,Limpieza,Lavavajilla,Qori,22.17,15.9,2025-08-04
-532,Energizantes Altura 623,Bebidas,Energizantes,Altura,14.93,11.48,2024-12-10
-533,Menestras Pukara 942,Abarrotes,Menestras,Pukara,11.18,8.02,2022-08-01
-534,Lejía Andesol 464,Limpieza,Lejía,Andesol,31.32,20.91,2025-07-28
-535,Lejía Qori 668,Limpieza,Lejía,Qori,5.05,3.54,2023-03-19
-536,Agua Pukara 631,Bebidas,Agua,Pukara,12.59,9.89,2024-07-18
-537,Detergente Pacífico 665,Limpieza,Detergente,Pacífico,74.83,58.53,2025-12-27
-538,Televisor Qori 398,Electrohogar,Televisor,Qori,785.14,510.7,2024-05-11
-539,Lavadora InkaHome 997,Electrohogar,Lavadora,InkaHome,2322.05,1447.82,2024-08-14
-540,Papel Higiénico InkaHome 453,Cuidado Personal,Papel Higiénico,InkaHome,52.84,38.24,2024-09-01
-541,Lavadora Kawsay 581,Electrohogar,Lavadora,Kawsay,268.21,201.43,2025-06-03
-542,Desinfectante NortePlus 342,Limpieza,Desinfectante,NortePlus,38.83,25.16,2025-01-29
-543,Sábanas Kawsay 172,Hogar,Sábanas,Kawsay,52.59,37.42,2022-06-01
-544,Papel Higiénico Andesol 334,Cuidado Personal,Papel Higiénico,Andesol,91.16,58.94,2025-02-20
-545,Gaseosas Wayra 967,Bebidas,Gaseosas,Wayra,11.1,8.16,2023-06-20
-546,Organizadores Rumi 704,Hogar,Organizadores,Rumi,50.44,33.6,2025-06-12
-547,Detergente Altura 410,Limpieza,Detergente,Altura,50.49,38.64,2025-05-09
-548,Harinas CostaSur 475,Abarrotes,Harinas,CostaSur,23.11,14.38,2025-11-04
-549,Menestras Pacífico 168,Abarrotes,Menestras,Pacífico,24.37,17.4,2022-07-24
-550,Papel Higiénico Pacífico 865,Cuidado Personal,Papel Higiénico,Pacífico,19.22,12.14,2023-10-03
-551,Infusiones Andesol 611,Bebidas,Infusiones,Andesol,8.92,6.39,2021-03-10
-552,Jugos SolRetail 410,Bebidas,Jugos,SolRetail,19.65,12.2,2021-05-16
-553,Refrigeradora IntiMax 823,Electrohogar,Refrigeradora,IntiMax,923.13,603.47,2025-02-04
-554,Sábanas Kawsay 595,Hogar,Sábanas,Kawsay,234.41,154.91,2021-05-18
-555,Desodorante Kawsay 349,Cuidado Personal,Desodorante,Kawsay,41.29,28.18,2024-06-22
-556,Microondas Wayra 404,Electrohogar,Microondas,Wayra,505.9,325.21,2023-12-17
-557,Toallas Andesol 294,Hogar,Toallas,Andesol,78.78,50.91,2023-12-01
-558,Gaseosas Misti 747,Bebidas,Gaseosas,Misti,2.55,1.86,2021-06-03
-559,Detergente CostaSur 818,Limpieza,Detergente,CostaSur,14.36,8.97,2025-10-22
-560,Papel Higiénico Wayra 244,Cuidado Personal,Papel Higiénico,Wayra,42.12,28.83,2024-03-31
-561,Arroz Misti 602,Abarrotes,Arroz,Misti,30.82,24.57,2023-03-25
-562,Toallas Misti 619,Hogar,Toallas,Misti,219.22,136.11,2024-11-15
-563,Jabón NortePlus 568,Cuidado Personal,Jabón,NortePlus,79.82,48.51,2021-07-09
-564,Organizadores Sumaq 080,Hogar,Organizadores,Sumaq,47.34,29.43,2025-01-12
-565,Fideos Misti 100,Abarrotes,Fideos,Misti,33.5,23.51,2022-08-04
-566,Desodorante Misti 052,Cuidado Personal,Desodorante,Misti,54.03,33.9,2024-09-29
-567,Lavavajilla Altura 007,Limpieza,Lavavajilla,Altura,44.85,28.61,2022-08-07
-568,Ollas Wayra 009,Hogar,Ollas,Wayra,341.51,233.27,2023-12-09
-569,Desinfectante Altura 170,Limpieza,Desinfectante,Altura,57.76,34.71,2022-05-08
-570,Arroz Pacífico 392,Abarrotes,Arroz,Pacífico,13.81,8.96,2024-04-26
-571,Lavavajilla Rumi 733,Limpieza,Lavavajilla,Rumi,25.77,20.1,2024-12-02
-572,Aceite Pacífico 057,Abarrotes,Aceite,Pacífico,7.22,5.43,2022-09-26
-573,Jabón CostaSur 030,Cuidado Personal,Jabón,CostaSur,107.18,66.26,2021-10-05
-574,Licuadora Rumi 488,Electrohogar,Licuadora,Rumi,699.54,481.1,2021-11-16
-575,Energizantes Rumi 778,Bebidas,Energizantes,Rumi,31.41,23.03,2022-11-01
-576,Energizantes Pacífico 166,Bebidas,Energizantes,Pacífico,10.06,7.09,2023-02-26
-577,Lejía Andesol 114,Limpieza,Lejía,Andesol,21.46,15.16,2025-05-08
-578,Energizantes Sumaq 635,Bebidas,Energizantes,Sumaq,13.5,10.25,2025-09-17
-579,Energizantes Misti 110,Bebidas,Energizantes,Misti,9.92,6.34,2025-11-21
-580,Detergente Wayra 203,Limpieza,Detergente,Wayra,18.55,12.81,2024-10-20
-581,Energizantes CostaSur 830,Bebidas,Energizantes,CostaSur,29.09,22.43,2022-09-29
-582,Lavavajilla NortePlus 040,Limpieza,Lavavajilla,NortePlus,42.72,26.31,2021-12-21
-583,Microondas InkaHome 300,Electrohogar,Microondas,InkaHome,1267.82,813.65,2024-07-06
-584,Infusiones Qori 426,Bebidas,Infusiones,Qori,19.06,11.65,2024-02-03
-585,Refrigeradora CostaSur 371,Electrohogar,Refrigeradora,CostaSur,1353.74,985.8,2025-04-13
-586,Suavizante InkaHome 671,Limpieza,Suavizante,InkaHome,68.88,49.63,2023-04-09
-587,Infusiones Andesol 552,Bebidas,Infusiones,Andesol,35.95,25.64,2021-09-17
-588,Toallas Rumi 930,Hogar,Toallas,Rumi,500.02,396.07,2022-10-21
-589,Papel Higiénico IntiMax 126,Cuidado Personal,Papel Higiénico,IntiMax,19.08,14.6,2021-07-02
-590,Papel Higiénico Kawsay 708,Cuidado Personal,Papel Higiénico,Kawsay,39.29,28.39,2024-07-27
-591,Lejía Qori 129,Limpieza,Lejía,Qori,31.14,18.97,2022-03-11
-592,Jugos Rumi 770,Bebidas,Jugos,Rumi,7.2,5.55,2021-06-24
-593,Gaseosas Wayra 579,Bebidas,Gaseosas,Wayra,23.3,15.29,2022-06-04
-594,Aceite Pacífico 299,Abarrotes,Aceite,Pacífico,40.01,30.08,2023-04-08
-595,Televisor CostaSur 239,Electrohogar,Televisor,CostaSur,1197.21,957.64,2025-01-23
-596,Shampoo CostaSur 813,Cuidado Personal,Shampoo,CostaSur,26.17,15.81,2023-06-11
-597,Arroz CostaSur 370,Abarrotes,Arroz,CostaSur,32.84,21.99,2024-06-27
-598,Televisor Altura 271,Electrohogar,Televisor,Altura,752.17,553.3,2024-07-02
-599,Gaseosas Sumaq 861,Bebidas,Gaseosas,Sumaq,23.45,15.12,2022-05-21
-600,Ollas Andesol 581,Hogar,Ollas,Andesol,224.74,166.09,2024-01-28
-601,Agua CostaSur 299,Bebidas,Agua,CostaSur,29.2,21.55,2023-01-03
-602,Ollas Wayra 914,Hogar,Ollas,Wayra,170.88,118.08,2024-07-22
-603,Agua SolRetail 706,Bebidas,Agua,SolRetail,16.54,11.07,2022-01-26
-604,Fideos Kawsay 755,Abarrotes,Fideos,Kawsay,44.65,34.75,2022-06-01
-605,Desinfectante IntiMax 485,Limpieza,Desinfectante,IntiMax,52.96,32.58,2023-04-27
-606,Licuadora Sumaq 066,Electrohogar,Licuadora,Sumaq,1088.59,706.18,2022-10-03
-607,Harinas InkaHome 351,Abarrotes,Harinas,InkaHome,14.74,9.04,2025-10-17
-608,Infusiones Kawsay 676,Bebidas,Infusiones,Kawsay,2.97,2.11,2025-05-26
-609,Conservas Wayra 825,Abarrotes,Conservas,Wayra,40.26,24.96,2025-12-16
-610,Harinas Andesol 973,Abarrotes,Harinas,Andesol,42.39,33.55,2021-12-02
-611,Agua SolRetail 481,Bebidas,Agua,SolRetail,34.06,22.77,2021-05-06
-612,Harinas Pacífico 241,Abarrotes,Harinas,Pacífico,13.2,10.32,2024-07-24
-613,Menestras Pukara 726,Abarrotes,Menestras,Pukara,25.74,18.57,2025-11-10
-614,Shampoo SolRetail 436,Cuidado Personal,Shampoo,SolRetail,19.73,12.31,2022-08-31
-615,Jabón Pukara 628,Cuidado Personal,Jabón,Pukara,33.5,25.99,2022-09-05
-616,Plancha Pacífico 290,Electrohogar,Plancha,Pacífico,1208.63,870.47,2021-10-15
-617,Arroz NortePlus 920,Abarrotes,Arroz,NortePlus,4.02,2.45,2025-03-21
-618,Licuadora IntiMax 824,Electrohogar,Licuadora,IntiMax,863.99,568.45,2023-06-05
-619,Harinas Kawsay 220,Abarrotes,Harinas,Kawsay,11.19,8.33,2023-03-02
-620,Crema Dental Sumaq 426,Cuidado Personal,Crema Dental,Sumaq,112.94,88.26,2023-09-06
-621,Sábanas NortePlus 283,Hogar,Sábanas,NortePlus,616.1,449.83,2024-10-10
-622,Lavadora Pukara 709,Electrohogar,Lavadora,Pukara,930.27,676.01,2021-04-08
-623,Detergente Pacífico 506,Limpieza,Detergente,Pacífico,24.24,16.58,2022-02-15
-624,Agua Kawsay 018,Bebidas,Agua,Kawsay,30.59,21.85,2025-10-15
-625,Papel Higiénico IntiMax 898,Cuidado Personal,Papel Higiénico,IntiMax,95.45,62.34,2023-08-31
-626,Lejía Pukara 704,Limpieza,Lejía,Pukara,39.98,28.68,2024-04-13
-627,Lavadora Rumi 151,Electrohogar,Lavadora,Rumi,450.19,346.07,2024-11-23
-628,Vajilla Sumaq 780,Hogar,Vajilla,Sumaq,365.11,279.8,2025-04-05
-629,Suavizante InkaHome 133,Limpieza,Suavizante,InkaHome,28.75,18.96,2022-06-26
-630,Sábanas Wayra 252,Hogar,Sábanas,Wayra,211.63,128.25,2025-03-22
-631,Fideos Sumaq 695,Abarrotes,Fideos,Sumaq,8.09,5.16,2023-05-18
-632,Menestras Altura 637,Abarrotes,Menestras,Altura,8.7,5.35,2024-06-18
-633,Conservas Kawsay 827,Abarrotes,Conservas,Kawsay,9.83,7.2,2025-01-10
-634,Lavavajilla Andesol 608,Limpieza,Lavavajilla,Andesol,23.06,17.55,2021-02-04
-635,Gaseosas Altura 219,Bebidas,Gaseosas,Altura,11.42,8.82,2024-08-19
-636,Desodorante Wayra 612,Cuidado Personal,Desodorante,Wayra,45.45,28.56,2023-12-12
-637,Gaseosas Pacífico 138,Bebidas,Gaseosas,Pacífico,5.7,3.52,2024-06-11
-638,Plancha Rumi 560,Electrohogar,Plancha,Rumi,1497.65,1081.77,2023-02-24
-639,Aceite IntiMax 700,Abarrotes,Aceite,IntiMax,7.47,5.78,2023-05-01
-640,Ollas IntiMax 223,Hogar,Ollas,IntiMax,585.78,446.79,2025-11-22
-641,Infusiones Sumaq 869,Bebidas,Infusiones,Sumaq,4.87,3.42,2024-02-16
-642,Infusiones CostaSur 695,Bebidas,Infusiones,CostaSur,2.05,1.39,2022-11-20
-643,Refrigeradora Altura 343,Electrohogar,Refrigeradora,Altura,1781.68,1129.42,2022-02-28
-644,Desinfectante Pukara 274,Limpieza,Desinfectante,Pukara,28.49,21.55,2022-12-04
-645,Jabón Pacífico 655,Cuidado Personal,Jabón,Pacífico,102.52,73.78,2025-10-28
-646,Gaseosas Andesol 013,Bebidas,Gaseosas,Andesol,35.86,27.79,2021-07-05
-647,Refrigeradora Kawsay 510,Electrohogar,Refrigeradora,Kawsay,3600.0,2337.98,2021-09-04
-648,Jugos Rumi 063,Bebidas,Jugos,Rumi,36.47,22.64,2023-10-01
-649,Papel Higiénico CostaSur 717,Cuidado Personal,Papel Higiénico,CostaSur,50.49,32.9,2023-04-02
-650,Lavavajilla InkaHome 112,Limpieza,Lavavajilla,InkaHome,10.39,7.48,2023-03-31
-651,Energizantes InkaHome 433,Bebidas,Energizantes,InkaHome,9.91,7.07,2025-02-05
-652,Decoración IntiMax 516,Hogar,Decoración,IntiMax,259.53,189.31,2021-11-11
-653,Decoración CostaSur 585,Hogar,Decoración,CostaSur,272.34,207.23,2024-02-08
-654,Toallas IntiMax 098,Hogar,Toallas,IntiMax,109.65,75.12,2021-08-03
-655,Suavizante Wayra 680,Limpieza,Suavizante,Wayra,69.59,47.4,2021-02-15
-656,Shampoo IntiMax 154,Cuidado Personal,Shampoo,IntiMax,87.48,59.91,2025-12-31
-657,Detergente InkaHome 316,Limpieza,Detergente,InkaHome,59.17,36.9,2022-11-22
-658,Conservas Kawsay 103,Abarrotes,Conservas,Kawsay,26.41,16.26,2022-07-24
-659,Energizantes Pukara 022,Bebidas,Energizantes,Pukara,36.81,27.17,2023-12-21
-660,Energizantes Pukara 502,Bebidas,Energizantes,Pukara,29.06,21.44,2021-04-17
-661,Papel Higiénico Qori 152,Cuidado Personal,Papel Higiénico,Qori,83.96,55.72,2021-05-27
-662,Vajilla Qori 051,Hogar,Vajilla,Qori,76.97,55.7,2024-10-18
-663,Sábanas Misti 148,Hogar,Sábanas,Misti,404.25,263.62,2024-03-24
-664,Harinas Rumi 294,Abarrotes,Harinas,Rumi,23.17,15.24,2023-03-01
-665,Shampoo Pukara 183,Cuidado Personal,Shampoo,Pukara,77.76,52.83,2021-02-18
-666,Fideos Sumaq 419,Abarrotes,Fideos,Sumaq,22.93,16.92,2024-07-04
-667,Arroz Altura 082,Abarrotes,Arroz,Altura,25.16,19.58,2021-03-20
-668,Ollas NortePlus 386,Hogar,Ollas,NortePlus,590.51,449.96,2025-01-05
-669,Menestras Pukara 135,Abarrotes,Menestras,Pukara,25.34,15.66,2025-04-15
-670,Menestras Pukara 212,Abarrotes,Menestras,Pukara,13.88,9.72,2022-12-14
-671,Papel Higiénico IntiMax 223,Cuidado Personal,Papel Higiénico,IntiMax,104.38,82.11,2025-12-19
-672,Fideos Misti 863,Abarrotes,Fideos,Misti,40.27,31.15,2025-10-11
-673,Vajilla Andesol 787,Hogar,Vajilla,Andesol,257.38,192.56,2022-06-28
-674,Shampoo Qori 760,Cuidado Personal,Shampoo,Qori,32.15,20.11,2023-08-25
-675,Lavavajilla Misti 405,Limpieza,Lavavajilla,Misti,4.83,3.8,2022-12-28
-676,Suavizante Rumi 424,Limpieza,Suavizante,Rumi,71.84,56.01,2021-12-19
-677,Shampoo Sumaq 685,Cuidado Personal,Shampoo,Sumaq,96.74,73.17,2023-04-17
-678,Desodorante CostaSur 424,Cuidado Personal,Desodorante,CostaSur,70.24,46.12,2024-08-15
-679,Lavavajilla Rumi 276,Limpieza,Lavavajilla,Rumi,74.95,54.22,2024-02-27
-680,Vajilla SolRetail 412,Hogar,Vajilla,SolRetail,50.54,38.77,2025-03-04
-681,Energizantes Kawsay 974,Bebidas,Energizantes,Kawsay,9.43,7.41,2025-11-25
-682,Detergente IntiMax 476,Limpieza,Detergente,IntiMax,65.03,48.02,2022-04-05
-683,Gaseosas Rumi 604,Bebidas,Gaseosas,Rumi,11.54,7.31,2024-08-28
-684,Menestras NortePlus 713,Abarrotes,Menestras,NortePlus,17.83,13.57,2023-05-20
-685,Jugos Altura 936,Bebidas,Jugos,Altura,37.33,22.51,2025-06-16
-686,Desinfectante Andesol 055,Limpieza,Desinfectante,Andesol,24.08,18.89,2024-05-21
-687,Energizantes Rumi 049,Bebidas,Energizantes,Rumi,27.49,20.99,2022-11-02
-688,Desinfectante IntiMax 657,Limpieza,Desinfectante,IntiMax,39.51,27.64,2023-10-20
-689,Energizantes Pukara 096,Bebidas,Energizantes,Pukara,32.15,20.2,2023-09-26
-690,Detergente Pacífico 056,Limpieza,Detergente,Pacífico,54.36,39.38,2024-05-15
-691,Menestras Kawsay 433,Abarrotes,Menestras,Kawsay,33.69,21.72,2023-05-24
-692,Shampoo Sumaq 387,Cuidado Personal,Shampoo,Sumaq,34.11,26.02,2021-06-24
-693,Agua Pacífico 926,Bebidas,Agua,Pacífico,2.62,1.59,2023-06-23
-694,Arroz InkaHome 877,Abarrotes,Arroz,InkaHome,38.57,25.46,2025-07-22
-695,Desodorante NortePlus 109,Cuidado Personal,Desodorante,NortePlus,105.51,73.64,2021-08-12
-696,Conservas CostaSur 964,Abarrotes,Conservas,CostaSur,36.21,24.91,2023-11-30
-697,Conservas Misti 446,Abarrotes,Conservas,Misti,42.44,28.69,2022-02-14
-698,Fideos NortePlus 940,Abarrotes,Fideos,NortePlus,4.06,2.93,2023-06-09
-699,Conservas Misti 372,Abarrotes,Conservas,Misti,29.58,18.63,2022-06-11
-700,Infusiones Altura 056,Bebidas,Infusiones,Altura,35.41,27.24,2025-12-21
-701,Conservas NortePlus 832,Abarrotes,Conservas,NortePlus,27.25,18.96,2023-10-29
-702,Refrigeradora InkaHome 660,Electrohogar,Refrigeradora,InkaHome,924.32,607.96,2021-08-05
-703,Aceite Kawsay 756,Abarrotes,Aceite,Kawsay,38.38,25.86,2023-11-16
-704,Vajilla Wayra 896,Hogar,Vajilla,Wayra,74.28,53.18,2022-11-17
-705,Detergente Sumaq 516,Limpieza,Detergente,Sumaq,46.92,32.44,2024-09-16
-706,Jugos Misti 480,Bebidas,Jugos,Misti,20.46,14.14,2025-08-14
-707,Toallas Misti 788,Hogar,Toallas,Misti,124.09,86.72,2025-10-10
-708,Energizantes Sumaq 203,Bebidas,Energizantes,Sumaq,33.59,21.94,2022-12-15
-709,Desinfectante IntiMax 962,Limpieza,Desinfectante,IntiMax,33.71,23.32,2023-02-12
-710,Detergente Sumaq 209,Limpieza,Detergente,Sumaq,37.15,29.37,2024-03-30
-711,Televisor IntiMax 876,Electrohogar,Televisor,IntiMax,705.04,556.4,2023-07-03
-712,Infusiones Qori 953,Bebidas,Infusiones,Qori,24.9,17.58,2021-06-17
-713,Decoración Wayra 971,Hogar,Decoración,Wayra,280.38,209.85,2022-10-27
-714,Conservas Sumaq 100,Abarrotes,Conservas,Sumaq,28.46,20.73,2023-09-05
-715,Infusiones Wayra 989,Bebidas,Infusiones,Wayra,7.04,4.58,2025-09-23
-716,Crema Dental SolRetail 760,Cuidado Personal,Crema Dental,SolRetail,94.05,67.88,2024-09-14
-717,Lejía Wayra 028,Limpieza,Lejía,Wayra,50.58,38.7,2025-09-12
-718,Suavizante Misti 220,Limpieza,Suavizante,Misti,27.34,16.96,2023-12-31
-719,Fideos Qori 701,Abarrotes,Fideos,Qori,32.12,25.08,2022-01-04
-720,Suavizante Sumaq 692,Limpieza,Suavizante,Sumaq,12.75,8.1,2022-03-30
-721,Lavavajilla Wayra 984,Limpieza,Lavavajilla,Wayra,57.28,37.74,2024-11-26
-722,Refrigeradora Andesol 427,Electrohogar,Refrigeradora,Andesol,1425.25,930.1,2025-02-08
-723,Papel Higiénico InkaHome 820,Cuidado Personal,Papel Higiénico,InkaHome,105.39,65.55,2025-05-31
-724,Microondas NortePlus 624,Electrohogar,Microondas,NortePlus,888.38,551.73,2025-02-12
-725,Lavavajilla InkaHome 431,Limpieza,Lavavajilla,InkaHome,47.52,32.09,2022-06-24
-726,Suavizante Pukara 774,Limpieza,Suavizante,Pukara,24.83,17.74,2022-12-22
-727,Infusiones IntiMax 664,Bebidas,Infusiones,IntiMax,18.32,14.46,2022-01-20
-728,Organizadores Altura 323,Hogar,Organizadores,Altura,615.0,446.21,2022-08-19
-729,Decoración Pacífico 167,Hogar,Decoración,Pacífico,160.78,120.99,2024-08-18
-730,Shampoo Rumi 779,Cuidado Personal,Shampoo,Rumi,36.23,24.57,2023-12-11
-731,Fideos Misti 214,Abarrotes,Fideos,Misti,24.44,18.09,2023-06-21
-732,Gaseosas CostaSur 153,Bebidas,Gaseosas,CostaSur,2.18,1.44,2025-09-25
-733,Papel Higiénico Wayra 447,Cuidado Personal,Papel Higiénico,Wayra,12.37,9.64,2025-09-13
-734,Refrigeradora Wayra 967,Electrohogar,Refrigeradora,Wayra,3314.7,2560.4,2021-09-09
-735,Crema Dental InkaHome 252,Cuidado Personal,Crema Dental,InkaHome,60.77,44.61,2025-02-24
-736,Desodorante Sumaq 189,Cuidado Personal,Desodorante,Sumaq,96.27,77.01,2021-07-26
-737,Lejía SolRetail 903,Limpieza,Lejía,SolRetail,60.22,39.22,2025-03-09
-738,Papel Higiénico NortePlus 321,Cuidado Personal,Papel Higiénico,NortePlus,115.28,84.68,2024-06-01
-739,Papel Higiénico Wayra 266,Cuidado Personal,Papel Higiénico,Wayra,84.89,56.93,2025-12-10
-740,Fideos InkaHome 869,Abarrotes,Fideos,InkaHome,44.57,33.64,2021-11-14
-741,Agua CostaSur 227,Bebidas,Agua,CostaSur,19.06,14.64,2023-06-11
-742,Televisor Wayra 138,Electrohogar,Televisor,Wayra,1450.02,1049.9,2023-01-14
-743,Ollas Andesol 312,Hogar,Ollas,Andesol,640.3,502.77,2022-08-17
-744,Organizadores Wayra 947,Hogar,Organizadores,Wayra,266.82,181.25,2024-12-08
-745,Energizantes Altura 150,Bebidas,Energizantes,Altura,9.52,5.72,2023-08-19
-746,Lejía SolRetail 295,Limpieza,Lejía,SolRetail,53.6,36.06,2022-10-07
-747,Fideos InkaHome 292,Abarrotes,Fideos,InkaHome,14.21,10.94,2025-09-04
-748,Ollas Wayra 074,Hogar,Ollas,Wayra,79.52,54.46,2022-06-13
-749,Vajilla Altura 256,Hogar,Vajilla,Altura,175.17,112.58,2021-05-21
-750,Fideos InkaHome 579,Abarrotes,Fideos,InkaHome,21.43,16.19,2021-04-26
-751,Harinas InkaHome 837,Abarrotes,Harinas,InkaHome,13.6,10.2,2021-03-25
-752,Arroz Kawsay 176,Abarrotes,Arroz,Kawsay,3.92,2.85,2021-08-21
-753,Jugos Sumaq 345,Bebidas,Jugos,Sumaq,9.3,7.42,2023-05-30
-754,Ollas Pacífico 260,Hogar,Ollas,Pacífico,418.13,297.23,2024-09-23
-755,Menestras Altura 645,Abarrotes,Menestras,Altura,14.27,11.31,2025-07-02
-756,Organizadores InkaHome 011,Hogar,Organizadores,InkaHome,309.07,224.34,2023-03-01
-757,Ollas Altura 459,Hogar,Ollas,Altura,70.2,51.1,2025-11-13
-758,Infusiones Sumaq 460,Bebidas,Infusiones,Sumaq,24.0,14.4,2021-09-17
-759,Toallas Andesol 965,Hogar,Toallas,Andesol,109.38,82.46,2024-09-16
-760,Papel Higiénico Kawsay 845,Cuidado Personal,Papel Higiénico,Kawsay,119.1,90.82,2022-12-13
-761,Detergente Kawsay 007,Limpieza,Detergente,Kawsay,12.51,9.04,2023-03-17
-762,Lavavajilla Altura 485,Limpieza,Lavavajilla,Altura,52.17,33.75,2024-01-08
-763,Licuadora Pacífico 148,Electrohogar,Licuadora,Pacífico,1448.97,1054.89,2024-01-18
-764,Vajilla Qori 101,Hogar,Vajilla,Qori,102.8,71.17,2022-07-23
-765,Papel Higiénico SolRetail 331,Cuidado Personal,Papel Higiénico,SolRetail,52.46,32.69,2021-12-23
-766,Harinas Kawsay 560,Abarrotes,Harinas,Kawsay,41.94,33.38,2024-07-01
-767,Suavizante Sumaq 408,Limpieza,Suavizante,Sumaq,70.86,54.75,2024-02-08
-768,Fideos NortePlus 378,Abarrotes,Fideos,NortePlus,35.42,24.15,2023-03-11
-769,Shampoo Kawsay 195,Cuidado Personal,Shampoo,Kawsay,87.39,69.18,2022-01-23
-770,Gaseosas CostaSur 961,Bebidas,Gaseosas,CostaSur,37.22,27.33,2023-10-11
-771,Desinfectante Pukara 010,Limpieza,Desinfectante,Pukara,62.87,49.65,2021-04-06
-772,Jabón Pacífico 195,Cuidado Personal,Jabón,Pacífico,8.67,6.04,2023-07-19
-773,Energizantes Kawsay 444,Bebidas,Energizantes,Kawsay,23.27,17.61,2022-12-27
-774,Gaseosas InkaHome 615,Bebidas,Gaseosas,InkaHome,13.1,9.64,2025-02-03
-775,Microondas InkaHome 157,Electrohogar,Microondas,InkaHome,3600.0,2702.09,2022-06-24
-776,Lavadora InkaHome 539,Electrohogar,Lavadora,InkaHome,1980.35,1572.66,2023-04-25
-777,Energizantes Qori 210,Bebidas,Energizantes,Qori,36.7,24.56,2025-03-12
-778,Lejía IntiMax 254,Limpieza,Lejía,IntiMax,46.43,29.75,2022-10-09
-779,Detergente Kawsay 909,Limpieza,Detergente,Kawsay,74.82,57.82,2022-05-24
-780,Refrigeradora Sumaq 218,Electrohogar,Refrigeradora,Sumaq,998.56,740.96,2023-02-17
-781,Jabón Pacífico 890,Cuidado Personal,Jabón,Pacífico,37.79,25.52,2022-11-10
-782,Desodorante InkaHome 499,Cuidado Personal,Desodorante,InkaHome,89.48,55.2,2024-04-19
-783,Sábanas SolRetail 531,Hogar,Sábanas,SolRetail,286.63,189.39,2024-12-24
-784,Infusiones CostaSur 423,Bebidas,Infusiones,CostaSur,26.55,19.04,2022-11-23
-785,Organizadores CostaSur 733,Hogar,Organizadores,CostaSur,378.72,252.01,2021-11-19
-786,Aceite Kawsay 697,Abarrotes,Aceite,Kawsay,27.03,19.45,2023-06-15
-787,Arroz Pukara 951,Abarrotes,Arroz,Pukara,30.93,24.21,2025-04-22
-788,Conservas Altura 685,Abarrotes,Conservas,Altura,3.96,2.44,2021-01-06
-789,Arroz Pacífico 424,Abarrotes,Arroz,Pacífico,16.56,12.39,2023-05-08
-790,Conservas Andesol 744,Abarrotes,Conservas,Andesol,32.59,20.47,2022-05-18
-791,Suavizante Pacífico 805,Limpieza,Suavizante,Pacífico,32.04,22.89,2025-07-26
-792,Refrigeradora Misti 949,Electrohogar,Refrigeradora,Misti,1128.15,821.46,2023-05-26
-793,Shampoo Andesol 806,Cuidado Personal,Shampoo,Andesol,96.87,61.3,2025-03-28
-794,Televisor IntiMax 558,Electrohogar,Televisor,IntiMax,2749.63,1885.81,2021-02-18
-795,Desodorante Pukara 562,Cuidado Personal,Desodorante,Pukara,45.31,35.14,2021-11-17
-796,Detergente NortePlus 528,Limpieza,Detergente,NortePlus,7.06,5.2,2021-10-28
-797,Plancha Wayra 456,Electrohogar,Plancha,Wayra,2253.92,1464.97,2025-10-26
-798,Papel Higiénico Sumaq 186,Cuidado Personal,Papel Higiénico,Sumaq,99.49,71.13,2023-05-30
-799,Suavizante Kawsay 340,Limpieza,Suavizante,Kawsay,65.04,44.26,2022-02-11
-800,Crema Dental IntiMax 561,Cuidado Personal,Crema Dental,IntiMax,43.29,34.33,2025-09-07
+1,Gaseosas Pukara 158,Bebidas,Gaseosas,Pukara,5.68,3.94,2024-02-28
+2,Bloqueador Solar Ayni 813,Cuidado Personal,Bloqueador Solar,Ayni,148.33,106.4,2025-12-11
+3,Juguetes Educativos Sumaq 998,Juguetería,Juguetes Educativos,Sumaq,354.59,267.49,2025-08-17
+4,Aceite Illari 698,Abarrotes,Aceite,Illari,3.61,2.46,2023-03-04
+5,Lavadora Tambo 797,Electrohogar,Lavadora,Tambo,644.79,480.83,2021-08-25
+6,Bloques Nativa 309,Juguetería,Bloques,Nativa,50.49,32.81,2023-03-10
+7,Infusiones Killa 114,Bebidas,Infusiones,Killa,9.62,7.53,2023-05-29
+8,Útiles Escolares Nativa 170,Escolar y Oficina,Útiles Escolares,Nativa,1157.48,806.3,2022-06-02
+9,Organizadores Pacífico 753,Hogar,Organizadores,Pacífico,188.32,138.5,2024-12-30
+10,Polos Illari 645,Moda,Polos,Illari,194.66,121.36,2025-06-08
+11,Detergente Sumaq 568,Limpieza,Detergente,Sumaq,29.26,19.88,2023-06-27
+12,Crema Dental Sumaq 151,Cuidado Personal,Crema Dental,Sumaq,76.54,60.24,2021-01-08
+13,Suavizante Andesol 884,Limpieza,Suavizante,Andesol,53.69,36.14,2024-05-26
+14,Útiles Escolares Killa 472,Escolar y Oficina,Útiles Escolares,Killa,722.99,488.4,2025-08-10
+15,Harinas Pukara 940,Abarrotes,Harinas,Pukara,19.44,13.55,2025-10-02
+16,Microondas CostaSur 557,Electrohogar,Microondas,CostaSur,1936.56,1515.61,2025-03-29
+17,Toallas Misti 616,Hogar,Toallas,Misti,826.11,630.41,2021-12-09
+18,Crema Dental CostaSur 987,Cuidado Personal,Crema Dental,CostaSur,12.39,9.82,2025-07-15
+19,Smartphones IntiMax 168,Tecnología y Cómputo,Smartphones,IntiMax,1822.36,1309.14,2021-08-30
+20,Sillas de Oficina Pukara 976,Escolar y Oficina,Sillas de Oficina,Pukara,119.9,94.58,2025-05-11
+21,Arroz Tambo 846,Abarrotes,Arroz,Tambo,32.21,22.45,2023-12-16
+22,Menestras Rumi 978,Abarrotes,Menestras,Rumi,34.45,22.91,2025-09-03
+23,Desinfectante SolRetail 809,Limpieza,Desinfectante,SolRetail,7.63,5.35,2025-08-03
+24,Monitores Nativa 320,Tecnología y Cómputo,Monitores,Nativa,1278.37,859.19,2024-11-23
+25,Desinfectante Andesol 819,Limpieza,Desinfectante,Andesol,41.65,28.84,2022-12-12
+26,Juguetes Educativos Misti 672,Juguetería,Juguetes Educativos,Misti,417.46,312.51,2023-07-02
+27,Agua SolRetail 731,Bebidas,Agua,SolRetail,15.58,11.43,2025-07-22
+28,Conservas IntiMax 778,Abarrotes,Conservas,IntiMax,38.11,25.55,2023-11-27
+29,Televisor Nativa 486,Electrohogar,Televisor,Nativa,875.8,636.71,2024-12-19
+30,Smartphones Killa 488,Tecnología y Cómputo,Smartphones,Killa,2869.58,2009.23,2023-05-26
+31,Zapatillas InkaHome 766,Calzado,Zapatillas,InkaHome,113.69,85.48,2021-09-02
+32,Smartphones Illari 344,Tecnología y Cómputo,Smartphones,Illari,965.78,610.78,2022-01-09
+33,Organizadores CostaSur 002,Hogar,Organizadores,CostaSur,439.5,288.66,2021-08-28
+34,Lavadora Wayra 978,Electrohogar,Lavadora,Wayra,1393.18,981.09,2024-02-17
+35,Suavizante Nativa 753,Limpieza,Suavizante,Nativa,26.38,20.99,2021-03-23
+36,Televisor Ayni 477,Electrohogar,Televisor,Ayni,1787.22,1140.73,2021-03-09
+37,Vajilla Andesol 876,Hogar,Vajilla,Andesol,300.96,201.41,2024-11-16
+38,Lavadora Pacífico 804,Electrohogar,Lavadora,Pacífico,993.74,613.66,2024-09-29
+39,Jugos Kawsay 571,Bebidas,Jugos,Kawsay,30.9,18.76,2025-12-10
+40,Plancha Ayni 784,Electrohogar,Plancha,Ayni,3600.0,2815.82,2023-02-01
+41,Sillas de Oficina Sumaq 726,Escolar y Oficina,Sillas de Oficina,Sumaq,74.11,45.0,2022-02-01
+42,Lejía InkaHome 714,Limpieza,Lejía,InkaHome,9.67,6.47,2024-07-19
+43,Conservas NortePlus 751,Abarrotes,Conservas,NortePlus,10.13,7.11,2024-04-15
+44,Suavizante Pacífico 362,Limpieza,Suavizante,Pacífico,36.78,22.5,2021-09-12
+45,Gaseosas SolRetail 701,Bebidas,Gaseosas,SolRetail,6.53,4.66,2024-03-17
+46,Energizantes Tambo 079,Bebidas,Energizantes,Tambo,27.76,20.17,2022-12-29
+47,Mouse Tambo 819,Tecnología y Cómputo,Mouse,Tambo,673.97,530.6,2025-12-22
+48,Jeans Rumi 331,Moda,Jeans,Rumi,199.04,138.37,2023-02-28
+49,Calzado Deportivo Ayni 908,Calzado,Calzado Deportivo,Ayni,348.28,257.42,2023-12-25
+50,Harinas Killa 452,Abarrotes,Harinas,Killa,44.24,29.46,2022-07-10
+51,Energizantes InkaHome 059,Bebidas,Energizantes,InkaHome,31.59,23.33,2025-07-16
+52,Muñecos Rumi 972,Juguetería,Muñecos,Rumi,379.6,272.88,2023-07-08
+53,Fideos Andesol 837,Abarrotes,Fideos,Andesol,42.81,26.51,2021-06-14
+54,Licuadora NortePlus 929,Electrohogar,Licuadora,NortePlus,957.36,647.76,2025-01-15
+55,Harinas Illari 841,Abarrotes,Harinas,Illari,12.48,9.15,2023-07-04
+56,Accesorios Ayni 622,Tecnología y Cómputo,Accesorios,Ayni,4787.25,3676.08,2022-03-05
+57,Bloques Misti 948,Juguetería,Bloques,Misti,391.87,282.78,2022-01-19
+58,Microondas Wayra 662,Electrohogar,Microondas,Wayra,2129.46,1444.9,2021-04-10
+59,Perfumería Killa 836,Cuidado Personal,Perfumería,Killa,69.49,50.11,2025-03-26
+60,Accesorios Ayni 016,Tecnología y Cómputo,Accesorios,Ayni,2391.99,1859.26,2022-01-07
+61,Accesorios InkaHome 105,Tecnología y Cómputo,Accesorios,InkaHome,596.72,405.93,2025-11-06
+62,Vajilla Kawsay 500,Hogar,Vajilla,Kawsay,488.98,367.17,2022-10-19
+63,Parrillas Rumi 875,Hogar,Parrillas,Rumi,428.68,296.46,2022-01-23
+64,Fideos SolRetail 475,Abarrotes,Fideos,SolRetail,37.36,28.21,2021-01-20
+65,Juegos de Mesa SolRetail 177,Juguetería,Juegos de Mesa,SolRetail,443.81,353.14,2025-12-31
+66,Smartphones Wayra 992,Tecnología y Cómputo,Smartphones,Wayra,1070.76,715.86,2021-12-11
+67,Suavizante Qori 298,Limpieza,Suavizante,Qori,25.21,16.93,2024-08-09
+68,Archivadores Killa 369,Escolar y Oficina,Archivadores,Killa,930.65,743.65,2025-10-24
+69,Gaseosas Wayra 579,Bebidas,Gaseosas,Wayra,15.8,11.27,2023-12-02
+70,Desodorante Misti 318,Cuidado Personal,Desodorante,Misti,88.13,62.23,2022-01-27
+71,Sábanas Altura 603,Hogar,Sábanas,Altura,521.11,357.39,2021-11-06
+72,Perfumería InkaHome 208,Cuidado Personal,Perfumería,InkaHome,66.34,51.29,2021-11-01
+73,Microondas SolRetail 073,Electrohogar,Microondas,SolRetail,1515.62,927.32,2024-03-31
+74,Licuadora IntiMax 702,Electrohogar,Licuadora,IntiMax,910.55,652.69,2024-02-15
+75,Detergente SolRetail 838,Limpieza,Detergente,SolRetail,63.47,38.86,2022-05-19
+76,Smartphones IntiMax 222,Tecnología y Cómputo,Smartphones,IntiMax,3413.28,2310.36,2021-12-31
+77,Menestras Altura 646,Abarrotes,Menestras,Altura,16.09,10.08,2023-03-10
+78,Jugos Sumaq 861,Bebidas,Jugos,Sumaq,19.8,14.94,2021-10-15
+79,Vestidos Kawsay 642,Moda,Vestidos,Kawsay,256.66,165.32,2021-01-31
+80,Ropa de Verano Tambo 524,Moda,Ropa de Verano,Tambo,171.35,104.66,2021-08-20
+81,Desinfectante Misti 776,Limpieza,Desinfectante,Misti,34.01,25.14,2023-01-13
+82,Zapatos Casuales Andesol 472,Calzado,Zapatos Casuales,Andesol,380.67,302.77,2021-08-07
+83,Casacas Nativa 587,Moda,Casacas,Nativa,155.72,98.27,2024-05-24
+84,Escritorios Killa 718,Escolar y Oficina,Escritorios,Killa,749.12,596.94,2025-02-09
+85,Lavavajilla Tambo 841,Limpieza,Lavavajilla,Tambo,69.48,41.92,2024-10-05
+86,Jugos Killa 330,Bebidas,Jugos,Killa,19.21,13.02,2022-02-04
+87,Lejía NortePlus 175,Limpieza,Lejía,NortePlus,39.27,28.88,2025-12-12
+88,Calzado Deportivo Ayni 682,Calzado,Calzado Deportivo,Ayni,451.39,344.24,2021-01-23
+89,Sandalias IntiMax 052,Calzado,Sandalias,IntiMax,190.35,139.68,2024-05-27
+90,Conservas Qori 589,Abarrotes,Conservas,Qori,33.39,20.06,2024-10-05
+91,Ollas Nativa 831,Hogar,Ollas,Nativa,316.53,192.56,2022-07-18
+92,Peluches Ayni 948,Juguetería,Peluches,Ayni,355.37,223.99,2025-08-30
+93,Impresoras CostaSur 939,Tecnología y Cómputo,Impresoras,CostaSur,3126.57,2342.18,2025-05-03
+94,Aceite Ayni 494,Abarrotes,Aceite,Ayni,13.92,9.91,2025-08-20
+95,Parrillas Altura 821,Hogar,Parrillas,Altura,234.94,158.14,2024-03-23
+96,Bloques Andesol 416,Juguetería,Bloques,Andesol,330.74,237.93,2023-07-20
+97,Cuadernos CostaSur 210,Escolar y Oficina,Cuadernos,CostaSur,210.33,165.54,2021-11-19
+98,Tablets Kawsay 521,Tecnología y Cómputo,Tablets,Kawsay,1536.66,1111.63,2022-06-24
+99,Útiles Escolares Misti 854,Escolar y Oficina,Útiles Escolares,Misti,981.2,592.73,2021-09-14
+100,Agua Andesol 914,Bebidas,Agua,Andesol,26.15,17.12,2023-11-30
+101,Cuadernos Ayni 524,Escolar y Oficina,Cuadernos,Ayni,628.78,427.19,2025-03-08
+102,Suavizante Pukara 410,Limpieza,Suavizante,Pukara,35.96,22.07,2022-02-13
+103,Sillas de Oficina Rumi 646,Escolar y Oficina,Sillas de Oficina,Rumi,786.12,570.28,2024-09-25
+104,Televisor Pukara 001,Electrohogar,Televisor,Pukara,2149.36,1704.06,2025-02-03
+105,Shampoo Killa 304,Cuidado Personal,Shampoo,Killa,76.0,49.84,2025-02-10
+106,Accesorios Nativa 118,Tecnología y Cómputo,Accesorios,Nativa,1181.03,777.53,2021-09-13
+107,Monitores NortePlus 955,Tecnología y Cómputo,Monitores,NortePlus,1596.68,1141.2,2022-07-01
+108,Smartphones Altura 799,Tecnología y Cómputo,Smartphones,Altura,2753.61,1884.01,2022-09-21
+109,Organizadores Illari 065,Hogar,Organizadores,Illari,516.06,359.02,2021-01-25
+110,Refrigeradora SolRetail 939,Electrohogar,Refrigeradora,SolRetail,779.47,493.44,2025-03-06
+111,Escritorios Pacífico 761,Escolar y Oficina,Escritorios,Pacífico,1113.23,676.07,2023-08-01
+112,Tablets Tambo 584,Tecnología y Cómputo,Tablets,Tambo,674.82,491.82,2024-12-16
+113,Televisor Kawsay 645,Electrohogar,Televisor,Kawsay,752.23,489.31,2024-12-22
+114,Teclados Qori 060,Tecnología y Cómputo,Teclados,Qori,3649.09,2270.65,2022-08-20
+115,Cuadernos Tambo 454,Escolar y Oficina,Cuadernos,Tambo,364.97,277.09,2022-01-23
+116,Arroz SolRetail 146,Abarrotes,Arroz,SolRetail,31.35,22.2,2024-11-14
+117,Perfumería Altura 590,Cuidado Personal,Perfumería,Altura,77.1,51.87,2021-08-13
+118,Energizantes Andesol 853,Bebidas,Energizantes,Andesol,8.75,5.46,2025-11-16
+119,Mochilas Ayni 801,Escolar y Oficina,Mochilas,Ayni,326.25,258.15,2022-01-07
+120,Teclados Ayni 291,Tecnología y Cómputo,Teclados,Ayni,702.04,520.71,2025-06-14
+121,Monitores Qori 102,Tecnología y Cómputo,Monitores,Qori,4066.05,2688.52,2023-01-01
+122,Decoración Qori 859,Hogar,Decoración,Qori,120.17,82.93,2023-07-15
+123,Conservas Wayra 406,Abarrotes,Conservas,Wayra,4.64,2.93,2021-07-19
+124,Archivadores Tambo 925,Escolar y Oficina,Archivadores,Tambo,146.34,101.37,2023-03-10
+125,Botines IntiMax 666,Calzado,Botines,IntiMax,131.58,87.34,2022-12-01
+126,Botines Rumi 363,Calzado,Botines,Rumi,170.56,109.53,2024-02-19
+127,Lavavajilla Misti 228,Limpieza,Lavavajilla,Misti,14.27,9.34,2023-03-15
+128,Jabón Wayra 088,Cuidado Personal,Jabón,Wayra,139.8,91.25,2022-10-15
+129,Televisor Killa 642,Electrohogar,Televisor,Killa,824.3,495.72,2025-12-07
+130,Bloques Rumi 300,Juguetería,Bloques,Rumi,137.2,98.61,2023-05-09
+131,Energizantes Qori 487,Bebidas,Energizantes,Qori,27.29,21.41,2021-11-29
+132,Refrigeradora Ayni 645,Electrohogar,Refrigeradora,Ayni,1308.81,1040.9,2021-07-26
+133,Jeans SolRetail 291,Moda,Jeans,SolRetail,122.32,73.85,2021-02-19
+134,Polos Ayni 280,Moda,Polos,Ayni,101.53,77.64,2022-12-10
+135,Parrillas Ayni 845,Hogar,Parrillas,Ayni,181.14,135.08,2024-08-28
+136,Freidora de Aire Wayra 850,Electrohogar,Freidora de Aire,Wayra,1733.88,1149.27,2022-05-31
+137,Tablets Altura 037,Tecnología y Cómputo,Tablets,Altura,2876.53,1964.77,2024-02-02
+138,Lavavajilla Andesol 038,Limpieza,Lavavajilla,Andesol,5.27,3.57,2025-06-12
+139,Gaseosas SolRetail 265,Bebidas,Gaseosas,SolRetail,6.01,3.93,2023-01-27
+140,Desinfectante InkaHome 384,Limpieza,Desinfectante,InkaHome,51.65,31.47,2025-11-14
+141,Smartphones Qori 535,Tecnología y Cómputo,Smartphones,Qori,1286.43,959.99,2022-06-11
+142,Detergente Misti 577,Limpieza,Detergente,Misti,63.93,47.09,2025-07-24
+143,Lavavajilla Misti 879,Limpieza,Lavavajilla,Misti,12.98,8.63,2024-05-13
+144,Infusiones Nativa 432,Bebidas,Infusiones,Nativa,2.27,1.75,2021-10-02
+145,Calzado Deportivo Altura 627,Calzado,Calzado Deportivo,Altura,194.56,150.1,2022-04-29
+146,Gaseosas Illari 058,Bebidas,Gaseosas,Illari,24.69,19.19,2022-01-27
+147,Decoración Wayra 602,Hogar,Decoración,Wayra,814.91,589.12,2023-03-12
+148,Calzado Deportivo Nativa 145,Calzado,Calzado Deportivo,Nativa,54.83,39.59,2021-09-17
+149,Teclados Nativa 842,Tecnología y Cómputo,Teclados,Nativa,2129.29,1590.48,2022-09-04
+150,Mouse Nativa 108,Tecnología y Cómputo,Mouse,Nativa,3034.73,2257.04,2021-05-26
+151,Sandalias Tambo 394,Calzado,Sandalias,Tambo,262.74,173.36,2021-09-24
+152,Jugos Sumaq 906,Bebidas,Jugos,Sumaq,28.34,17.69,2024-07-29
+153,Peluches Sumaq 688,Juguetería,Peluches,Sumaq,229.81,161.07,2022-10-21
+154,Conservas Qori 281,Abarrotes,Conservas,Qori,7.25,4.41,2024-02-28
+155,Polos Kawsay 126,Moda,Polos,Kawsay,358.25,222.43,2022-04-22
+156,Ropa de Verano Misti 584,Moda,Ropa de Verano,Misti,316.51,203.06,2023-06-06
+157,Ropa Deportiva Qori 409,Moda,Ropa Deportiva,Qori,297.41,221.11,2024-10-08
+158,Decoración Sumaq 324,Hogar,Decoración,Sumaq,87.97,66.61,2023-06-09
+159,Escritorios Pukara 484,Escolar y Oficina,Escritorios,Pukara,483.46,371.09,2024-12-20
+160,Fideos Nativa 526,Abarrotes,Fideos,Nativa,12.27,8.1,2021-01-23
+161,Gaseosas Rumi 309,Bebidas,Gaseosas,Rumi,6.04,3.98,2023-02-13
+162,Fideos Qori 765,Abarrotes,Fideos,Qori,14.85,10.17,2025-03-12
+163,Crema Dental Wayra 828,Cuidado Personal,Crema Dental,Wayra,50.11,35.83,2025-09-07
+164,Juegos de Mesa Andesol 025,Juguetería,Juegos de Mesa,Andesol,81.52,52.64,2022-05-16
+165,Jeans Wayra 822,Moda,Jeans,Wayra,243.6,158.5,2025-07-30
+166,Desodorante Andesol 018,Cuidado Personal,Desodorante,Andesol,159.82,109.73,2022-09-13
+167,Zapatillas Sumaq 051,Calzado,Zapatillas,Sumaq,361.9,254.05,2022-05-13
+168,Jugos Andesol 543,Bebidas,Jugos,Andesol,32.88,25.91,2021-02-02
+169,Sandalias Sumaq 829,Calzado,Sandalias,Sumaq,193.53,137.26,2021-05-30
+170,Sábanas Tambo 932,Hogar,Sábanas,Tambo,785.41,609.74,2022-12-23
+171,Bloqueador Solar Misti 157,Cuidado Personal,Bloqueador Solar,Misti,124.14,83.41,2025-06-26
+172,Audífonos SolRetail 116,Tecnología y Cómputo,Audífonos,SolRetail,1283.56,889.68,2025-08-13
+173,Carros de Juguete Illari 494,Juguetería,Carros de Juguete,Illari,152.66,105.77,2022-12-30
+174,Gaseosas CostaSur 157,Bebidas,Gaseosas,CostaSur,21.72,15.89,2023-04-25
+175,Desinfectante Illari 718,Limpieza,Desinfectante,Illari,60.18,44.35,2021-03-07
+176,Zapatos Casuales Illari 835,Calzado,Zapatos Casuales,Illari,210.05,134.8,2025-07-12
+177,Botines InkaHome 795,Calzado,Botines,InkaHome,73.43,56.95,2025-10-05
+178,Tablets Misti 111,Tecnología y Cómputo,Tablets,Misti,1759.28,1266.1,2023-11-13
+179,Carros de Juguete Wayra 744,Juguetería,Carros de Juguete,Wayra,435.29,320.43,2024-06-23
+180,Energizantes Rumi 325,Bebidas,Energizantes,Rumi,35.81,25.26,2021-04-08
+181,Agua Kawsay 688,Bebidas,Agua,Kawsay,2.37,1.49,2025-12-17
+182,Suavizante Andesol 557,Limpieza,Suavizante,Andesol,65.82,43.36,2025-10-26
+183,Fideos Pukara 652,Abarrotes,Fideos,Pukara,6.99,5.54,2023-05-03
+184,Casacas Sumaq 373,Moda,Casacas,Sumaq,31.14,19.63,2021-07-01
+185,Peluches InkaHome 556,Juguetería,Peluches,InkaHome,438.84,316.38,2025-01-16
+186,Fideos Nativa 963,Abarrotes,Fideos,Nativa,20.46,15.56,2021-07-02
+187,Arroz Tambo 279,Abarrotes,Arroz,Tambo,38.35,26.64,2025-11-06
+188,Desinfectante Altura 264,Limpieza,Desinfectante,Altura,8.55,6.51,2025-03-07
+189,Carros de Juguete Kawsay 515,Juguetería,Carros de Juguete,Kawsay,385.94,247.89,2021-03-04
+190,Tablets Qori 474,Tecnología y Cómputo,Tablets,Qori,463.73,315.26,2022-02-01
+191,Calzado Deportivo Sumaq 284,Calzado,Calzado Deportivo,Sumaq,270.88,181.17,2023-03-11
+192,Gaseosas Kawsay 352,Bebidas,Gaseosas,Kawsay,5.06,3.56,2025-07-11
+193,Aceite Ayni 814,Abarrotes,Aceite,Ayni,41.76,25.32,2022-02-11
+194,Fideos Illari 497,Abarrotes,Fideos,Illari,4.39,3.1,2021-02-22
+195,Sillas de Oficina Rumi 660,Escolar y Oficina,Sillas de Oficina,Rumi,824.51,605.1,2021-12-02
+196,Licuadora InkaHome 856,Electrohogar,Licuadora,InkaHome,1775.33,1232.99,2022-11-14
+197,Menestras NortePlus 517,Abarrotes,Menestras,NortePlus,2.99,2.25,2025-10-03
+198,Agua InkaHome 883,Bebidas,Agua,InkaHome,6.23,4.76,2021-10-16
+199,Energizantes CostaSur 655,Bebidas,Energizantes,CostaSur,16.74,12.54,2023-07-24
+200,Aceite InkaHome 062,Abarrotes,Aceite,InkaHome,14.01,8.83,2021-09-02
+201,Lavavajilla NortePlus 048,Limpieza,Lavavajilla,NortePlus,45.66,28.32,2022-03-02
+202,Zapatos Casuales Tambo 425,Calzado,Zapatos Casuales,Tambo,323.89,197.23,2024-04-13
+203,Arroz Tambo 996,Abarrotes,Arroz,Tambo,35.57,22.68,2022-02-18
+204,Infusiones CostaSur 775,Bebidas,Infusiones,CostaSur,25.6,15.89,2025-06-24
+205,Fideos NortePlus 003,Abarrotes,Fideos,NortePlus,27.28,21.22,2022-02-12
+206,Mochilas Andesol 145,Escolar y Oficina,Mochilas,Andesol,1138.14,886.03,2025-07-24
+207,Zapatillas Wayra 037,Calzado,Zapatillas,Wayra,233.22,184.63,2025-05-25
+208,Infusiones Killa 849,Bebidas,Infusiones,Killa,19.54,13.4,2025-07-27
+209,Jeans Wayra 518,Moda,Jeans,Wayra,246.37,177.97,2023-10-29
+210,Sandalias NortePlus 380,Calzado,Sandalias,NortePlus,396.53,255.68,2021-08-18
+211,Decoración Nativa 125,Hogar,Decoración,Nativa,775.68,558.15,2023-07-07
+212,Sábanas Qori 373,Hogar,Sábanas,Qori,835.16,654.08,2024-02-09
+213,Vajilla Kawsay 924,Hogar,Vajilla,Kawsay,402.58,242.2,2022-08-23
+214,Infusiones Wayra 196,Bebidas,Infusiones,Wayra,35.15,25.45,2025-05-31
+215,Fideos Ayni 898,Abarrotes,Fideos,Ayni,15.87,9.54,2024-01-27
+216,Freidora de Aire Pukara 210,Electrohogar,Freidora de Aire,Pukara,411.82,267.49,2021-05-31
+217,Shampoo Andesol 460,Cuidado Personal,Shampoo,Andesol,78.59,50.95,2022-04-19
+218,Plancha Pacífico 288,Electrohogar,Plancha,Pacífico,1199.09,922.01,2021-03-03
+219,Conservas Kawsay 375,Abarrotes,Conservas,Kawsay,41.16,25.19,2024-04-22
+220,Lavavajilla Ayni 555,Limpieza,Lavavajilla,Ayni,53.04,34.35,2025-03-06
+221,Jugos CostaSur 974,Bebidas,Jugos,CostaSur,7.08,4.33,2025-09-02
+222,Sandalias Pacífico 754,Calzado,Sandalias,Pacífico,442.27,345.73,2023-01-01
+223,Vestidos Wayra 072,Moda,Vestidos,Wayra,44.44,30.06,2021-02-24
+224,Audífonos Altura 075,Tecnología y Cómputo,Audífonos,Altura,5200.0,3520.87,2025-05-18
+225,Desinfectante Misti 473,Limpieza,Desinfectante,Misti,34.85,27.4,2021-03-17
+226,Energizantes SolRetail 548,Bebidas,Energizantes,SolRetail,24.27,17.1,2021-06-28
+227,Bloqueador Solar Killa 643,Cuidado Personal,Bloqueador Solar,Killa,109.81,87.22,2021-01-09
+228,Ropa de Verano Nativa 906,Moda,Ropa de Verano,Nativa,344.07,252.89,2023-05-11
+229,Toallas Altura 188,Hogar,Toallas,Altura,720.74,546.15,2022-09-18
+230,Ollas InkaHome 479,Hogar,Ollas,InkaHome,73.03,50.27,2024-06-16
+231,Camisas Killa 188,Moda,Camisas,Killa,357.63,221.82,2024-04-07
+232,Arroz Misti 957,Abarrotes,Arroz,Misti,39.25,30.8,2023-03-03
+233,Infusiones InkaHome 555,Bebidas,Infusiones,InkaHome,18.95,11.99,2023-10-26
+234,Laptops Qori 218,Tecnología y Cómputo,Laptops,Qori,1942.18,1208.43,2021-12-14
+235,Licuadora Rumi 248,Electrohogar,Licuadora,Rumi,230.93,150.49,2021-01-01
+236,Toallas Tambo 861,Hogar,Toallas,Tambo,125.89,85.94,2025-10-27
+237,Harinas Wayra 930,Abarrotes,Harinas,Wayra,19.83,13.65,2022-10-04
+238,Microondas Sumaq 733,Electrohogar,Microondas,Sumaq,536.52,342.87,2021-07-03
+239,Sábanas Tambo 688,Hogar,Sábanas,Tambo,266.22,178.19,2024-01-02
+240,Teclados Nativa 283,Tecnología y Cómputo,Teclados,Nativa,1642.63,1231.88,2024-07-15
+241,Toallas Nativa 472,Hogar,Toallas,Nativa,146.37,95.52,2021-09-08
+242,Detergente CostaSur 855,Limpieza,Detergente,CostaSur,6.37,3.97,2024-11-17
+243,Jeans Tambo 689,Moda,Jeans,Tambo,334.93,242.06,2021-12-30
+244,Vajilla Qori 832,Hogar,Vajilla,Qori,75.02,49.53,2021-04-02
+245,Vajilla Sumaq 982,Hogar,Vajilla,Sumaq,52.43,33.65,2023-05-11
+246,Shampoo NortePlus 229,Cuidado Personal,Shampoo,NortePlus,23.4,18.61,2021-09-26
+247,Perfumería CostaSur 004,Cuidado Personal,Perfumería,CostaSur,60.87,43.59,2025-06-11
+248,Casacas Tambo 422,Moda,Casacas,Tambo,58.55,37.85,2021-02-09
+249,Fideos Rumi 485,Abarrotes,Fideos,Rumi,3.72,2.75,2023-10-05
+250,Juegos de Mesa Nativa 272,Juguetería,Juegos de Mesa,Nativa,281.14,212.45,2021-06-11
+251,Lavavajilla Qori 202,Limpieza,Lavavajilla,Qori,43.56,29.99,2021-05-28
+252,Agua Rumi 269,Bebidas,Agua,Rumi,12.77,8.74,2022-02-18
+253,Smartphones Rumi 780,Tecnología y Cómputo,Smartphones,Rumi,558.49,370.29,2023-03-24
+254,Casacas NortePlus 438,Moda,Casacas,NortePlus,227.75,168.47,2022-02-19
+255,Botines Altura 581,Calzado,Botines,Altura,411.44,322.51,2021-11-17
+256,Perfumería Andesol 762,Cuidado Personal,Perfumería,Andesol,150.67,111.0,2023-01-20
+257,Freidora de Aire Illari 528,Electrohogar,Freidora de Aire,Illari,852.07,529.24,2024-11-27
+258,Ropa Deportiva Killa 070,Moda,Ropa Deportiva,Killa,31.82,23.54,2025-12-14
+259,Desodorante Misti 015,Cuidado Personal,Desodorante,Misti,105.98,71.53,2023-10-13
+260,Ropa de Verano Tambo 945,Moda,Ropa de Verano,Tambo,127.67,80.39,2022-04-12
+261,Ollas Ayni 028,Hogar,Ollas,Ayni,355.85,253.04,2021-10-05
+262,Juegos de Mesa Qori 316,Juguetería,Juegos de Mesa,Qori,225.69,154.48,2024-12-07
+263,Agua Tambo 632,Bebidas,Agua,Tambo,28.26,17.95,2025-09-21
+264,Zapatos Casuales Qori 337,Calzado,Zapatos Casuales,Qori,234.16,159.19,2024-11-04
+265,Shampoo Sumaq 352,Cuidado Personal,Shampoo,Sumaq,63.79,48.53,2022-11-24
+266,Menestras Andesol 866,Abarrotes,Menestras,Andesol,37.1,25.06,2021-05-21
+267,Crema Dental IntiMax 753,Cuidado Personal,Crema Dental,IntiMax,35.07,27.46,2021-10-30
+268,Toallas Rumi 478,Hogar,Toallas,Rumi,704.04,487.12,2024-07-12
+269,Jabón Tambo 971,Cuidado Personal,Jabón,Tambo,21.21,12.88,2025-01-29
+270,Microondas Illari 331,Electrohogar,Microondas,Illari,992.52,657.64,2025-07-09
+271,Vestidos Pacífico 159,Moda,Vestidos,Pacífico,245.77,178.64,2022-10-02
+272,Monitores Sumaq 212,Tecnología y Cómputo,Monitores,Sumaq,3974.8,3020.01,2022-09-09
+273,Crema Dental Killa 363,Cuidado Personal,Crema Dental,Killa,145.32,113.16,2022-11-08
+274,Sábanas IntiMax 608,Hogar,Sábanas,IntiMax,687.92,509.54,2024-05-04
+275,Energizantes Wayra 244,Bebidas,Energizantes,Wayra,27.65,18.46,2025-09-21
+276,Vajilla Rumi 560,Hogar,Vajilla,Rumi,156.06,124.8,2022-08-11
+277,Gaseosas Misti 787,Bebidas,Gaseosas,Misti,17.64,12.0,2024-04-30
+278,Archivadores Killa 457,Escolar y Oficina,Archivadores,Killa,879.99,531.79,2021-08-21
+279,Arroz Tambo 212,Abarrotes,Arroz,Tambo,35.14,28.03,2024-10-10
+280,Escritorios Pacífico 835,Escolar y Oficina,Escritorios,Pacífico,538.24,344.15,2025-01-09
+281,Crema Dental SolRetail 769,Cuidado Personal,Crema Dental,SolRetail,49.1,30.17,2022-07-29
+282,Lejía Misti 908,Limpieza,Lejía,Misti,54.03,34.74,2022-06-16
+283,Sábanas IntiMax 541,Hogar,Sábanas,IntiMax,404.18,245.56,2024-07-10
+284,Freidora de Aire IntiMax 775,Electrohogar,Freidora de Aire,IntiMax,3309.22,2522.11,2024-07-31
+285,Útiles Escolares Killa 888,Escolar y Oficina,Útiles Escolares,Killa,212.38,156.07,2021-10-02
+286,Fideos Wayra 144,Abarrotes,Fideos,Wayra,44.63,32.71,2024-05-09
+287,Perfumería Pacífico 019,Cuidado Personal,Perfumería,Pacífico,11.41,6.85,2021-09-03
+288,Lavavajilla Pukara 018,Limpieza,Lavavajilla,Pukara,54.54,32.76,2024-07-20
+289,Impresoras Ayni 791,Tecnología y Cómputo,Impresoras,Ayni,2381.51,1621.4,2025-06-17
+290,Menestras Pukara 697,Abarrotes,Menestras,Pukara,40.33,25.43,2024-03-14
+291,Agua Killa 978,Bebidas,Agua,Killa,28.12,19.82,2021-04-07
+292,Televisor Pukara 025,Electrohogar,Televisor,Pukara,388.51,267.97,2022-07-06
+293,Zapatos Casuales Altura 201,Calzado,Zapatos Casuales,Altura,265.95,160.38,2025-05-08
+294,Botines Pacífico 612,Calzado,Botines,Pacífico,106.25,70.7,2025-08-09
+295,Perfumería Misti 840,Cuidado Personal,Perfumería,Misti,19.79,15.66,2025-07-29
+296,Útiles Escolares Misti 019,Escolar y Oficina,Útiles Escolares,Misti,1146.38,914.4,2024-02-21
+297,Suavizante Nativa 815,Limpieza,Suavizante,Nativa,64.22,49.06,2023-12-26
+298,Impresoras Altura 247,Tecnología y Cómputo,Impresoras,Altura,4411.32,3478.49,2025-03-25
+299,Camisas SolRetail 357,Moda,Camisas,SolRetail,226.1,170.06,2024-09-16
+300,Harinas Nativa 363,Abarrotes,Harinas,Nativa,18.32,11.12,2025-09-16
+301,Monitores InkaHome 856,Tecnología y Cómputo,Monitores,InkaHome,5200.0,3201.1,2024-05-09
+302,Casacas Pukara 073,Moda,Casacas,Pukara,177.71,140.44,2023-01-05
+303,Zapatillas Pukara 927,Calzado,Zapatillas,Pukara,124.05,93.88,2023-06-27
+304,Casacas SolRetail 319,Moda,Casacas,SolRetail,358.0,222.05,2025-01-18
+305,Fideos NortePlus 796,Abarrotes,Fideos,NortePlus,27.53,21.48,2023-04-06
+306,Calzado Deportivo Wayra 780,Calzado,Calzado Deportivo,Wayra,314.58,228.56,2025-02-27
+307,Teclados Pukara 736,Tecnología y Cómputo,Teclados,Pukara,836.53,601.39,2024-12-31
+308,Camisas Tambo 087,Moda,Camisas,Tambo,359.94,269.2,2025-06-19
+309,Tablets Wayra 243,Tecnología y Cómputo,Tablets,Wayra,3756.36,2799.2,2021-10-11
+310,Desinfectante Nativa 854,Limpieza,Desinfectante,Nativa,64.79,43.55,2025-01-04
+311,Botines CostaSur 690,Calzado,Botines,CostaSur,250.42,183.66,2025-06-27
+312,Organizadores Andesol 598,Hogar,Organizadores,Andesol,347.68,257.9,2024-07-24
+313,Infusiones Pukara 281,Bebidas,Infusiones,Pukara,34.32,21.64,2023-08-13
+314,Impresoras Pukara 953,Tecnología y Cómputo,Impresoras,Pukara,3437.42,2598.73,2022-10-01
+315,Arroz Killa 918,Abarrotes,Arroz,Killa,31.36,25.05,2023-02-23
+316,Infusiones Ayni 276,Bebidas,Infusiones,Ayni,9.69,7.32,2022-08-15
+317,Teclados InkaHome 116,Tecnología y Cómputo,Teclados,InkaHome,857.36,518.44,2023-07-22
+318,Agua Pukara 603,Bebidas,Agua,Pukara,3.97,2.67,2021-12-17
+319,Shampoo CostaSur 304,Cuidado Personal,Shampoo,CostaSur,112.65,70.09,2024-07-30
+320,Monitores Andesol 284,Tecnología y Cómputo,Monitores,Andesol,1708.37,1351.59,2023-02-10
+321,Sandalias Tambo 514,Calzado,Sandalias,Tambo,503.29,316.74,2021-03-03
+322,Perfumería Wayra 203,Cuidado Personal,Perfumería,Wayra,82.47,54.17,2025-12-20
+323,Aceite Pukara 817,Abarrotes,Aceite,Pukara,4.73,3.74,2021-06-06
+324,Menestras Illari 805,Abarrotes,Menestras,Illari,19.97,14.07,2021-05-28
+325,Impresoras Killa 780,Tecnología y Cómputo,Impresoras,Killa,2204.13,1715.07,2025-10-03
+326,Freidora de Aire Killa 370,Electrohogar,Freidora de Aire,Killa,544.93,392.85,2024-03-24
+327,Casacas Andesol 412,Moda,Casacas,Andesol,330.89,232.09,2024-09-22
+328,Laptops Pacífico 143,Tecnología y Cómputo,Laptops,Pacífico,3794.13,2641.51,2024-05-19
+329,Tablets Wayra 049,Tecnología y Cómputo,Tablets,Wayra,2191.08,1678.86,2025-10-28
+330,Refrigeradora Andesol 074,Electrohogar,Refrigeradora,Andesol,625.02,494.37,2023-03-18
+331,Teclados SolRetail 182,Tecnología y Cómputo,Teclados,SolRetail,2721.84,2143.12,2023-07-24
+332,Calzado Deportivo Wayra 889,Calzado,Calzado Deportivo,Wayra,318.33,196.34,2021-06-10
+333,Audífonos IntiMax 837,Tecnología y Cómputo,Audífonos,IntiMax,1595.01,1062.39,2024-12-20
+334,Calzado Deportivo Altura 085,Calzado,Calzado Deportivo,Altura,67.23,46.82,2021-05-15
+335,Lavadora Andesol 386,Electrohogar,Lavadora,Andesol,3600.0,2875.39,2022-08-19
+336,Polos NortePlus 713,Moda,Polos,NortePlus,272.3,206.93,2023-07-10
+337,Fideos Pacífico 006,Abarrotes,Fideos,Pacífico,38.78,27.97,2024-12-15
+338,Bloques Altura 681,Juguetería,Bloques,Altura,209.01,148.66,2022-11-24
+339,Lejía Qori 792,Limpieza,Lejía,Qori,13.4,8.31,2023-10-28
+340,Harinas Rumi 232,Abarrotes,Harinas,Rumi,32.22,25.29,2022-01-28
+341,Arroz Nativa 838,Abarrotes,Arroz,Nativa,32.27,21.55,2025-01-14
+342,Impresoras Ayni 564,Tecnología y Cómputo,Impresoras,Ayni,4321.09,3399.98,2023-12-29
+343,Smartphones NortePlus 271,Tecnología y Cómputo,Smartphones,NortePlus,697.64,455.54,2025-07-17
+344,Cuadernos Andesol 051,Escolar y Oficina,Cuadernos,Andesol,497.32,316.44,2023-07-17
+345,Toallas InkaHome 298,Hogar,Toallas,InkaHome,690.24,489.22,2025-06-17
+346,Shampoo Qori 372,Cuidado Personal,Shampoo,Qori,76.0,50.65,2025-12-23
+347,Bloqueador Solar Ayni 527,Cuidado Personal,Bloqueador Solar,Ayni,26.57,16.76,2024-04-23
+348,Jugos Killa 812,Bebidas,Jugos,Killa,11.48,7.62,2021-08-01
+349,Sandalias Pukara 061,Calzado,Sandalias,Pukara,134.86,90.3,2022-08-08
+350,Crema Dental Pukara 769,Cuidado Personal,Crema Dental,Pukara,40.21,30.9,2022-07-17
+351,Menestras Killa 585,Abarrotes,Menestras,Killa,27.88,20.38,2022-09-13
+352,Agua Killa 190,Bebidas,Agua,Killa,17.49,11.93,2025-05-23
+353,Refrigeradora Wayra 431,Electrohogar,Refrigeradora,Wayra,976.15,680.48,2024-11-10
+354,Shampoo Killa 634,Cuidado Personal,Shampoo,Killa,58.81,41.56,2025-09-29
+355,Ollas Andesol 999,Hogar,Ollas,Andesol,521.48,385.68,2021-04-22
+356,Organizadores Misti 248,Hogar,Organizadores,Misti,415.37,284.36,2025-12-03
+357,Refrigeradora SolRetail 005,Electrohogar,Refrigeradora,SolRetail,1774.6,1398.51,2024-03-05
+358,Camisas Misti 279,Moda,Camisas,Misti,315.03,200.19,2021-03-20
+359,Refrigeradora Ayni 137,Electrohogar,Refrigeradora,Ayni,380.74,284.63,2023-10-31
+360,Botines Rumi 298,Calzado,Botines,Rumi,426.86,256.72,2021-03-23
+361,Lavavajilla Nativa 711,Limpieza,Lavavajilla,Nativa,52.39,37.0,2024-09-09
+362,Licuadora InkaHome 209,Electrohogar,Licuadora,InkaHome,1485.24,1159.34,2022-11-12
+363,Arroz Ayni 842,Abarrotes,Arroz,Ayni,42.23,31.91,2025-10-04
+364,Perfumería Tambo 640,Cuidado Personal,Perfumería,Tambo,134.33,82.21,2025-06-19
+365,Freidora de Aire Rumi 794,Electrohogar,Freidora de Aire,Rumi,2004.7,1263.11,2024-01-06
+366,Desodorante Illari 260,Cuidado Personal,Desodorante,Illari,57.15,40.4,2021-06-28
+367,Gaseosas Ayni 791,Bebidas,Gaseosas,Ayni,35.67,25.54,2024-04-17
+368,Bloqueador Solar Illari 135,Cuidado Personal,Bloqueador Solar,Illari,46.11,28.08,2024-02-17
+369,Crema Dental Killa 716,Cuidado Personal,Crema Dental,Killa,127.62,94.39,2024-09-05
+370,Lapiceros Pukara 477,Escolar y Oficina,Lapiceros,Pukara,196.47,134.33,2023-02-01
+371,Sandalias Qori 447,Calzado,Sandalias,Qori,356.95,258.43,2025-02-27
+372,Sábanas Tambo 967,Hogar,Sábanas,Tambo,505.15,365.08,2024-01-17
+373,Jugos Wayra 452,Bebidas,Jugos,Wayra,29.26,21.07,2025-06-18
+374,Parrillas Ayni 198,Hogar,Parrillas,Ayni,374.12,296.97,2024-03-04
+375,Menestras CostaSur 033,Abarrotes,Menestras,CostaSur,25.42,17.47,2025-10-07
+376,Sillas de Oficina Sumaq 463,Escolar y Oficina,Sillas de Oficina,Sumaq,636.47,471.98,2024-05-24
+377,Lejía Altura 521,Limpieza,Lejía,Altura,66.63,45.92,2022-12-27
+378,Zapatillas SolRetail 362,Calzado,Zapatillas,SolRetail,489.25,341.34,2022-11-09
+379,Microondas Altura 958,Electrohogar,Microondas,Altura,1247.26,831.6,2021-03-18
+380,Suavizante Ayni 639,Limpieza,Suavizante,Ayni,48.27,29.01,2021-10-01
+381,Freidora de Aire Ayni 848,Electrohogar,Freidora de Aire,Ayni,902.13,582.8,2025-01-31
+382,Muñecos Ayni 864,Juguetería,Muñecos,Ayni,307.1,187.57,2024-08-08
+383,Camisas Wayra 573,Moda,Camisas,Wayra,341.59,264.64,2023-01-31
+384,Botines NortePlus 284,Calzado,Botines,NortePlus,199.19,155.45,2024-11-02
+385,Lavadora Pukara 093,Electrohogar,Lavadora,Pukara,2814.35,2238.85,2022-08-10
+386,Desinfectante CostaSur 426,Limpieza,Desinfectante,CostaSur,25.43,18.46,2024-11-26
+387,Lejía Illari 927,Limpieza,Lejía,Illari,63.63,43.6,2021-07-29
+388,Ropa Deportiva Tambo 670,Moda,Ropa Deportiva,Tambo,299.58,179.89,2024-06-23
+389,Mochilas NortePlus 940,Escolar y Oficina,Mochilas,NortePlus,190.46,127.32,2022-03-25
+390,Smartphones NortePlus 985,Tecnología y Cómputo,Smartphones,NortePlus,1256.31,840.94,2025-05-28
+391,Zapatos Casuales NortePlus 846,Calzado,Zapatos Casuales,NortePlus,170.52,131.91,2021-03-10
+392,Parrillas Nativa 388,Hogar,Parrillas,Nativa,154.04,120.47,2024-03-03
+393,Gaseosas Kawsay 498,Bebidas,Gaseosas,Kawsay,13.46,10.22,2022-07-04
+394,Toallas Rumi 556,Hogar,Toallas,Rumi,760.13,529.93,2024-10-03
+395,Parrillas Qori 830,Hogar,Parrillas,Qori,775.18,547.26,2023-09-09
+396,Jugos Wayra 686,Bebidas,Jugos,Wayra,29.29,20.16,2025-02-03
+397,Lavadora Misti 695,Electrohogar,Lavadora,Misti,667.69,516.94,2021-02-23
+398,Lavavajilla SolRetail 389,Limpieza,Lavavajilla,SolRetail,68.48,45.46,2024-10-11
+399,Mochilas Qori 650,Escolar y Oficina,Mochilas,Qori,284.74,226.0,2021-07-08
+400,Sillas de Oficina Kawsay 133,Escolar y Oficina,Sillas de Oficina,Kawsay,349.18,277.42,2023-11-28
+401,Útiles Escolares Qori 279,Escolar y Oficina,Útiles Escolares,Qori,754.39,526.07,2024-08-08
+402,Decoración NortePlus 672,Hogar,Decoración,NortePlus,261.58,187.91,2024-06-18
+403,Jeans Illari 683,Moda,Jeans,Illari,276.3,199.55,2024-11-13
+404,Archivadores Tambo 508,Escolar y Oficina,Archivadores,Tambo,303.44,224.04,2023-11-09
+405,Laptops Rumi 111,Tecnología y Cómputo,Laptops,Rumi,4662.08,3018.5,2025-06-18
+406,Aceite Ayni 361,Abarrotes,Aceite,Ayni,42.96,27.8,2025-07-28
+407,Agua Tambo 795,Bebidas,Agua,Tambo,26.7,18.87,2025-03-16
+408,Detergente SolRetail 816,Limpieza,Detergente,SolRetail,25.04,16.69,2021-02-14
+409,Perfumería InkaHome 354,Cuidado Personal,Perfumería,InkaHome,52.37,41.67,2025-04-09
+410,Camisas Pukara 011,Moda,Camisas,Pukara,294.96,230.93,2024-12-11
+411,Zapatos Casuales Ayni 527,Calzado,Zapatos Casuales,Ayni,490.94,367.59,2023-09-18
+412,Sábanas Killa 611,Hogar,Sábanas,Killa,716.23,469.65,2024-12-21
+413,Arroz Kawsay 387,Abarrotes,Arroz,Kawsay,20.44,14.97,2025-07-03
+414,Polos Misti 592,Moda,Polos,Misti,324.76,240.56,2021-04-26
+415,Vajilla Wayra 115,Hogar,Vajilla,Wayra,91.52,69.32,2025-11-30
+416,Toallas Andesol 327,Hogar,Toallas,Andesol,775.66,560.46,2021-09-05
+417,Aceite Ayni 718,Abarrotes,Aceite,Ayni,27.79,20.31,2023-10-28
+418,Mochilas IntiMax 621,Escolar y Oficina,Mochilas,IntiMax,297.0,188.39,2024-04-14
+419,Bloques InkaHome 076,Juguetería,Bloques,InkaHome,164.98,118.16,2024-05-26
+420,Aceite Qori 177,Abarrotes,Aceite,Qori,39.68,30.54,2021-02-05
+421,Lavavajilla Pacífico 077,Limpieza,Lavavajilla,Pacífico,71.72,51.28,2022-08-11
+422,Perfumería Killa 510,Cuidado Personal,Perfumería,Killa,140.71,87.62,2025-10-06
+423,Camisas Misti 626,Moda,Camisas,Misti,330.64,223.32,2022-11-12
+424,Mochilas Tambo 148,Escolar y Oficina,Mochilas,Tambo,1128.7,881.9,2022-04-18
+425,Conservas InkaHome 836,Abarrotes,Conservas,InkaHome,2.93,2.15,2021-04-28
+426,Suavizante Misti 152,Limpieza,Suavizante,Misti,8.38,5.03,2025-10-25
+427,Harinas Altura 029,Abarrotes,Harinas,Altura,4.62,3.6,2022-04-03
+428,Crema Dental SolRetail 944,Cuidado Personal,Crema Dental,SolRetail,109.36,75.44,2021-02-26
+429,Lejía Illari 613,Limpieza,Lejía,Illari,66.26,43.15,2021-07-02
+430,Televisor IntiMax 516,Electrohogar,Televisor,IntiMax,3600.0,2642.44,2021-03-06
+431,Teclados Altura 199,Tecnología y Cómputo,Teclados,Altura,1296.83,999.11,2023-05-15
+432,Sábanas IntiMax 456,Hogar,Sábanas,IntiMax,42.13,31.85,2025-08-16
+433,Fideos Illari 994,Abarrotes,Fideos,Illari,44.53,29.9,2021-01-23
+434,Harinas Qori 398,Abarrotes,Harinas,Qori,7.62,4.67,2022-04-30
+435,Sábanas Qori 286,Hogar,Sábanas,Qori,385.93,295.37,2022-01-18
+436,Teclados InkaHome 408,Tecnología y Cómputo,Teclados,InkaHome,1340.16,985.59,2021-07-15
+437,Lavavajilla InkaHome 948,Limpieza,Lavavajilla,InkaHome,25.29,19.91,2024-02-22
+438,Polos Tambo 746,Moda,Polos,Tambo,31.55,22.2,2021-08-11
+439,Monitores Wayra 439,Tecnología y Cómputo,Monitores,Wayra,1313.77,967.51,2021-10-24
+440,Refrigeradora Misti 725,Electrohogar,Refrigeradora,Misti,3600.0,2511.34,2025-08-28
+441,Jeans Andesol 844,Moda,Jeans,Andesol,35.2,22.47,2021-10-03
+442,Organizadores Ayni 419,Hogar,Organizadores,Ayni,50.82,36.04,2024-08-05
+443,Archivadores Wayra 303,Escolar y Oficina,Archivadores,Wayra,223.33,176.89,2024-09-28
+444,Parrillas Misti 995,Hogar,Parrillas,Misti,97.12,63.22,2025-12-09
+445,Suavizante NortePlus 515,Limpieza,Suavizante,NortePlus,39.32,23.83,2022-09-30
+446,Arroz NortePlus 669,Abarrotes,Arroz,NortePlus,13.09,10.05,2024-12-03
+447,Menestras Pacífico 796,Abarrotes,Menestras,Pacífico,44.48,29.88,2022-04-05
+448,Peluches SolRetail 156,Juguetería,Peluches,SolRetail,233.51,149.64,2024-03-14
+449,Botines Illari 795,Calzado,Botines,Illari,374.9,253.79,2025-07-22
+450,Juguetes Educativos Nativa 965,Juguetería,Juguetes Educativos,Nativa,203.03,122.42,2025-11-16
+451,Arroz Tambo 056,Abarrotes,Arroz,Tambo,39.1,25.23,2025-01-22
+452,Audífonos Wayra 547,Tecnología y Cómputo,Audífonos,Wayra,5200.0,4151.52,2022-04-28
+453,Ropa Deportiva IntiMax 056,Moda,Ropa Deportiva,IntiMax,258.09,160.93,2021-09-28
+454,Jeans SolRetail 709,Moda,Jeans,SolRetail,301.13,220.54,2025-08-24
+455,Refrigeradora Tambo 048,Electrohogar,Refrigeradora,Tambo,809.43,526.5,2024-05-11
+456,Menestras Ayni 801,Abarrotes,Menestras,Ayni,7.5,4.74,2022-06-03
+457,Licuadora Wayra 564,Electrohogar,Licuadora,Wayra,2226.93,1611.49,2024-09-01
+458,Mouse Kawsay 644,Tecnología y Cómputo,Mouse,Kawsay,417.21,313.32,2025-06-03
+459,Cuadernos Nativa 033,Escolar y Oficina,Cuadernos,Nativa,589.51,381.96,2025-01-29
+460,Polos IntiMax 013,Moda,Polos,IntiMax,46.02,32.74,2022-06-01
+461,Lavadora SolRetail 205,Electrohogar,Lavadora,SolRetail,941.47,705.95,2025-05-25
+462,Calzado Deportivo Sumaq 987,Calzado,Calzado Deportivo,Sumaq,112.67,73.3,2024-09-04
+463,Impresoras Nativa 198,Tecnología y Cómputo,Impresoras,Nativa,4054.9,2999.96,2022-09-14
+464,Conservas Illari 890,Abarrotes,Conservas,Illari,5.88,4.6,2023-04-22
+465,Desodorante Tambo 421,Cuidado Personal,Desodorante,Tambo,75.98,49.34,2024-04-09
+466,Detergente NortePlus 631,Limpieza,Detergente,NortePlus,13.3,8.45,2021-06-29
+467,Crema Dental NortePlus 111,Cuidado Personal,Crema Dental,NortePlus,26.3,20.81,2021-01-14
+468,Licuadora Sumaq 960,Electrohogar,Licuadora,Sumaq,3600.0,2652.32,2023-09-22
+469,Conservas IntiMax 278,Abarrotes,Conservas,IntiMax,27.16,17.52,2021-01-10
+470,Jabón Tambo 046,Cuidado Personal,Jabón,Tambo,21.32,16.18,2025-06-01
+471,Crema Dental Andesol 587,Cuidado Personal,Crema Dental,Andesol,86.55,55.96,2022-11-20
+472,Detergente IntiMax 306,Limpieza,Detergente,IntiMax,20.14,12.51,2023-01-31
+473,Ropa de Verano Illari 424,Moda,Ropa de Verano,Illari,70.67,52.95,2022-08-18
+474,Infusiones Sumaq 829,Bebidas,Infusiones,Sumaq,9.71,5.91,2021-12-15
+475,Audífonos NortePlus 601,Tecnología y Cómputo,Audífonos,NortePlus,1094.26,841.51,2024-06-17
+476,Lapiceros Killa 796,Escolar y Oficina,Lapiceros,Killa,450.9,283.7,2025-06-21
+477,Ollas Pukara 772,Hogar,Ollas,Pukara,805.37,535.21,2025-11-17
+478,Botines Pacífico 041,Calzado,Botines,Pacífico,370.51,271.69,2022-12-15
+479,Archivadores Pacífico 263,Escolar y Oficina,Archivadores,Pacífico,981.08,651.75,2025-03-05
+480,Menestras Pukara 478,Abarrotes,Menestras,Pukara,30.49,20.28,2025-09-23
+481,Energizantes Kawsay 923,Bebidas,Energizantes,Kawsay,30.46,18.59,2025-03-02
+482,Organizadores Pacífico 524,Hogar,Organizadores,Pacífico,784.71,585.29,2021-07-12
+483,Lavadora Qori 013,Electrohogar,Lavadora,Qori,832.3,649.35,2025-11-01
+484,Conservas Altura 761,Abarrotes,Conservas,Altura,8.33,5.07,2023-12-22
+485,Arroz Nativa 561,Abarrotes,Arroz,Nativa,10.55,8.05,2025-04-08
+486,Energizantes Nativa 059,Bebidas,Energizantes,Nativa,16.95,11.92,2022-12-15
+487,Impresoras Killa 148,Tecnología y Cómputo,Impresoras,Killa,4253.08,2812.69,2021-09-02
+488,Lavadora Andesol 335,Electrohogar,Lavadora,Andesol,765.24,512.2,2025-07-17
+489,Jeans Altura 414,Moda,Jeans,Altura,103.86,66.3,2025-05-26
+490,Jeans Kawsay 881,Moda,Jeans,Kawsay,201.96,125.08,2021-10-05
+491,Escritorios SolRetail 813,Escolar y Oficina,Escritorios,SolRetail,527.3,350.11,2022-10-14
+492,Jabón Rumi 785,Cuidado Personal,Jabón,Rumi,108.3,83.78,2025-04-16
+493,Jabón Ayni 222,Cuidado Personal,Jabón,Ayni,86.13,60.63,2022-07-26
+494,Casacas Wayra 384,Moda,Casacas,Wayra,373.91,269.67,2025-09-15
+495,Desodorante Nativa 164,Cuidado Personal,Desodorante,Nativa,128.47,95.33,2022-04-28
+496,Laptops Misti 975,Tecnología y Cómputo,Laptops,Misti,2682.35,1975.94,2023-08-26
+497,Escritorios Ayni 332,Escolar y Oficina,Escritorios,Ayni,814.06,553.81,2021-03-01
+498,Aceite Ayni 571,Abarrotes,Aceite,Ayni,35.54,24.04,2025-04-27
+499,Shampoo Nativa 929,Cuidado Personal,Shampoo,Nativa,14.37,10.77,2024-01-31
+500,Peluches Altura 480,Juguetería,Peluches,Altura,105.85,82.17,2023-06-10
+501,Vestidos IntiMax 853,Moda,Vestidos,IntiMax,45.11,32.42,2025-06-18
+502,Smartphones Qori 470,Tecnología y Cómputo,Smartphones,Qori,907.98,723.11,2021-07-22
+503,Accesorios CostaSur 424,Tecnología y Cómputo,Accesorios,CostaSur,468.3,303.01,2021-02-27
+504,Ropa de Verano Sumaq 761,Moda,Ropa de Verano,Sumaq,84.25,54.17,2023-06-25
+505,Útiles Escolares Sumaq 341,Escolar y Oficina,Útiles Escolares,Sumaq,736.49,548.41,2021-02-24
+506,Conservas CostaSur 461,Abarrotes,Conservas,CostaSur,12.75,8.1,2024-11-05
+507,Licuadora Pacífico 754,Electrohogar,Licuadora,Pacífico,2093.33,1420.78,2025-11-10
+508,Jugos Kawsay 420,Bebidas,Jugos,Kawsay,31.31,21.92,2021-11-18
+509,Toallas Qori 146,Hogar,Toallas,Qori,830.45,632.62,2025-02-10
+510,Smartphones Wayra 133,Tecnología y Cómputo,Smartphones,Wayra,3126.86,2415.84,2023-02-10
+511,Sandalias IntiMax 800,Calzado,Sandalias,IntiMax,167.9,123.89,2022-09-11
+512,Casacas Qori 530,Moda,Casacas,Qori,180.46,129.78,2025-03-10
+513,Gaseosas Altura 514,Bebidas,Gaseosas,Altura,2.71,1.81,2021-12-09
+514,Lejía Sumaq 786,Limpieza,Lejía,Sumaq,28.19,21.17,2024-12-29
+515,Desodorante Tambo 589,Cuidado Personal,Desodorante,Tambo,81.56,62.72,2023-06-19
+516,Juguetes Educativos Kawsay 305,Juguetería,Juguetes Educativos,Kawsay,52.05,35.43,2024-10-18
+517,Fideos SolRetail 977,Abarrotes,Fideos,SolRetail,27.91,22.28,2023-06-04
+518,Bloqueador Solar Kawsay 605,Cuidado Personal,Bloqueador Solar,Kawsay,143.44,105.85,2024-08-02
+519,Zapatos Casuales Killa 538,Calzado,Zapatos Casuales,Killa,76.73,52.24,2022-05-18
+520,Laptops Rumi 488,Tecnología y Cómputo,Laptops,Rumi,1795.24,1134.98,2024-07-18
+521,Cuadernos Qori 568,Escolar y Oficina,Cuadernos,Qori,83.99,64.37,2025-02-20
+522,Decoración IntiMax 106,Hogar,Decoración,IntiMax,177.14,108.85,2025-12-17
+523,Lapiceros Altura 709,Escolar y Oficina,Lapiceros,Altura,1106.34,844.09,2025-08-22
+524,Gaseosas Rumi 072,Bebidas,Gaseosas,Rumi,24.07,16.09,2022-10-19
+525,Menestras Kawsay 761,Abarrotes,Menestras,Kawsay,19.0,12.72,2025-04-21
+526,Jeans Wayra 514,Moda,Jeans,Wayra,57.19,35.1,2021-07-14
+527,Sábanas Tambo 136,Hogar,Sábanas,Tambo,189.72,149.41,2022-04-13
+528,Microondas Tambo 334,Electrohogar,Microondas,Tambo,757.67,482.38,2022-10-19
+529,Ropa Deportiva Ayni 370,Moda,Ropa Deportiva,Ayni,204.24,130.04,2023-03-23
+530,Smartphones Pacífico 108,Tecnología y Cómputo,Smartphones,Pacífico,1696.74,1278.28,2022-10-04
+531,Desodorante Kawsay 752,Cuidado Personal,Desodorante,Kawsay,53.38,32.48,2025-01-01
+532,Lejía Misti 623,Limpieza,Lejía,Misti,59.72,38.42,2023-06-12
+533,Aceite Tambo 942,Abarrotes,Aceite,Tambo,15.26,10.33,2025-05-14
+534,Televisor SolRetail 464,Electrohogar,Televisor,SolRetail,2737.4,2156.31,2023-02-01
+535,Licuadora Pacífico 668,Electrohogar,Licuadora,Pacífico,3207.4,2487.4,2023-05-11
+536,Shampoo Andesol 631,Cuidado Personal,Shampoo,Andesol,105.85,72.53,2021-04-20
+537,Organizadores CostaSur 665,Hogar,Organizadores,CostaSur,761.5,469.11,2022-02-15
+538,Vestidos IntiMax 398,Moda,Vestidos,IntiMax,306.98,219.31,2025-10-15
+539,Jeans Illari 997,Moda,Jeans,Illari,304.21,198.67,2023-08-31
+540,Monitores Qori 453,Tecnología y Cómputo,Monitores,Qori,5200.0,3847.37,2021-02-08
+541,Zapatos Casuales Qori 581,Calzado,Zapatos Casuales,Qori,136.88,105.22,2024-11-23
+542,Lavadora Altura 342,Electrohogar,Lavadora,Altura,1432.56,1017.5,2025-06-10
+543,Escritorios Pukara 172,Escolar y Oficina,Escritorios,Pukara,928.42,621.78,2023-08-13
+544,Organizadores Wayra 334,Hogar,Organizadores,Wayra,385.48,255.16,2024-12-14
+545,Jugos SolRetail 967,Bebidas,Jugos,SolRetail,2.51,1.57,2021-06-28
+546,Juegos de Mesa Andesol 704,Juguetería,Juegos de Mesa,Andesol,389.5,245.07,2023-03-01
+547,Toallas IntiMax 410,Hogar,Toallas,IntiMax,440.08,279.24,2023-11-01
+548,Harinas NortePlus 475,Abarrotes,Harinas,NortePlus,5.9,3.86,2021-12-23
+549,Infusiones Ayni 168,Bebidas,Infusiones,Ayni,36.72,23.95,2022-02-19
+550,Teclados Killa 865,Tecnología y Cómputo,Teclados,Killa,1677.81,1054.47,2023-12-12
+551,Perfumería NortePlus 611,Cuidado Personal,Perfumería,NortePlus,20.92,12.94,2024-06-11
+552,Perfumería Pukara 410,Cuidado Personal,Perfumería,Pukara,99.79,76.6,2024-08-01
+553,Camisas Killa 823,Moda,Camisas,Killa,332.59,235.75,2022-01-02
+554,Escritorios Sumaq 595,Escolar y Oficina,Escritorios,Sumaq,976.63,603.87,2025-02-21
+555,Monitores Andesol 349,Tecnología y Cómputo,Monitores,Andesol,1545.86,1084.25,2024-02-16
+556,Ropa de Verano CostaSur 404,Moda,Ropa de Verano,CostaSur,25.52,17.3,2022-11-20
+557,Juegos de Mesa Killa 294,Juguetería,Juegos de Mesa,Killa,439.92,348.34,2022-06-09
+558,Energizantes Nativa 747,Bebidas,Energizantes,Nativa,14.17,9.15,2025-11-19
+559,Toallas Ayni 818,Hogar,Toallas,Ayni,76.89,51.55,2023-01-12
+560,Audífonos IntiMax 244,Tecnología y Cómputo,Audífonos,IntiMax,609.92,451.63,2023-03-01
+561,Harinas Nativa 602,Abarrotes,Harinas,Nativa,8.02,5.14,2024-04-26
+562,Juegos de Mesa Wayra 619,Juguetería,Juegos de Mesa,Wayra,190.06,150.44,2021-03-01
+563,Teclados Sumaq 568,Tecnología y Cómputo,Teclados,Sumaq,851.46,618.28,2023-12-24
+564,Botines Pacífico 080,Calzado,Botines,Pacífico,161.87,99.35,2025-02-05
+565,Fideos Illari 100,Abarrotes,Fideos,Illari,11.34,7.32,2021-10-10
+566,Monitores Rumi 052,Tecnología y Cómputo,Monitores,Rumi,1734.71,1174.43,2023-04-20
+567,Decoración Tambo 007,Hogar,Decoración,Tambo,54.15,36.88,2024-05-06
+568,Cuadernos Andesol 009,Escolar y Oficina,Cuadernos,Andesol,609.08,383.61,2025-07-08
+569,Toallas Qori 170,Hogar,Toallas,Qori,338.34,265.51,2021-11-01
+570,Harinas SolRetail 392,Abarrotes,Harinas,SolRetail,42.28,31.43,2023-10-24
+571,Vajilla Sumaq 733,Hogar,Vajilla,Sumaq,704.12,531.91,2024-05-30
+572,Jugos Killa 057,Bebidas,Jugos,Killa,20.52,14.62,2025-01-25
+573,Monitores Illari 030,Tecnología y Cómputo,Monitores,Illari,3278.64,2092.66,2022-09-09
+574,Vestidos Killa 488,Moda,Vestidos,Killa,234.66,169.44,2024-10-11
+575,Shampoo IntiMax 778,Cuidado Personal,Shampoo,IntiMax,111.76,67.34,2025-06-06
+576,Jabón Andesol 166,Cuidado Personal,Jabón,Andesol,54.36,40.15,2023-05-30
+577,Lavadora Ayni 114,Electrohogar,Lavadora,Ayni,3508.52,2256.25,2021-10-18
+578,Crema Dental NortePlus 635,Cuidado Personal,Crema Dental,NortePlus,95.21,70.81,2024-08-10
+579,Suavizante Wayra 110,Limpieza,Suavizante,Wayra,55.97,35.5,2022-08-12
+580,Licuadora SolRetail 203,Electrohogar,Licuadora,SolRetail,2212.43,1330.56,2023-02-12
+581,Lejía Rumi 830,Limpieza,Lejía,Rumi,60.09,42.46,2024-12-17
+582,Microondas CostaSur 040,Electrohogar,Microondas,CostaSur,1215.28,953.42,2023-08-26
+583,Ropa Deportiva Andesol 300,Moda,Ropa Deportiva,Andesol,313.29,221.65,2021-04-08
+584,Desodorante Nativa 426,Cuidado Personal,Desodorante,Nativa,87.89,57.44,2025-06-14
+585,Polos Sumaq 371,Moda,Polos,Sumaq,32.26,24.93,2023-02-25
+586,Ollas Pukara 671,Hogar,Ollas,Pukara,448.25,348.62,2022-11-03
+587,Suavizante IntiMax 552,Limpieza,Suavizante,IntiMax,29.04,19.64,2024-09-17
+588,Botines Wayra 930,Calzado,Botines,Wayra,128.94,83.45,2023-09-18
+589,Organizadores SolRetail 126,Hogar,Organizadores,SolRetail,609.38,367.05,2025-01-27
+590,Mouse Wayra 708,Tecnología y Cómputo,Mouse,Wayra,3038.94,1841.13,2024-04-14
+591,Televisor Illari 129,Electrohogar,Televisor,Illari,2837.26,2155.05,2023-07-29
+592,Suavizante Killa 770,Limpieza,Suavizante,Killa,35.27,25.16,2022-04-20
+593,Crema Dental Pukara 579,Cuidado Personal,Crema Dental,Pukara,129.36,103.47,2021-05-27
+594,Aceite Sumaq 299,Abarrotes,Aceite,Sumaq,43.74,26.73,2022-08-23
+595,Calzado Deportivo Tambo 239,Calzado,Calzado Deportivo,Tambo,424.5,272.22,2024-04-29
+596,Sábanas Altura 813,Hogar,Sábanas,Altura,148.19,114.39,2023-01-06
+597,Jugos Rumi 370,Bebidas,Jugos,Rumi,22.73,16.89,2021-09-10
+598,Botines Pacífico 271,Calzado,Botines,Pacífico,310.9,208.97,2021-08-20
+599,Perfumería Pukara 861,Cuidado Personal,Perfumería,Pukara,7.13,5.68,2021-03-28
+600,Zapatos Casuales Sumaq 581,Calzado,Zapatos Casuales,Sumaq,250.71,164.61,2021-11-16
+601,Jabón CostaSur 299,Cuidado Personal,Jabón,CostaSur,78.23,58.02,2021-09-18
+602,Mochilas Illari 914,Escolar y Oficina,Mochilas,Illari,328.34,229.85,2022-09-17
+603,Desinfectante Tambo 706,Limpieza,Desinfectante,Tambo,58.51,45.46,2025-12-23
+604,Conservas Altura 755,Abarrotes,Conservas,Altura,9.64,7.15,2022-06-22
+605,Vajilla Tambo 485,Hogar,Vajilla,Tambo,632.73,472.51,2024-05-30
+606,Sandalias Tambo 066,Calzado,Sandalias,Tambo,206.7,134.48,2025-03-02
+607,Infusiones CostaSur 351,Bebidas,Infusiones,CostaSur,26.85,21.38,2025-10-24
+608,Perfumería Wayra 676,Cuidado Personal,Perfumería,Wayra,11.04,7.19,2022-11-22
+609,Fideos SolRetail 825,Abarrotes,Fideos,SolRetail,15.28,9.81,2025-09-21
+610,Aceite Qori 973,Abarrotes,Aceite,Qori,23.3,18.31,2025-03-21
+611,Infusiones Rumi 481,Bebidas,Infusiones,Rumi,17.84,13.84,2021-01-12
+612,Arroz Illari 241,Abarrotes,Arroz,Illari,18.65,11.34,2025-12-24
+613,Aceite Rumi 726,Abarrotes,Aceite,Rumi,28.26,17.87,2025-04-30
+614,Monitores InkaHome 436,Tecnología y Cómputo,Monitores,InkaHome,2706.52,1704.23,2022-06-11
+615,Monitores SolRetail 628,Tecnología y Cómputo,Monitores,SolRetail,4945.71,3440.84,2023-10-29
+616,Jeans Killa 290,Moda,Jeans,Killa,353.59,224.55,2025-08-25
+617,Gaseosas Illari 920,Bebidas,Gaseosas,Illari,7.82,5.01,2024-07-06
+618,Casacas Kawsay 824,Moda,Casacas,Kawsay,173.6,108.68,2023-01-29
+619,Infusiones Ayni 220,Bebidas,Infusiones,Ayni,5.71,3.76,2022-04-19
+620,Audífonos Tambo 426,Tecnología y Cómputo,Audífonos,Tambo,497.04,360.19,2025-11-28
+621,Peluches InkaHome 283,Juguetería,Peluches,InkaHome,178.67,125.53,2021-05-28
+622,Camisas Tambo 709,Moda,Camisas,Tambo,183.24,116.24,2022-01-26
+623,Freidora de Aire Ayni 506,Electrohogar,Freidora de Aire,Ayni,1508.48,1031.34,2025-06-21
+624,Crema Dental Illari 018,Cuidado Personal,Crema Dental,Illari,29.69,20.59,2023-11-27
+625,Smartphones Misti 898,Tecnología y Cómputo,Smartphones,Misti,1565.02,983.7,2021-04-23
+626,Freidora de Aire Misti 704,Electrohogar,Freidora de Aire,Misti,1659.79,1057.52,2022-03-08
+627,Botines Ayni 151,Calzado,Botines,Ayni,397.58,280.42,2024-11-08
+628,Mochilas Andesol 780,Escolar y Oficina,Mochilas,Andesol,770.65,463.69,2025-07-01
+629,Organizadores Ayni 133,Hogar,Organizadores,Ayni,115.49,70.81,2025-09-26
+630,Botines CostaSur 252,Calzado,Botines,CostaSur,377.19,272.0,2024-10-01
+631,Infusiones Misti 695,Bebidas,Infusiones,Misti,21.92,16.36,2024-02-03
+632,Jugos Tambo 637,Bebidas,Jugos,Tambo,22.59,16.97,2023-12-15
+633,Menestras CostaSur 827,Abarrotes,Menestras,CostaSur,44.89,29.62,2022-03-30
+634,Crema Dental Andesol 608,Cuidado Personal,Crema Dental,Andesol,121.33,79.94,2024-11-26
+635,Shampoo Pacífico 219,Cuidado Personal,Shampoo,Pacífico,15.02,11.06,2021-12-29
+636,Ollas Qori 612,Hogar,Ollas,Qori,526.25,407.63,2023-11-23
+637,Desodorante Illari 138,Cuidado Personal,Desodorante,Illari,125.24,77.78,2025-02-12
+638,Botines Killa 560,Calzado,Botines,Killa,336.13,226.96,2022-06-24
+639,Jugos InkaHome 700,Bebidas,Jugos,InkaHome,12.56,8.98,2022-12-22
+640,Escritorios Altura 223,Escolar y Oficina,Escritorios,Altura,544.79,429.97,2022-01-20
+641,Crema Dental Andesol 869,Cuidado Personal,Crema Dental,Andesol,151.46,109.89,2022-08-19
+642,Infusiones IntiMax 695,Bebidas,Infusiones,IntiMax,10.26,7.72,2024-08-18
+643,Polos Sumaq 343,Moda,Polos,Sumaq,121.41,82.32,2023-12-11
+644,Microondas CostaSur 274,Electrohogar,Microondas,CostaSur,828.33,582.53,2021-06-16
+645,Polos SolRetail 655,Moda,Polos,SolRetail,323.49,194.42,2021-04-09
+646,Bloqueador Solar Misti 013,Cuidado Personal,Bloqueador Solar,Misti,15.65,9.59,2025-01-15
+647,Ropa Deportiva Ayni 510,Moda,Ropa Deportiva,Ayni,124.09,88.12,2023-08-05
+648,Perfumería Sumaq 063,Cuidado Personal,Perfumería,Sumaq,97.04,70.55,2022-09-18
+649,Impresoras Pacífico 717,Tecnología y Cómputo,Impresoras,Pacífico,2260.34,1393.3,2021-05-03
+650,Refrigeradora Rumi 112,Electrohogar,Refrigeradora,Rumi,1511.34,1163.5,2025-03-22
+651,Shampoo Sumaq 433,Cuidado Personal,Shampoo,Sumaq,72.71,45.6,2022-05-13
+652,Cuadernos Pukara 516,Escolar y Oficina,Cuadernos,Pukara,718.98,574.34,2023-01-19
+653,Zapatos Casuales SolRetail 585,Calzado,Zapatos Casuales,SolRetail,131.42,81.4,2024-03-15
+654,Sillas de Oficina InkaHome 098,Escolar y Oficina,Sillas de Oficina,InkaHome,733.13,485.56,2024-12-11
+655,Sábanas Sumaq 680,Hogar,Sábanas,Sumaq,436.12,273.94,2025-06-07
+656,Ropa de Verano Altura 154,Moda,Ropa de Verano,Altura,310.67,188.6,2024-12-08
+657,Bloqueador Solar Killa 316,Cuidado Personal,Bloqueador Solar,Killa,37.36,22.43,2023-08-19
+658,Agua Illari 103,Bebidas,Agua,Illari,27.15,18.27,2022-10-07
+659,Jabón Sumaq 022,Cuidado Personal,Jabón,Sumaq,47.71,36.72,2025-09-04
+660,Shampoo Misti 502,Cuidado Personal,Shampoo,Misti,20.75,14.21,2022-06-13
+661,Ollas NortePlus 152,Hogar,Ollas,NortePlus,225.62,145.01,2021-05-21
+662,Botines SolRetail 051,Calzado,Botines,SolRetail,256.62,193.91,2021-04-26
+663,Juegos de Mesa Tambo 148,Juguetería,Juegos de Mesa,Tambo,128.58,96.39,2021-03-25
+664,Energizantes NortePlus 294,Bebidas,Energizantes,NortePlus,3.2,2.33,2021-08-21
+665,Tablets Andesol 183,Tecnología y Cómputo,Tablets,Andesol,5200.0,3759.77,2022-09-19
+666,Energizantes InkaHome 419,Bebidas,Energizantes,InkaHome,16.52,12.11,2025-01-27
+667,Gaseosas SolRetail 082,Bebidas,Gaseosas,SolRetail,25.52,18.19,2025-10-02
+668,Bloques Kawsay 386,Juguetería,Bloques,Kawsay,47.52,37.59,2022-10-13
+669,Conservas Killa 135,Abarrotes,Conservas,Killa,2.5,1.69,2022-10-04
+670,Agua Sumaq 212,Bebidas,Agua,Sumaq,29.7,22.47,2021-12-29
+671,Laptops InkaHome 223,Tecnología y Cómputo,Laptops,InkaHome,3759.96,2867.06,2022-12-13
+672,Aceite InkaHome 863,Abarrotes,Aceite,InkaHome,7.6,5.49,2023-03-17
+673,Zapatillas Wayra 787,Calzado,Zapatillas,Wayra,367.28,237.63,2024-01-08
+674,Smartphones Ayni 760,Tecnología y Cómputo,Smartphones,Ayni,2014.16,1466.36,2024-01-18
+675,Ollas InkaHome 405,Hogar,Ollas,InkaHome,130.45,90.32,2022-07-23
+676,Shampoo Misti 424,Cuidado Personal,Shampoo,Misti,68.96,42.98,2021-12-23
+677,Monitores Andesol 685,Tecnología y Cómputo,Monitores,Andesol,5200.0,4085.02,2025-03-12
+678,Monitores Illari 424,Tecnología y Cómputo,Monitores,Illari,2793.44,2158.49,2024-02-08
+679,Lavadora Rumi 276,Electrohogar,Lavadora,Rumi,1318.24,995.17,2024-03-02
+680,Lapiceros InkaHome 412,Escolar y Oficina,Lapiceros,InkaHome,354.23,263.29,2024-03-25
+681,Detergente Pacífico 974,Limpieza,Detergente,Pacífico,66.83,51.4,2023-10-17
+682,Refrigeradora IntiMax 476,Electrohogar,Refrigeradora,IntiMax,2616.33,1751.84,2023-09-28
+683,Desodorante IntiMax 604,Cuidado Personal,Desodorante,IntiMax,128.98,86.76,2021-12-19
+684,Menestras Illari 713,Abarrotes,Menestras,Illari,8.8,6.25,2025-06-05
+685,Crema Dental Pukara 936,Cuidado Personal,Crema Dental,Pukara,122.25,75.19,2025-06-06
+686,Desodorante Illari 055,Cuidado Personal,Desodorante,Illari,53.64,40.26,2022-06-24
+687,Lejía Rumi 049,Limpieza,Lejía,Rumi,26.26,20.5,2022-09-13
+688,Jabón Illari 657,Cuidado Personal,Jabón,Illari,5.93,4.7,2025-04-23
+689,Lejía Qori 096,Limpieza,Lejía,Qori,36.27,26.1,2022-06-03
+690,Lavadora InkaHome 056,Electrohogar,Lavadora,InkaHome,1910.53,1162.46,2022-11-07
+691,Fideos Kawsay 433,Abarrotes,Fideos,Kawsay,19.04,14.27,2025-06-14
+692,Smartphones Illari 387,Tecnología y Cómputo,Smartphones,Illari,1188.02,879.71,2021-05-20
+693,Crema Dental Ayni 926,Cuidado Personal,Crema Dental,Ayni,40.79,30.47,2021-07-12
+694,Conservas Rumi 877,Abarrotes,Conservas,Rumi,10.31,7.07,2023-12-13
+695,Impresoras Wayra 109,Tecnología y Cómputo,Impresoras,Wayra,5200.0,3756.83,2025-07-05
+696,Aceite Nativa 964,Abarrotes,Aceite,Nativa,27.39,19.49,2024-04-02
+697,Energizantes Qori 446,Bebidas,Energizantes,Qori,13.78,10.62,2024-02-18
+698,Fideos Ayni 940,Abarrotes,Fideos,Ayni,27.87,18.26,2025-07-20
+699,Agua Wayra 372,Bebidas,Agua,Wayra,34.89,27.7,2022-06-24
+700,Desinfectante Sumaq 056,Limpieza,Desinfectante,Sumaq,9.33,5.94,2021-06-19
+701,Menestras Pacífico 832,Abarrotes,Menestras,Pacífico,43.23,32.35,2024-11-13
+702,Polos Altura 660,Moda,Polos,Altura,213.96,129.21,2024-10-04
+703,Menestras Illari 756,Abarrotes,Menestras,Illari,36.67,27.9,2025-07-05
+704,Peluches Pukara 896,Juguetería,Peluches,Pukara,257.97,180.66,2021-12-14
+705,Plancha Sumaq 516,Electrohogar,Plancha,Sumaq,1765.81,1341.29,2022-05-11
+706,Perfumería Pukara 480,Cuidado Personal,Perfumería,Pukara,149.87,100.43,2021-04-02
+707,Botines InkaHome 788,Calzado,Botines,InkaHome,88.08,53.61,2021-03-16
+708,Bloqueador Solar SolRetail 203,Cuidado Personal,Bloqueador Solar,SolRetail,94.29,70.81,2022-05-08
+709,Vajilla CostaSur 962,Hogar,Vajilla,CostaSur,467.16,362.4,2024-02-05
+710,Decoración Sumaq 209,Hogar,Decoración,Sumaq,494.95,389.29,2023-12-01
+711,Casacas InkaHome 876,Moda,Casacas,InkaHome,167.77,105.82,2024-01-15
+712,Suavizante Nativa 953,Limpieza,Suavizante,Nativa,72.56,44.69,2025-09-08
+713,Lapiceros Nativa 971,Escolar y Oficina,Lapiceros,Nativa,794.39,534.44,2025-12-11
+714,Energizantes Misti 100,Bebidas,Energizantes,Misti,14.94,11.87,2023-10-13
+715,Shampoo Misti 989,Cuidado Personal,Shampoo,Misti,135.18,107.91,2022-02-07
+716,Organizadores Misti 760,Hogar,Organizadores,Misti,595.07,456.38,2025-11-09
+717,Freidora de Aire Wayra 028,Electrohogar,Freidora de Aire,Wayra,3600.0,2376.21,2021-04-17
+718,Freidora de Aire Killa 220,Electrohogar,Freidora de Aire,Killa,1351.88,813.3,2022-01-15
+719,Arroz Misti 701,Abarrotes,Arroz,Misti,29.55,23.61,2021-11-26
+720,Organizadores SolRetail 692,Hogar,Organizadores,SolRetail,344.17,256.66,2021-01-14
+721,Shampoo Illari 984,Cuidado Personal,Shampoo,Illari,116.02,87.86,2022-04-28
+722,Polos Rumi 427,Moda,Polos,Rumi,240.18,144.59,2023-08-09
+723,Smartphones Tambo 820,Tecnología y Cómputo,Smartphones,Tambo,4083.26,2601.04,2021-04-07
+724,Ropa de Verano Kawsay 624,Moda,Ropa de Verano,Kawsay,291.13,214.45,2022-09-20
+725,Licuadora Pukara 431,Electrohogar,Licuadora,Pukara,919.26,640.38,2024-04-08
+726,Organizadores Wayra 774,Hogar,Organizadores,Wayra,336.62,248.63,2025-06-01
+727,Desodorante Rumi 664,Cuidado Personal,Desodorante,Rumi,113.26,84.96,2023-12-21
+728,Sandalias Andesol 323,Calzado,Sandalias,Andesol,327.43,199.54,2025-11-21
+729,Zapatos Casuales Altura 167,Calzado,Zapatos Casuales,Altura,410.49,255.15,2021-07-28
+730,Laptops IntiMax 779,Tecnología y Cómputo,Laptops,IntiMax,1224.7,872.75,2023-03-28
+731,Jugos Qori 214,Bebidas,Jugos,Qori,17.98,11.36,2021-10-27
+732,Shampoo Misti 153,Cuidado Personal,Shampoo,Misti,123.28,77.04,2022-04-25
+733,Parrillas Illari 447,Hogar,Parrillas,Illari,652.31,474.19,2025-03-15
+734,Vestidos SolRetail 967,Moda,Vestidos,SolRetail,83.72,63.49,2021-02-07
+735,Tablets Illari 252,Tecnología y Cómputo,Tablets,Illari,1217.85,837.15,2023-12-05
+736,Smartphones Ayni 189,Tecnología y Cómputo,Smartphones,Ayni,2637.57,1779.48,2023-04-17
+737,Decoración Illari 903,Hogar,Decoración,Illari,440.88,311.69,2022-04-07
+738,Sábanas Rumi 321,Hogar,Sábanas,Rumi,34.48,24.28,2021-05-10
+739,Monitores Sumaq 266,Tecnología y Cómputo,Monitores,Sumaq,2617.49,2056.38,2023-05-19
+740,Conservas Pacífico 869,Abarrotes,Conservas,Pacífico,29.8,19.79,2025-02-11
+741,Shampoo IntiMax 227,Cuidado Personal,Shampoo,IntiMax,51.88,34.61,2022-10-31
+742,Polos IntiMax 138,Moda,Polos,IntiMax,299.26,209.41,2025-04-21
+743,Calzado Deportivo CostaSur 312,Calzado,Calzado Deportivo,CostaSur,329.34,213.37,2022-09-25
+744,Cuadernos NortePlus 947,Escolar y Oficina,Cuadernos,NortePlus,1171.27,741.11,2023-12-15
+745,Desodorante Tambo 150,Cuidado Personal,Desodorante,Tambo,153.86,107.29,2024-02-11
+746,Plancha Andesol 295,Electrohogar,Plancha,Andesol,1621.85,1134.77,2023-01-17
+747,Fideos InkaHome 292,Abarrotes,Fideos,InkaHome,6.51,4.17,2021-11-09
+748,Lapiceros Tambo 074,Escolar y Oficina,Lapiceros,Tambo,1006.09,796.4,2025-08-25
+749,Sillas de Oficina SolRetail 256,Escolar y Oficina,Sillas de Oficina,SolRetail,1037.13,800.65,2025-02-15
+750,Jugos Kawsay 579,Bebidas,Jugos,Kawsay,35.26,24.4,2023-02-18
+751,Energizantes Rumi 837,Bebidas,Energizantes,Rumi,37.57,25.14,2023-07-12
+752,Aceite Wayra 176,Abarrotes,Aceite,Wayra,6.16,3.71,2022-02-11
+753,Perfumería Tambo 345,Cuidado Personal,Perfumería,Tambo,119.36,93.24,2024-06-16
+754,Muñecos Illari 260,Juguetería,Muñecos,Illari,146.62,98.09,2024-05-14
+755,Conservas Kawsay 645,Abarrotes,Conservas,Kawsay,11.23,7.96,2025-01-07
+756,Cuadernos SolRetail 011,Escolar y Oficina,Cuadernos,SolRetail,567.71,415.47,2021-07-22
+757,Calzado Deportivo InkaHome 459,Calzado,Calzado Deportivo,InkaHome,225.23,156.28,2021-08-26
+758,Suavizante SolRetail 460,Limpieza,Suavizante,SolRetail,51.79,33.18,2025-12-14
+759,Sillas de Oficina NortePlus 965,Escolar y Oficina,Sillas de Oficina,NortePlus,1074.49,682.58,2022-08-08
+760,Parrillas Andesol 845,Hogar,Parrillas,Andesol,580.79,406.37,2023-07-13
+761,Toallas Sumaq 007,Hogar,Toallas,Sumaq,301.18,182.97,2023-09-14
+762,Parrillas NortePlus 485,Hogar,Parrillas,NortePlus,705.52,450.48,2024-03-21
+763,Jeans Altura 148,Moda,Jeans,Altura,292.33,221.94,2023-09-29
+764,Lapiceros SolRetail 101,Escolar y Oficina,Lapiceros,SolRetail,1000.43,701.65,2021-07-21
+765,Smartphones Illari 331,Tecnología y Cómputo,Smartphones,Illari,1642.52,1250.52,2021-10-25
+766,Aceite Altura 560,Abarrotes,Aceite,Altura,10.4,7.07,2025-03-27
+767,Toallas Qori 408,Hogar,Toallas,Qori,821.38,615.02,2025-07-05
+768,Harinas Rumi 378,Abarrotes,Harinas,Rumi,19.3,13.72,2021-07-26
+769,Sábanas Sumaq 195,Hogar,Sábanas,Sumaq,161.95,108.42,2023-03-14
+770,Jabón SolRetail 961,Cuidado Personal,Jabón,SolRetail,107.77,67.86,2024-02-16
+771,Televisor IntiMax 010,Electrohogar,Televisor,IntiMax,644.37,491.22,2022-09-13
+772,Audífonos CostaSur 195,Tecnología y Cómputo,Audífonos,CostaSur,1045.51,662.16,2025-06-17
+773,Detergente Andesol 444,Limpieza,Detergente,Andesol,50.87,31.66,2021-07-29
+774,Desinfectante Nativa 615,Limpieza,Desinfectante,Nativa,26.17,17.86,2025-09-17
+775,Ropa Deportiva IntiMax 157,Moda,Ropa Deportiva,IntiMax,362.56,217.66,2025-09-24
+776,Casacas Tambo 539,Moda,Casacas,Tambo,293.04,220.64,2021-07-24
+777,Jabón Altura 210,Cuidado Personal,Jabón,Altura,149.55,104.53,2025-03-06
+778,Toallas Wayra 254,Hogar,Toallas,Wayra,335.52,234.35,2024-07-24
+779,Licuadora Rumi 909,Electrohogar,Licuadora,Rumi,2382.43,1798.59,2024-01-15
+780,Vestidos Tambo 218,Moda,Vestidos,Tambo,258.95,182.65,2023-04-05
+781,Tablets Tambo 890,Tecnología y Cómputo,Tablets,Tambo,5200.0,3839.79,2021-09-18
+782,Sábanas Pacífico 499,Hogar,Sábanas,Pacífico,536.31,393.99,2024-08-24
+783,Botines Tambo 531,Calzado,Botines,Tambo,113.35,75.26,2024-05-16
+784,Desinfectante NortePlus 423,Limpieza,Desinfectante,NortePlus,53.33,32.42,2023-06-01
+785,Zapatos Casuales NortePlus 733,Calzado,Zapatos Casuales,NortePlus,181.36,123.07,2025-10-28
+786,Aceite Tambo 697,Abarrotes,Aceite,Tambo,8.67,6.9,2021-01-12
+787,Agua Sumaq 951,Bebidas,Agua,Sumaq,14.08,10.43,2024-06-27
+788,Conservas Wayra 685,Abarrotes,Conservas,Wayra,7.9,5.28,2024-08-07
+789,Menestras Killa 424,Abarrotes,Menestras,Killa,13.56,8.68,2025-10-08
+790,Fideos Altura 744,Abarrotes,Fideos,Altura,15.12,11.88,2022-07-23
+791,Microondas Qori 805,Electrohogar,Microondas,Qori,1032.58,807.66,2023-07-28
+792,Casacas Killa 949,Moda,Casacas,Killa,296.06,195.64,2024-05-20
+793,Tablets Illari 806,Tecnología y Cómputo,Tablets,Illari,1216.29,934.97,2021-08-08
+794,Camisas Illari 558,Moda,Camisas,Illari,76.13,51.79,2025-01-09
+795,Toallas Tambo 562,Hogar,Toallas,Tambo,835.32,612.84,2025-07-31
+796,Sábanas Tambo 528,Hogar,Sábanas,Tambo,780.2,521.02,2025-07-25
+797,Casacas Pacífico 456,Moda,Casacas,Pacífico,245.65,183.36,2022-01-31
+798,Mouse Killa 186,Tecnología y Cómputo,Mouse,Killa,2406.75,1920.04,2021-01-17
+799,Decoración Kawsay 340,Hogar,Decoración,Kawsay,221.2,174.58,2024-09-10
+800,Mouse NortePlus 561,Tecnología y Cómputo,Mouse,NortePlus,829.47,640.58,2025-03-17
+801,Mouse SolRetail 357,Tecnología y Cómputo,Mouse,SolRetail,2211.09,1688.27,2023-11-17
+802,Desodorante Sumaq 506,Cuidado Personal,Desodorante,Sumaq,98.08,58.92,2022-11-28
+803,Camisas Rumi 942,Moda,Camisas,Rumi,172.62,114.53,2022-01-28
+804,Sábanas Wayra 669,Hogar,Sábanas,Wayra,359.07,228.95,2025-05-05
+805,Decoración InkaHome 814,Hogar,Decoración,InkaHome,168.62,110.43,2023-03-27
+806,Licuadora Killa 331,Electrohogar,Licuadora,Killa,623.28,458.21,2025-06-28
+807,Toallas Rumi 791,Hogar,Toallas,Rumi,110.74,81.48,2024-06-11
+808,Lapiceros NortePlus 430,Escolar y Oficina,Lapiceros,NortePlus,753.74,558.19,2024-01-11
+809,Laptops IntiMax 747,Tecnología y Cómputo,Laptops,IntiMax,4011.3,2931.32,2024-07-15
+810,Mouse InkaHome 776,Tecnología y Cómputo,Mouse,InkaHome,909.02,593.78,2024-01-14
+811,Polos Altura 388,Moda,Polos,Altura,35.91,26.65,2021-06-05
+812,Ropa Deportiva Altura 691,Moda,Ropa Deportiva,Altura,354.8,222.67,2025-05-23
+813,Lejía Andesol 804,Limpieza,Lejía,Andesol,65.23,48.58,2023-01-10
+814,Shampoo Pukara 418,Cuidado Personal,Shampoo,Pukara,77.42,55.33,2025-06-11
+815,Camisas Andesol 613,Moda,Camisas,Andesol,332.01,221.06,2025-09-29
+816,Harinas Pukara 406,Abarrotes,Harinas,Pukara,15.03,11.36,2021-06-28
+817,Detergente Wayra 956,Limpieza,Detergente,Wayra,51.46,33.75,2022-06-05
+818,Archivadores Ayni 314,Escolar y Oficina,Archivadores,Ayni,183.08,143.95,2021-07-19
+819,Parrillas InkaHome 395,Hogar,Parrillas,InkaHome,828.92,558.36,2022-07-12
+820,Perfumería Pukara 461,Cuidado Personal,Perfumería,Pukara,156.1,106.07,2023-07-09
+821,Menestras Illari 807,Abarrotes,Menestras,Illari,31.27,19.52,2025-12-29
+822,Lavavajilla Kawsay 567,Limpieza,Lavavajilla,Kawsay,56.96,42.35,2023-12-17
+823,Desinfectante Nativa 817,Limpieza,Desinfectante,Nativa,47.19,32.64,2022-10-25
+824,Juguetes Educativos Killa 246,Juguetería,Juguetes Educativos,Killa,377.18,234.49,2025-03-10
+825,Sillas de Oficina Killa 641,Escolar y Oficina,Sillas de Oficina,Killa,301.96,236.79,2023-09-25
+826,Decoración InkaHome 220,Hogar,Decoración,InkaHome,697.79,464.45,2023-06-17
+827,Sábanas Pukara 284,Hogar,Sábanas,Pukara,517.83,408.0,2024-12-06
+828,Agua Altura 852,Bebidas,Agua,Altura,24.16,15.34,2021-01-09
+829,Bloqueador Solar Wayra 580,Cuidado Personal,Bloqueador Solar,Wayra,45.19,30.48,2022-04-22
+830,Vestidos Ayni 257,Moda,Vestidos,Ayni,41.77,32.19,2022-12-03
+831,Fideos CostaSur 978,Abarrotes,Fideos,CostaSur,16.05,12.03,2021-01-21
+832,Infusiones IntiMax 176,Bebidas,Infusiones,IntiMax,17.35,11.16,2021-01-22
+833,Decoración Andesol 887,Hogar,Decoración,Andesol,480.77,380.24,2024-06-07
+834,Organizadores SolRetail 849,Hogar,Organizadores,SolRetail,50.47,33.19,2024-11-30
+835,Zapatillas Illari 996,Calzado,Zapatillas,Illari,361.94,243.14,2021-10-24
+836,Detergente Killa 179,Limpieza,Detergente,Killa,23.16,17.27,2023-04-02
+837,Muñecos Killa 785,Juguetería,Muñecos,Killa,280.71,183.17,2022-06-03
+838,Organizadores Sumaq 575,Hogar,Organizadores,Sumaq,482.78,381.71,2024-11-02
+839,Perfumería Misti 660,Cuidado Personal,Perfumería,Misti,118.39,86.8,2025-08-24
+840,Arroz Wayra 554,Abarrotes,Arroz,Wayra,38.69,24.07,2025-05-09
+841,Arroz Pacífico 836,Abarrotes,Arroz,Pacífico,34.31,23.39,2025-01-28
+842,Impresoras Pacífico 708,Tecnología y Cómputo,Impresoras,Pacífico,1583.8,1075.61,2021-01-22
+843,Zapatos Casuales Wayra 878,Calzado,Zapatos Casuales,Wayra,184.34,130.31,2022-06-23
+844,Jabón SolRetail 531,Cuidado Personal,Jabón,SolRetail,80.69,59.15,2024-03-21
+845,Laptops Sumaq 624,Tecnología y Cómputo,Laptops,Sumaq,1367.01,996.12,2023-06-23
+846,Licuadora Ayni 487,Electrohogar,Licuadora,Ayni,1883.76,1138.55,2021-11-11
+847,Desodorante Misti 177,Cuidado Personal,Desodorante,Misti,139.05,110.25,2023-06-30
+848,Zapatos Casuales CostaSur 483,Calzado,Zapatos Casuales,CostaSur,300.38,207.71,2024-11-05
+849,Harinas NortePlus 640,Abarrotes,Harinas,NortePlus,37.78,27.63,2023-09-05
+850,Jabón Illari 320,Cuidado Personal,Jabón,Illari,33.86,22.5,2023-05-04
+851,Refrigeradora Qori 191,Electrohogar,Refrigeradora,Qori,2174.15,1654.83,2025-11-10
+852,Peluches InkaHome 722,Juguetería,Peluches,InkaHome,364.81,233.41,2021-12-08
+853,Lapiceros InkaHome 903,Escolar y Oficina,Lapiceros,InkaHome,364.59,240.34,2023-06-21
+854,Freidora de Aire InkaHome 575,Electrohogar,Freidora de Aire,InkaHome,1015.67,723.25,2024-08-13
+855,Lejía InkaHome 058,Limpieza,Lejía,InkaHome,68.48,48.75,2024-11-11
+856,Aceite IntiMax 077,Abarrotes,Aceite,IntiMax,13.87,8.58,2024-01-10
+857,Energizantes CostaSur 785,Bebidas,Energizantes,CostaSur,35.81,24.78,2022-09-28
+858,Fideos Altura 457,Abarrotes,Fideos,Altura,29.34,22.69,2023-03-14
+859,Lavadora Tambo 910,Electrohogar,Lavadora,Tambo,393.49,293.0,2022-06-22
+860,Harinas Illari 169,Abarrotes,Harinas,Illari,11.48,7.39,2025-12-10
+861,Vestidos Killa 929,Moda,Vestidos,Killa,338.62,266.87,2024-07-06
+862,Fideos Pukara 383,Abarrotes,Fideos,Pukara,32.13,21.9,2021-05-30
+863,Ropa Deportiva Pacífico 271,Moda,Ropa Deportiva,Pacífico,317.97,210.18,2023-04-09
+864,Audífonos Tambo 745,Tecnología y Cómputo,Audífonos,Tambo,2208.72,1533.59,2024-11-29
+865,Shampoo Altura 143,Cuidado Personal,Shampoo,Altura,122.54,85.52,2021-08-01
+866,Mouse Qori 511,Tecnología y Cómputo,Mouse,Qori,5200.0,3672.32,2024-04-03
+867,Licuadora SolRetail 593,Electrohogar,Licuadora,SolRetail,1041.9,744.11,2023-11-06
+868,Muñecos Pacífico 787,Juguetería,Muñecos,Pacífico,323.61,255.41,2024-01-20
+869,Jugos Rumi 366,Bebidas,Jugos,Rumi,17.52,12.85,2023-08-25
+870,Lavadora InkaHome 747,Electrohogar,Lavadora,InkaHome,701.08,477.45,2025-11-12
+871,Televisor SolRetail 147,Electrohogar,Televisor,SolRetail,1283.49,782.12,2021-04-09
+872,Sábanas Wayra 323,Hogar,Sábanas,Wayra,170.48,123.53,2024-10-08
+873,Útiles Escolares Rumi 124,Escolar y Oficina,Útiles Escolares,Rumi,1008.14,704.89,2023-12-09
+874,Detergente Kawsay 528,Limpieza,Detergente,Kawsay,46.72,35.33,2025-11-08
+875,Fideos SolRetail 771,Abarrotes,Fideos,SolRetail,14.81,10.81,2024-04-19
+876,Toallas IntiMax 327,Hogar,Toallas,IntiMax,197.46,142.12,2022-12-29
+877,Impresoras Ayni 440,Tecnología y Cómputo,Impresoras,Ayni,2973.17,2108.72,2025-09-14
+878,Vajilla InkaHome 430,Hogar,Vajilla,InkaHome,491.81,326.36,2021-11-18
+879,Audífonos InkaHome 964,Tecnología y Cómputo,Audífonos,InkaHome,1881.86,1400.78,2022-07-05
+880,Arroz Sumaq 282,Abarrotes,Arroz,Sumaq,23.81,15.0,2023-09-04
+881,Plancha Wayra 431,Electrohogar,Plancha,Wayra,684.52,535.79,2022-01-02
+882,Detergente Kawsay 433,Limpieza,Detergente,Kawsay,62.29,38.17,2022-09-25
+883,Smartphones NortePlus 591,Tecnología y Cómputo,Smartphones,NortePlus,3182.78,2091.86,2022-04-06
+884,Mochilas Pukara 838,Escolar y Oficina,Mochilas,Pukara,337.97,219.01,2023-04-20
+885,Bloqueador Solar Pukara 149,Cuidado Personal,Bloqueador Solar,Pukara,85.74,63.72,2022-12-05
+886,Lavavajilla Wayra 574,Limpieza,Lavavajilla,Wayra,67.98,53.11,2021-06-05
+887,Menestras Wayra 415,Abarrotes,Menestras,Wayra,11.79,8.36,2023-05-10
+888,Detergente Rumi 866,Limpieza,Detergente,Rumi,10.43,8.16,2022-07-22
+889,Zapatos Casuales Nativa 271,Calzado,Zapatos Casuales,Nativa,311.25,213.69,2024-07-21
+890,Sandalias Killa 252,Calzado,Sandalias,Killa,157.98,109.5,2024-04-07
+891,Fideos SolRetail 042,Abarrotes,Fideos,SolRetail,12.42,8.14,2022-07-08
+892,Lavadora IntiMax 651,Electrohogar,Lavadora,IntiMax,1942.53,1520.99,2025-11-22
+893,Ropa de Verano Tambo 162,Moda,Ropa de Verano,Tambo,287.15,202.12,2021-04-16
+894,Camisas Wayra 695,Moda,Camisas,Wayra,220.33,157.18,2023-11-12
+895,Peluches CostaSur 835,Juguetería,Peluches,CostaSur,283.66,199.71,2021-03-19
+896,Sábanas Qori 902,Hogar,Sábanas,Qori,290.11,197.14,2025-02-11
+897,Organizadores IntiMax 710,Hogar,Organizadores,IntiMax,196.23,149.92,2022-11-17
+898,Vajilla Misti 528,Hogar,Vajilla,Misti,231.84,169.32,2021-10-18
+899,Organizadores Tambo 659,Hogar,Organizadores,Tambo,112.25,85.07,2021-02-28
+900,Sillas de Oficina Andesol 460,Escolar y Oficina,Sillas de Oficina,Andesol,200.98,141.57,2023-08-06
+901,Perfumería Tambo 551,Cuidado Personal,Perfumería,Tambo,57.11,45.34,2021-10-23
+902,Detergente IntiMax 830,Limpieza,Detergente,IntiMax,29.58,22.31,2022-05-07
+903,Arroz Andesol 007,Abarrotes,Arroz,Andesol,16.32,11.05,2021-12-09
+904,Detergente Pukara 146,Limpieza,Detergente,Pukara,8.83,5.56,2023-04-24
+905,Ropa Deportiva NortePlus 555,Moda,Ropa Deportiva,NortePlus,293.98,213.27,2022-10-25
+906,Gaseosas Andesol 722,Bebidas,Gaseosas,Andesol,5.03,3.94,2025-10-03
+907,Botines Kawsay 348,Calzado,Botines,Kawsay,190.71,151.71,2024-04-30
+908,Shampoo Nativa 883,Cuidado Personal,Shampoo,Nativa,30.98,21.58,2022-09-29
+909,Cuadernos SolRetail 022,Escolar y Oficina,Cuadernos,SolRetail,536.2,350.75,2024-05-27
+910,Ropa de Verano Kawsay 654,Moda,Ropa de Verano,Kawsay,91.69,73.14,2022-07-28
+911,Teclados Illari 908,Tecnología y Cómputo,Teclados,Illari,1496.29,1118.59,2025-04-10
+912,Microondas Killa 982,Electrohogar,Microondas,Killa,765.47,543.25,2022-03-14
+913,Camisas Pacífico 338,Moda,Camisas,Pacífico,226.36,152.5,2022-05-06
+914,Arroz Misti 430,Abarrotes,Arroz,Misti,5.73,4.33,2022-09-16
+915,Jeans Kawsay 590,Moda,Jeans,Kawsay,337.02,213.0,2022-11-17
+916,Muñecos Kawsay 619,Juguetería,Muñecos,Kawsay,326.12,209.82,2022-06-24
+917,Refrigeradora Ayni 227,Electrohogar,Refrigeradora,Ayni,1711.11,1141.27,2025-01-16
+918,Vajilla Killa 553,Hogar,Vajilla,Killa,650.73,479.64,2024-09-24
+919,Jeans Ayni 548,Moda,Jeans,Ayni,91.05,57.2,2024-12-31
+920,Detergente InkaHome 344,Limpieza,Detergente,InkaHome,44.42,33.53,2025-12-22
+921,Impresoras IntiMax 744,Tecnología y Cómputo,Impresoras,IntiMax,2855.09,2020.28,2025-02-06
+922,Zapatillas Rumi 519,Calzado,Zapatillas,Rumi,291.77,206.17,2021-03-03
+923,Suavizante Pacífico 955,Limpieza,Suavizante,Pacífico,10.56,7.57,2024-07-24
+924,Audífonos IntiMax 939,Tecnología y Cómputo,Audífonos,IntiMax,3044.96,2270.16,2023-10-29
+925,Polos Andesol 298,Moda,Polos,Andesol,239.88,187.53,2022-08-18
+926,Jugos Andesol 170,Bebidas,Jugos,Andesol,18.05,14.32,2023-08-02
+927,Zapatos Casuales Ayni 361,Calzado,Zapatos Casuales,Ayni,114.64,82.56,2022-07-10
+928,Zapatos Casuales Kawsay 387,Calzado,Zapatos Casuales,Kawsay,149.82,92.34,2022-12-30
+929,Gaseosas Rumi 303,Bebidas,Gaseosas,Rumi,20.21,14.56,2024-06-23
+930,Licuadora Altura 752,Electrohogar,Licuadora,Altura,1491.37,905.72,2024-05-06
+931,Polos Andesol 680,Moda,Polos,Andesol,154.76,116.48,2022-06-02
+932,Refrigeradora Qori 578,Electrohogar,Refrigeradora,Qori,1601.21,1068.33,2021-04-29
+933,Botines Altura 605,Calzado,Botines,Altura,143.12,105.03,2025-08-22
+934,Desodorante IntiMax 183,Cuidado Personal,Desodorante,IntiMax,142.09,85.83,2023-09-30
+935,Botines Killa 761,Calzado,Botines,Killa,248.1,149.91,2023-06-17
+936,Shampoo Pukara 253,Cuidado Personal,Shampoo,Pukara,72.04,56.61,2021-07-24
+937,Crema Dental Qori 982,Cuidado Personal,Crema Dental,Qori,13.51,9.97,2021-05-22
+938,Teclados Kawsay 575,Tecnología y Cómputo,Teclados,Kawsay,484.63,364.95,2025-11-25
+939,Shampoo NortePlus 370,Cuidado Personal,Shampoo,NortePlus,14.66,8.89,2021-05-13
+940,Organizadores SolRetail 730,Hogar,Organizadores,SolRetail,424.84,323.89,2025-05-12
+941,Arroz Ayni 809,Abarrotes,Arroz,Ayni,39.63,27.97,2023-12-10
+942,Gaseosas NortePlus 086,Bebidas,Gaseosas,NortePlus,34.04,21.8,2025-12-11
+943,Ropa de Verano Illari 277,Moda,Ropa de Verano,Illari,352.6,245.5,2024-01-26
+944,Bloques Killa 326,Juguetería,Bloques,Killa,296.38,231.9,2025-08-24
+945,Licuadora Pukara 445,Electrohogar,Licuadora,Pukara,1653.96,1129.69,2024-12-13
+946,Energizantes Illari 274,Bebidas,Energizantes,Illari,36.54,24.66,2022-11-02
+947,Decoración Qori 368,Hogar,Decoración,Qori,622.53,388.72,2024-04-05
+948,Escritorios Illari 043,Escolar y Oficina,Escritorios,Illari,751.58,472.19,2025-09-17
+949,Mochilas Altura 104,Escolar y Oficina,Mochilas,Altura,916.69,642.19,2021-07-09
+950,Smartphones IntiMax 172,Tecnología y Cómputo,Smartphones,IntiMax,2067.53,1604.2,2022-10-09
+951,Sillas de Oficina Altura 614,Escolar y Oficina,Sillas de Oficina,Altura,1096.59,677.91,2024-06-16
+952,Ollas Killa 225,Hogar,Ollas,Killa,743.01,592.62,2025-03-26
+953,Arroz NortePlus 152,Abarrotes,Arroz,NortePlus,4.71,2.93,2023-12-19
+954,Archivadores Sumaq 165,Escolar y Oficina,Archivadores,Sumaq,988.72,705.21,2023-03-15
+955,Infusiones InkaHome 767,Bebidas,Infusiones,InkaHome,34.36,23.08,2022-08-05
+956,Arroz Misti 526,Abarrotes,Arroz,Misti,37.48,23.11,2023-11-05
+957,Bloqueador Solar Sumaq 058,Cuidado Personal,Bloqueador Solar,Sumaq,82.44,59.29,2024-07-19
+958,Zapatos Casuales Nativa 188,Calzado,Zapatos Casuales,Nativa,476.31,366.86,2021-11-05
+959,Bloqueador Solar Illari 589,Cuidado Personal,Bloqueador Solar,Illari,5.27,3.54,2023-10-01
+960,Detergente Rumi 383,Limpieza,Detergente,Rumi,24.37,17.93,2021-03-21
+961,Desodorante Andesol 299,Cuidado Personal,Desodorante,Andesol,25.27,16.67,2024-01-25
+962,Plancha CostaSur 077,Electrohogar,Plancha,CostaSur,1216.58,753.61,2024-08-10
+963,Jeans Pukara 091,Moda,Jeans,Pukara,297.18,209.74,2024-08-09
+964,Audífonos Wayra 317,Tecnología y Cómputo,Audífonos,Wayra,2352.18,1572.06,2022-01-25
+965,Infusiones Pukara 570,Bebidas,Infusiones,Pukara,36.98,22.91,2024-03-11
+966,Shampoo InkaHome 601,Cuidado Personal,Shampoo,InkaHome,37.92,29.19,2023-02-21
+967,Televisor Pacífico 696,Electrohogar,Televisor,Pacífico,1173.04,864.37,2021-08-08
+968,Ropa de Verano Pukara 764,Moda,Ropa de Verano,Pukara,308.01,237.97,2022-12-21
+969,Cuadernos CostaSur 479,Escolar y Oficina,Cuadernos,CostaSur,406.86,285.02,2022-09-07
+970,Organizadores InkaHome 783,Hogar,Organizadores,InkaHome,717.15,453.33,2024-03-04
+971,Bloqueador Solar NortePlus 768,Cuidado Personal,Bloqueador Solar,NortePlus,138.27,83.8,2023-09-20
+972,Peluches Nativa 917,Juguetería,Peluches,Nativa,234.27,141.48,2023-06-07
+973,Energizantes Altura 760,Bebidas,Energizantes,Altura,20.41,14.6,2023-05-27
+974,Sandalias Tambo 342,Calzado,Sandalias,Tambo,108.31,65.95,2021-01-13
+975,Perfumería IntiMax 365,Cuidado Personal,Perfumería,IntiMax,16.18,9.78,2021-03-14
+976,Mochilas Wayra 966,Escolar y Oficina,Mochilas,Wayra,533.06,408.45,2024-07-12
+977,Gaseosas SolRetail 026,Bebidas,Gaseosas,SolRetail,15.07,11.31,2023-06-01
+978,Perfumería Qori 837,Cuidado Personal,Perfumería,Qori,127.61,85.17,2025-02-05
+979,Conservas Wayra 547,Abarrotes,Conservas,Wayra,39.51,26.43,2024-01-27
+980,Mochilas InkaHome 415,Escolar y Oficina,Mochilas,InkaHome,349.56,242.49,2024-08-03
+981,Energizantes NortePlus 477,Bebidas,Energizantes,NortePlus,23.48,17.82,2021-02-15
+982,Vajilla Qori 333,Hogar,Vajilla,Qori,283.43,202.93,2022-08-20
+983,Infusiones Andesol 743,Bebidas,Infusiones,Andesol,28.4,21.21,2024-03-01
+984,Sillas de Oficina Illari 663,Escolar y Oficina,Sillas de Oficina,Illari,378.65,291.72,2023-12-29
+985,Monitores Andesol 044,Tecnología y Cómputo,Monitores,Andesol,5200.0,4057.64,2025-09-29
+986,Lavadora NortePlus 618,Electrohogar,Lavadora,NortePlus,2810.91,1870.97,2024-10-21
+987,Harinas Rumi 118,Abarrotes,Harinas,Rumi,23.71,18.56,2021-07-25
+988,Aceite NortePlus 331,Abarrotes,Aceite,NortePlus,25.81,18.13,2021-03-24
+989,Laptops Rumi 782,Tecnología y Cómputo,Laptops,Rumi,845.92,533.51,2025-02-13
+990,Microondas CostaSur 054,Electrohogar,Microondas,CostaSur,3600.0,2837.49,2022-03-12
+991,Camisas Ayni 049,Moda,Camisas,Ayni,253.79,154.54,2022-06-01
+992,Teclados SolRetail 153,Tecnología y Cómputo,Teclados,SolRetail,794.16,554.12,2022-09-08
+993,Harinas Andesol 216,Abarrotes,Harinas,Andesol,37.29,22.93,2021-01-12
+994,Harinas Illari 870,Abarrotes,Harinas,Illari,12.86,8.52,2024-06-05
+995,Desinfectante Kawsay 784,Limpieza,Desinfectante,Kawsay,52.85,36.54,2024-08-11
+996,Organizadores Kawsay 431,Hogar,Organizadores,Kawsay,57.58,38.88,2024-06-04
+997,Gaseosas Tambo 736,Bebidas,Gaseosas,Tambo,19.72,12.41,2024-05-26
+998,Lavadora Nativa 751,Electrohogar,Lavadora,Nativa,1695.61,1096.17,2024-11-28
+999,Ropa Deportiva Tambo 272,Moda,Ropa Deportiva,Tambo,374.19,285.36,2022-02-03
+1000,Desodorante Andesol 555,Cuidado Personal,Desodorante,Andesol,159.24,119.82,2021-02-28

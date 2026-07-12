@@ -8,15 +8,16 @@ Original file is located at
 """
 
 !pip install faker
+#@title Dataset2
 
-#@title Datos
 # generar_datos.py
 # Generación reproducible de datos sintéticos para AndinaRetail S.A.C.
-# Python 3.11
+# Prompt aplicado según archivo compartido: :contentReference[oaicite:0]{index=0}
 
 from pathlib import Path
 import random
-from typing import Dict, List
+import calendar
+from typing import Dict, Tuple
 
 import numpy as np
 import pandas as pd
@@ -33,17 +34,20 @@ np.random.seed(SEED)
 random.seed(SEED)
 Faker.seed(SEED)
 
-fake = Faker("es_ES")
+try:
+    fake = Faker("es_PE")
+except AttributeError:
+    fake = Faker("es_ES")
 
 OUTPUT_DIR = Path("datos")
 
 N_TIENDAS = 12
-N_PRODUCTOS = 800
+N_PRODUCTOS = 1000
 N_CLIENTES = 15_000
-N_VENTAS = 250_000
+N_TICKETS = 100_000
 
-FECHA_INICIO_VENTAS = pd.Timestamp("2023-01-01")
-FECHA_FIN_VENTAS = pd.Timestamp("2025-12-31")
+FECHA_INICIO = pd.Timestamp("2023-01-01")
+FECHA_FIN = pd.Timestamp("2025-12-31")
 FECHA_CORTE_CHURN = pd.Timestamp("2025-12-31")
 
 CIUDADES = ["Lima", "Arequipa", "Trujillo", "Cusco", "Piura"]
@@ -86,34 +90,63 @@ CATEGORIAS = [
     "Cuidado Personal",
     "Electrohogar",
     "Hogar",
+    "Tecnología y Cómputo",
+    "Moda",
+    "Calzado",
+    "Escolar y Oficina",
+    "Juguetería",
 ]
 
 SUBCATEGORIAS = {
     "Abarrotes": ["Arroz", "Aceite", "Fideos", "Conservas", "Menestras", "Harinas"],
     "Bebidas": ["Gaseosas", "Jugos", "Agua", "Energizantes", "Infusiones"],
     "Limpieza": ["Detergente", "Lavavajilla", "Desinfectante", "Suavizante", "Lejía"],
-    "Cuidado Personal": ["Shampoo", "Jabón", "Crema Dental", "Desodorante", "Papel Higiénico"],
-    "Electrohogar": ["Licuadora", "Microondas", "Refrigeradora", "Televisor", "Lavadora", "Plancha"],
-    "Hogar": ["Sábanas", "Ollas", "Toallas", "Organizadores", "Vajilla", "Decoración"],
+    "Cuidado Personal": ["Shampoo", "Jabón", "Crema Dental", "Desodorante", "Bloqueador Solar", "Perfumería"],
+    "Electrohogar": ["Licuadora", "Microondas", "Refrigeradora", "Televisor", "Lavadora", "Plancha", "Freidora de Aire"],
+    "Hogar": ["Sábanas", "Ollas", "Toallas", "Organizadores", "Vajilla", "Decoración", "Parrillas"],
+    "Tecnología y Cómputo": ["Laptops", "Tablets", "Monitores", "Teclados", "Mouse", "Audífonos", "Impresoras", "Accesorios", "Smartphones"],
+    "Moda": ["Polos", "Camisas", "Casacas", "Jeans", "Vestidos", "Ropa Deportiva", "Ropa de Verano"],
+    "Calzado": ["Zapatillas", "Zapatos Casuales", "Sandalias", "Botines", "Calzado Deportivo"],
+    "Escolar y Oficina": ["Cuadernos", "Mochilas", "Lapiceros", "Archivadores", "Escritorios", "Sillas de Oficina", "Útiles Escolares"],
+    "Juguetería": ["Juegos de Mesa", "Muñecos", "Peluches", "Bloques", "Carros de Juguete", "Juguetes Educativos"],
 }
 
 RANGOS_PRECIO = {
-    "Abarrotes": (2.5, 45.0),
-    "Bebidas": (2.0, 38.0),
-    "Limpieza": (4.0, 75.0),
-    "Cuidado Personal": (5.0, 120.0),
-    "Electrohogar": (120.0, 3600.0),
-    "Hogar": (15.0, 650.0),
+    "Abarrotes": (2.50, 45.00),
+    "Bebidas": (2.00, 38.00),
+    "Limpieza": (4.00, 75.00),
+    "Cuidado Personal": (5.00, 160.00),
+    "Electrohogar": (120.00, 3600.00),
+    "Hogar": (15.00, 850.00),
+    "Tecnología y Cómputo": (25.00, 5200.00),
+    "Moda": (25.00, 380.00),
+    "Calzado": (45.00, 520.00),
+    "Escolar y Oficina": (1.50, 1200.00),
+    "Juguetería": (15.00, 450.00),
 }
 
 MARCAS_FICTICIAS = [
     "Andesol", "Kawsay", "IntiMax", "Sumaq", "NortePlus",
     "Qori", "Altura", "Pacífico", "Wayra", "Rumi",
-    "Pukara", "Misti", "CostaSur", "InkaHome", "SolRetail"
+    "Pukara", "Misti", "CostaSur", "InkaHome", "SolRetail",
+    "Killa", "Ayni", "Tambo", "Nativa", "Illari"
 ]
 
 METODOS_PAGO_TIENDA = ["Efectivo", "Tarjeta Débito", "Tarjeta Crédito", "Yape", "Plin"]
 METODOS_PAGO_DIGITAL = ["Tarjeta Débito", "Tarjeta Crédito", "Yape", "Plin", "Transferencia"]
+
+TIPO_CAMPANA = {
+    "Normal": "Regular",
+    "Campaña Escolar": "Escolar",
+    "Día de la Madre": "Familiar",
+    "Día del Padre": "Familiar",
+    "Fiestas Patrias": "Festiva",
+    "Cyber Wow Abril": "Digital",
+    "Cyber Wow Julio": "Digital",
+    "Cyber Wow Noviembre": "Digital",
+    "Black Friday": "Digital",
+    "Navidad": "Festiva",
+}
 
 
 # ============================================================
@@ -154,6 +187,111 @@ def margen_porcentual(df: pd.DataFrame) -> float:
         return 0.0
 
     return df["margen_total"].sum() / monto
+
+
+def normalizar_pesos(diccionario: Dict[str, float]) -> Tuple[list, np.ndarray]:
+    claves = list(diccionario.keys())
+    valores = np.array(list(diccionario.values()), dtype=float)
+    valores = valores / valores.sum()
+    return claves, valores
+
+
+# ============================================================
+# FECHAS DE CAMPAÑA
+# ============================================================
+
+def n_esimo_domingo(anio: int, mes: int, n: int) -> pd.Timestamp:
+    contador = 0
+
+    for dia in range(1, calendar.monthrange(anio, mes)[1] + 1):
+        fecha = pd.Timestamp(anio, mes, dia)
+
+        if fecha.weekday() == 6:
+            contador += 1
+
+            if contador == n:
+                return fecha
+
+    raise ValueError("No se encontró el domingo solicitado.")
+
+
+def obtener_campana(fecha: pd.Timestamp) -> str:
+    fecha = pd.Timestamp(fecha)
+    anio = fecha.year
+
+    dia_madre = n_esimo_domingo(anio, 5, 2)
+    dia_padre = n_esimo_domingo(anio, 6, 3)
+
+    if pd.Timestamp(anio, 4, 20) <= fecha <= pd.Timestamp(anio, 4, 23):
+        return "Cyber Wow Abril"
+
+    if pd.Timestamp(anio, 7, 13) <= fecha <= pd.Timestamp(anio, 7, 16):
+        return "Cyber Wow Julio"
+
+    if pd.Timestamp(anio, 11, 2) <= fecha <= pd.Timestamp(anio, 11, 5):
+        return "Cyber Wow Noviembre"
+
+    if fecha.month in [2, 3]:
+        return "Campaña Escolar"
+
+    if dia_madre - pd.Timedelta(days=10) <= fecha <= dia_madre + pd.Timedelta(days=2):
+        return "Día de la Madre"
+
+    if dia_padre - pd.Timedelta(days=10) <= fecha <= dia_padre + pd.Timedelta(days=2):
+        return "Día del Padre"
+
+    if fecha.month == 7:
+        return "Fiestas Patrias"
+
+    if fecha.month == 11 and fecha.day >= 24:
+        return "Black Friday"
+
+    if fecha.month == 12:
+        return "Navidad"
+
+    return "Normal"
+
+
+def peso_fecha(fecha: pd.Timestamp) -> float:
+    campana = obtener_campana(fecha)
+
+    peso = 1.0
+    peso *= 1.0 + ((fecha.year - 2023) * 0.12)
+
+    if fecha.month in [1, 2]:
+        peso *= 0.92
+
+    if fecha.month == 5:
+        peso *= 1.10
+
+    if fecha.month == 6:
+        peso *= 1.06
+
+    if fecha.month == 7:
+        peso *= 1.35
+
+    if fecha.month == 11:
+        peso *= 1.15
+
+    if fecha.month == 12:
+        peso *= 1.90
+
+    multiplicador_campana = {
+        "Normal": 1.00,
+        "Campaña Escolar": 1.35,
+        "Día de la Madre": 1.80,
+        "Día del Padre": 1.70,
+        "Fiestas Patrias": 1.35,
+        "Cyber Wow Abril": 3.80,
+        "Cyber Wow Julio": 4.00,
+        "Cyber Wow Noviembre": 4.10,
+        "Black Friday": 3.50,
+        "Navidad": 2.10,
+    }
+
+    peso *= multiplicador_campana[campana]
+
+    return float(peso)
 
 
 # ============================================================
@@ -197,25 +335,38 @@ def generar_tiendas() -> pd.DataFrame:
 def generar_productos() -> pd.DataFrame:
     registros = []
 
-    pesos_categoria = np.array([0.22, 0.18, 0.17, 0.16, 0.12, 0.15])
-    pesos_categoria = pesos_categoria / pesos_categoria.sum()
+    pesos_categoria = {
+        "Abarrotes": 0.13,
+        "Bebidas": 0.10,
+        "Limpieza": 0.09,
+        "Cuidado Personal": 0.10,
+        "Electrohogar": 0.09,
+        "Hogar": 0.10,
+        "Tecnología y Cómputo": 0.11,
+        "Moda": 0.10,
+        "Calzado": 0.07,
+        "Escolar y Oficina": 0.07,
+        "Juguetería": 0.04,
+    }
 
-    categorias = np.random.choice(
-        CATEGORIAS,
+    categorias, probabilidades = normalizar_pesos(pesos_categoria)
+
+    categorias_generadas = np.random.choice(
+        categorias,
         size=N_PRODUCTOS,
-        p=pesos_categoria
+        p=probabilidades
     )
 
-    for i, categoria in enumerate(categorias, start=1):
+    for i, categoria in enumerate(categorias_generadas, start=1):
         subcategoria = random.choice(SUBCATEGORIAS[categoria])
         marca = random.choice(MARCAS_FICTICIAS)
 
         precio_min, precio_max = RANGOS_PRECIO[categoria]
 
-        if categoria == "Electrohogar":
+        if categoria in ["Electrohogar", "Tecnología y Cómputo"]:
             precio_lista = np.random.lognormal(
                 mean=np.log((precio_min + precio_max) / 3),
-                sigma=0.75
+                sigma=0.70
             )
             precio_lista = np.clip(precio_lista, precio_min, precio_max)
         else:
@@ -223,7 +374,6 @@ def generar_productos() -> pd.DataFrame:
 
         precio_lista = round(float(precio_lista), 2)
         costo_unitario = round(precio_lista * np.random.uniform(0.60, 0.80), 2)
-
         fecha_alta = fecha_aleatoria("2021-01-01", "2025-12-31", 1).iloc[0].date()
 
         nombre_producto = f"{subcategoria} {marca} {fake.bothify(text='###')}"
@@ -241,7 +391,24 @@ def generar_productos() -> pd.DataFrame:
             }
         )
 
-    return pd.DataFrame(registros)
+    productos_df = pd.DataFrame(registros)
+
+    faltantes = [cat for cat in CATEGORIAS if cat not in productos_df["categoria"].unique()]
+
+    for categoria in faltantes:
+        idx = productos_df.sample(1, random_state=SEED).index[0]
+        subcategoria = random.choice(SUBCATEGORIAS[categoria])
+        precio_min, precio_max = RANGOS_PRECIO[categoria]
+        precio_lista = round(float(np.random.uniform(precio_min, precio_max)), 2)
+        costo_unitario = round(precio_lista * np.random.uniform(0.60, 0.80), 2)
+
+        productos_df.loc[idx, "categoria"] = categoria
+        productos_df.loc[idx, "subcategoria"] = subcategoria
+        productos_df.loc[idx, "precio_lista"] = precio_lista
+        productos_df.loc[idx, "costo_unitario"] = costo_unitario
+        productos_df.loc[idx, "nombre"] = f"{subcategoria} {random.choice(MARCAS_FICTICIAS)} {fake.bothify(text='###')}"
+
+    return productos_df
 
 
 # ============================================================
@@ -314,71 +481,29 @@ def generar_clientes_base() -> pd.DataFrame:
 
 
 # ============================================================
-# GENERACIÓN DE FECHAS DE VENTA
+# GENERACIÓN DE FECHAS Y CANALES
 # ============================================================
 
-def generar_fechas_ventas(n: int) -> pd.Series:
-    periodos = pd.period_range("2023-01", "2025-12", freq="M")
-
-    pesos = []
-
-    for periodo in periodos:
-        peso = 1.0
-
-        # Tendencia general creciente.
-        peso *= 1.0 + ((periodo.year - 2023) * 0.12)
-
-        # Estacionalidad fuerte.
-        if periodo.month == 7:
-            peso *= 1.55
-        elif periodo.month == 12:
-            peso *= 2.05
-        elif periodo.month in [5, 11]:
-            peso *= 1.15
-        elif periodo.month in [1, 2]:
-            peso *= 0.88
-
-        pesos.append(peso)
-
-    pesos = np.array(pesos)
+def generar_fechas_tickets(n: int) -> pd.Series:
+    fechas = pd.date_range(FECHA_INICIO, FECHA_FIN, freq="D")
+    pesos = np.array([peso_fecha(fecha) for fecha in fechas], dtype=float)
     pesos = pesos / pesos.sum()
 
-    indices_periodo = np.random.choice(
-        np.arange(len(periodos)),
+    fechas_elegidas = np.random.choice(
+        fechas.to_numpy(),
         size=n,
         p=pesos
     )
 
-    periodos_elegidos = periodos[indices_periodo]
-
-    anios = periodos_elegidos.year.to_numpy()
-    meses = periodos_elegidos.month.to_numpy()
-
-    dias = np.array([
-        random.randint(1, periodo.days_in_month)
-        for periodo in periodos_elegidos
-    ])
-
-    fechas = pd.to_datetime(
-        {
-            "year": anios,
-            "month": meses,
-            "day": dias,
-        }
-    )
-
-    return pd.Series(fechas)
+    return pd.Series(pd.to_datetime(fechas_elegidas))
 
 
-# ============================================================
-# SELECCIÓN DE CANALES
-# ============================================================
-
-def generar_canales(fechas: pd.Series, clientes_venta: np.ndarray, clientes_df: pd.DataFrame) -> np.ndarray:
+def generar_canales(fechas: pd.Series, clientes_ticket: np.ndarray, clientes_df: pd.DataFrame) -> np.ndarray:
     clientes_lookup = clientes_df.set_index("id_cliente")
 
-    preferencias = clientes_lookup.loc[clientes_venta, "canal_preferido"].to_numpy()
+    preferencias = clientes_lookup.loc[clientes_ticket, "canal_preferido"].to_numpy()
     anios = fechas.dt.year.to_numpy()
+    campanas = fechas.apply(obtener_campana).to_numpy()
 
     progreso = (anios - 2023) / 2
 
@@ -386,12 +511,28 @@ def generar_canales(fechas: pd.Series, clientes_venta: np.ndarray, clientes_df: 
     p_web = 0.20 + (0.10 * progreso)
     p_app = 0.10 + (0.11 * progreso)
 
-    # Ajuste suave por preferencia del cliente.
     p_tienda = p_tienda + np.where(preferencias == "Tienda", 0.08, 0.00)
     p_web = p_web + np.where(preferencias == "Web", 0.06, 0.00)
     p_app = p_app + np.where(preferencias == "App", 0.06, 0.00)
 
+    es_cyber = np.isin(campanas, ["Cyber Wow Abril", "Cyber Wow Julio", "Cyber Wow Noviembre"])
+    es_black = campanas == "Black Friday"
+    es_escolar = campanas == "Campaña Escolar"
+
+    p_tienda = p_tienda - np.where(es_cyber | es_black, 0.28, 0.00)
+    p_web = p_web + np.where(es_cyber | es_black, 0.16, 0.00)
+    p_app = p_app + np.where(es_cyber | es_black, 0.16, 0.00)
+
+    p_tienda = p_tienda + np.where(es_escolar, 0.08, 0.00)
+    p_web = p_web - np.where(es_escolar, 0.03, 0.00)
+    p_app = p_app - np.where(es_escolar, 0.02, 0.00)
+
+    p_tienda = np.clip(p_tienda, 0.10, None)
+    p_web = np.clip(p_web, 0.05, None)
+    p_app = np.clip(p_app, 0.05, None)
+
     total = p_tienda + p_web + p_app
+
     p_tienda = p_tienda / total
     p_web = p_web / total
     p_app = p_app / total
@@ -412,68 +553,14 @@ def generar_canales(fechas: pd.Series, clientes_venta: np.ndarray, clientes_df: 
 
 
 # ============================================================
-# SELECCIÓN DE PRODUCTOS
+# GENERACIÓN DE TICKETS BASE
 # ============================================================
 
-def elegir_categorias_venta(meses: np.ndarray, canales: np.ndarray) -> np.ndarray:
-    categorias_resultado = np.empty(len(meses), dtype=object)
-
-    base = {
-        "Abarrotes": 0.23,
-        "Bebidas": 0.18,
-        "Limpieza": 0.17,
-        "Cuidado Personal": 0.15,
-        "Electrohogar": 0.12,
-        "Hogar": 0.15,
-    }
-
-    for mes in np.unique(meses):
-        for canal in ["Tienda", "Web", "App"]:
-            mascara = (meses == mes) & (canales == canal)
-
-            if mascara.sum() == 0:
-                continue
-
-            pesos = base.copy()
-
-            if mes == 7:
-                pesos["Abarrotes"] *= 1.25
-                pesos["Bebidas"] *= 1.30
-                pesos["Hogar"] *= 1.10
-
-            if mes == 12:
-                pesos["Electrohogar"] *= 1.65
-                pesos["Hogar"] *= 1.45
-                pesos["Cuidado Personal"] *= 1.15
-
-            if canal in ["Web", "App"]:
-                pesos["Electrohogar"] *= 1.35
-                pesos["Hogar"] *= 1.20
-
-            categorias = list(pesos.keys())
-            valores = np.array(list(pesos.values()))
-            probabilidades = valores / valores.sum()
-
-            categorias_resultado[mascara] = np.random.choice(
-                categorias,
-                size=mascara.sum(),
-                p=probabilidades
-            )
-
-    return categorias_resultado
-
-
-# ============================================================
-# GENERACIÓN DE VENTAS
-# ============================================================
-
-def generar_ventas(
-    tiendas_df: pd.DataFrame,
-    productos_df: pd.DataFrame,
-    clientes_df: pd.DataFrame
-) -> pd.DataFrame:
-
-    fechas = generar_fechas_ventas(N_VENTAS)
+def generar_tickets_base(tiendas_df: pd.DataFrame, clientes_df: pd.DataFrame) -> pd.DataFrame:
+    fechas = generar_fechas_tickets(N_TICKETS)
+    campanas = fechas.apply(obtener_campana).to_numpy()
+    tipos_campana = np.array([TIPO_CAMPANA[c] for c in campanas])
+    es_campana = np.where(campanas == "Normal", 0, 1)
 
     clientes_ids = clientes_df["id_cliente"].to_numpy()
     actividad = clientes_df["actividad_tipo"].to_numpy()
@@ -482,31 +569,31 @@ def generar_ventas(
     pesos_temprano = pesos_base / pesos_base.sum()
 
     pesos_tarde = pesos_base.copy()
-    pesos_tarde[actividad == "Alta"] *= 1.25
-    pesos_tarde[actividad == "Media"] *= 0.45
-    pesos_tarde[actividad == "Baja"] *= 0.07
+    pesos_tarde[actividad == "Alta"] *= 1.30
+    pesos_tarde[actividad == "Media"] *= 0.42
+    pesos_tarde[actividad == "Baja"] *= 0.06
     pesos_tarde = pesos_tarde / pesos_tarde.sum()
 
     mascara_tarde = fechas >= pd.Timestamp("2025-10-02")
 
-    clientes_venta = np.empty(N_VENTAS, dtype=int)
+    clientes_ticket = np.empty(N_TICKETS, dtype=int)
 
-    clientes_venta[~mascara_tarde.to_numpy()] = np.random.choice(
+    clientes_ticket[~mascara_tarde.to_numpy()] = np.random.choice(
         clientes_ids,
         size=(~mascara_tarde).sum(),
         p=pesos_temprano
     )
 
-    clientes_venta[mascara_tarde.to_numpy()] = np.random.choice(
+    clientes_ticket[mascara_tarde.to_numpy()] = np.random.choice(
         clientes_ids,
         size=mascara_tarde.sum(),
         p=pesos_tarde
     )
 
-    canales = generar_canales(fechas, clientes_venta, clientes_df)
+    canales = generar_canales(fechas, clientes_ticket, clientes_df)
 
     clientes_lookup = clientes_df.set_index("id_cliente")
-    ciudades_cliente = clientes_lookup.loc[clientes_venta, "ciudad"].to_numpy()
+    ciudades_cliente = clientes_lookup.loc[clientes_ticket, "ciudad"].to_numpy()
 
     tiendas_fisicas = tiendas_df[tiendas_df["tipo"] == "Física"]
     tiendas_virtuales = tiendas_df[tiendas_df["tipo"] == "Virtual"]
@@ -516,116 +603,45 @@ def generar_ventas(
         for ciudad in CIUDADES
     }
 
-    id_tienda_virtual = tiendas_virtuales["id_tienda"].iloc[0]
+    id_tienda_virtual = int(tiendas_virtuales["id_tienda"].iloc[0])
 
-    tiendas_venta = np.empty(N_VENTAS, dtype=int)
+    tiendas_ticket = np.empty(N_TICKETS, dtype=int)
 
     mascara_digital = canales != "Tienda"
-    tiendas_venta[mascara_digital] = id_tienda_virtual
+    tiendas_ticket[mascara_digital] = id_tienda_virtual
 
     for ciudad in CIUDADES:
         mascara = (canales == "Tienda") & (ciudades_cliente == ciudad)
-        tiendas_venta[mascara] = np.random.choice(
+
+        tiendas_ticket[mascara] = np.random.choice(
             tiendas_por_ciudad[ciudad],
             size=mascara.sum()
         )
 
-    meses = fechas.dt.month.to_numpy()
-    categorias_venta = elegir_categorias_venta(meses, canales)
-
-    productos_por_categoria = {
-        categoria: productos_df[productos_df["categoria"] == categoria]["id_producto"].to_numpy()
-        for categoria in CATEGORIAS
-    }
-
-    productos_venta = np.empty(N_VENTAS, dtype=int)
-
-    for categoria in CATEGORIAS:
-        mascara = categorias_venta == categoria
-        productos_venta[mascara] = np.random.choice(
-            productos_por_categoria[categoria],
-            size=mascara.sum()
-        )
-
-    productos_lookup = productos_df.set_index("id_producto")
-
-    precio_lista = productos_lookup.loc[productos_venta, "precio_lista"].to_numpy()
-    costo_unitario = productos_lookup.loc[productos_venta, "costo_unitario"].to_numpy()
-    categoria_producto = productos_lookup.loc[productos_venta, "categoria"].to_numpy()
-
-    precio_unitario = precio_lista * np.random.normal(loc=1.0, scale=0.025, size=N_VENTAS)
-    precio_unitario = np.maximum(precio_unitario, costo_unitario * 1.05)
-    precio_unitario = np.round(precio_unitario, 2)
-
-    descuento = np.random.beta(a=2.2, b=14, size=N_VENTAS) * 0.35
-
-    descuento += np.where(canales == "Web", 0.015, 0.00)
-    descuento += np.where(canales == "App", 0.025, 0.00)
-    descuento += np.where(categoria_producto == "Electrohogar", 0.025, 0.00)
-    descuento += np.where(categoria_producto == "Hogar", 0.015, 0.00)
-    descuento += np.where(meses == 12, 0.020, 0.00)
-    descuento += np.where(meses == 7, 0.012, 0.00)
-
-    tiendas_lookup = tiendas_df.set_index("id_tienda")
-    ciudades_tienda = tiendas_lookup.loc[tiendas_venta, "ciudad"].to_numpy()
-
-    mascara_trujillo_post_q2_2025 = (
-        (ciudades_tienda == "Trujillo") &
-        (fechas >= pd.Timestamp("2025-04-01")) &
-        (canales == "Tienda")
+    cantidad_lineas = np.random.choice(
+        [1, 2, 3, 4, 5, 6],
+        size=N_TICKETS,
+        p=[0.25, 0.30, 0.22, 0.13, 0.07, 0.03]
     )
 
-    descuento += np.where(
-        mascara_trujillo_post_q2_2025.to_numpy(),
-        np.random.uniform(0.08, 0.14, size=N_VENTAS),
-        0.00
+    campanas_mayor_ticket = np.isin(
+        campanas,
+        [
+            "Cyber Wow Abril",
+            "Cyber Wow Julio",
+            "Cyber Wow Noviembre",
+            "Día de la Madre",
+            "Día del Padre",
+            "Black Friday",
+            "Navidad",
+        ]
     )
 
-    descuento = np.clip(descuento, 0.00, 0.35)
-    descuento = np.round(descuento, 4)
+    incremento = np.random.binomial(1, 0.22, size=N_TICKETS)
+    cantidad_lineas = np.where(campanas_mayor_ticket, cantidad_lineas + incremento, cantidad_lineas)
+    cantidad_lineas = np.clip(cantidad_lineas, 1, 6)
 
-    cantidad_base = np.random.choice(
-        np.arange(1, 9),
-        size=N_VENTAS,
-        p=[0.43, 0.27, 0.12, 0.07, 0.04, 0.03, 0.025, 0.015]
-    )
-
-    factor_categoria = pd.Series(categoria_producto).map(
-        {
-            "Abarrotes": 1.15,
-            "Bebidas": 1.12,
-            "Limpieza": 1.00,
-            "Cuidado Personal": 0.95,
-            "Electrohogar": 0.55,
-            "Hogar": 0.85,
-        }
-    ).to_numpy()
-
-    factor_mes = np.ones(N_VENTAS)
-    factor_mes[meses == 7] *= 1.18
-    factor_mes[meses == 12] *= 1.35
-
-    factor_canal = np.where(canales == "App", 1.08, np.where(canales == "Web", 1.05, 1.00))
-    factor_descuento = 1 + (descuento * 1.45)
-
-    ruido = np.random.normal(loc=0.0, scale=0.45, size=N_VENTAS)
-
-    cantidad = np.round(
-        cantidad_base * factor_categoria * factor_mes * factor_canal * factor_descuento + ruido
-    ).astype(int)
-
-    cantidad = np.clip(cantidad, 1, 8)
-
-    # Outliers controlados de cantidad.
-    n_outliers = int(N_VENTAS * 0.004)
-    indices_outliers = np.random.choice(np.arange(N_VENTAS), size=n_outliers, replace=False)
-    cantidad[indices_outliers] = np.random.randint(9, 19, size=n_outliers)
-
-    monto_total = np.round(cantidad * precio_unitario * (1 - descuento), 2)
-    margen_unitario = np.round(precio_unitario * (1 - descuento) - costo_unitario, 2)
-    margen_total = np.round(monto_total - (cantidad * costo_unitario), 2)
-
-    metodo_pago = np.empty(N_VENTAS, dtype=object)
+    metodo_pago = np.empty(N_TICKETS, dtype=object)
 
     for canal in ["Tienda", "Web", "App"]:
         mascara = canales == canal
@@ -643,48 +659,523 @@ def generar_ventas(
                 p=[0.26, 0.36, 0.18, 0.12, 0.08]
             )
 
-    ventas_df = pd.DataFrame(
+    tickets_base = pd.DataFrame(
         {
-            "id_venta": np.arange(1, N_VENTAS + 1),
-            "fecha": fechas.dt.date,
-            "id_cliente": clientes_venta,
-            "id_tienda": tiendas_venta,
-            "id_producto": productos_venta,
-            "cantidad": cantidad,
-            "precio_unitario": precio_unitario,
-            "descuento_pct": descuento,
-            "costo_unitario": np.round(costo_unitario, 2),
-            "monto_total": monto_total,
-            "margen_unitario": margen_unitario,
-            "margen_total": margen_total,
+            "id_ticket": [f"T{str(i).zfill(6)}" for i in range(1, N_TICKETS + 1)],
+            "fecha": fechas,
+            "id_cliente": clientes_ticket,
+            "id_tienda": tiendas_ticket,
             "canal": canales,
             "metodo_pago": metodo_pago,
+            "campaña": campanas,
+            "es_campaña": es_campana,
+            "tipo_campaña": tipos_campana,
+            "cantidad_lineas_esperada": cantidad_lineas,
         }
     )
 
+    return tickets_base
+
+
+# ============================================================
+# SELECCIÓN DE PRODUCTOS, DESCUENTOS Y CANTIDADES
+# ============================================================
+
+def pesos_categoria_por_campana(campana: str) -> Dict[str, float]:
+    if campana == "Campaña Escolar":
+        return {
+            "Abarrotes": 0.05,
+            "Bebidas": 0.04,
+            "Limpieza": 0.04,
+            "Cuidado Personal": 0.05,
+            "Electrohogar": 0.04,
+            "Hogar": 0.06,
+            "Tecnología y Cómputo": 0.18,
+            "Moda": 0.12,
+            "Calzado": 0.14,
+            "Escolar y Oficina": 0.26,
+            "Juguetería": 0.02,
+        }
+
+    if campana == "Día de la Madre":
+        return {
+            "Abarrotes": 0.04,
+            "Bebidas": 0.04,
+            "Limpieza": 0.04,
+            "Cuidado Personal": 0.22,
+            "Electrohogar": 0.14,
+            "Hogar": 0.16,
+            "Tecnología y Cómputo": 0.10,
+            "Moda": 0.17,
+            "Calzado": 0.08,
+            "Escolar y Oficina": 0.01,
+            "Juguetería": 0.00,
+        }
+
+    if campana == "Día del Padre":
+        return {
+            "Abarrotes": 0.04,
+            "Bebidas": 0.05,
+            "Limpieza": 0.03,
+            "Cuidado Personal": 0.05,
+            "Electrohogar": 0.18,
+            "Hogar": 0.14,
+            "Tecnología y Cómputo": 0.25,
+            "Moda": 0.12,
+            "Calzado": 0.12,
+            "Escolar y Oficina": 0.01,
+            "Juguetería": 0.01,
+        }
+
+    if campana == "Fiestas Patrias":
+        return {
+            "Abarrotes": 0.25,
+            "Bebidas": 0.22,
+            "Limpieza": 0.06,
+            "Cuidado Personal": 0.05,
+            "Electrohogar": 0.05,
+            "Hogar": 0.18,
+            "Tecnología y Cómputo": 0.04,
+            "Moda": 0.08,
+            "Calzado": 0.06,
+            "Escolar y Oficina": 0.00,
+            "Juguetería": 0.01,
+        }
+
+    if campana in ["Cyber Wow Abril", "Cyber Wow Julio", "Cyber Wow Noviembre"]:
+        return {
+            "Abarrotes": 0.02,
+            "Bebidas": 0.03,
+            "Limpieza": 0.02,
+            "Cuidado Personal": 0.04,
+            "Electrohogar": 0.25,
+            "Hogar": 0.12,
+            "Tecnología y Cómputo": 0.32,
+            "Moda": 0.10,
+            "Calzado": 0.08,
+            "Escolar y Oficina": 0.01,
+            "Juguetería": 0.01,
+        }
+
+    if campana == "Black Friday":
+        return {
+            "Abarrotes": 0.03,
+            "Bebidas": 0.03,
+            "Limpieza": 0.03,
+            "Cuidado Personal": 0.05,
+            "Electrohogar": 0.23,
+            "Hogar": 0.12,
+            "Tecnología y Cómputo": 0.27,
+            "Moda": 0.12,
+            "Calzado": 0.10,
+            "Escolar y Oficina": 0.01,
+            "Juguetería": 0.01,
+        }
+
+    if campana == "Navidad":
+        return {
+            "Abarrotes": 0.07,
+            "Bebidas": 0.08,
+            "Limpieza": 0.03,
+            "Cuidado Personal": 0.05,
+            "Electrohogar": 0.14,
+            "Hogar": 0.12,
+            "Tecnología y Cómputo": 0.17,
+            "Moda": 0.12,
+            "Calzado": 0.07,
+            "Escolar y Oficina": 0.01,
+            "Juguetería": 0.14,
+        }
+
+    return {
+        "Abarrotes": 0.16,
+        "Bebidas": 0.12,
+        "Limpieza": 0.11,
+        "Cuidado Personal": 0.11,
+        "Electrohogar": 0.09,
+        "Hogar": 0.11,
+        "Tecnología y Cómputo": 0.09,
+        "Moda": 0.08,
+        "Calzado": 0.06,
+        "Escolar y Oficina": 0.04,
+        "Juguetería": 0.03,
+    }
+
+
+def subcategorias_preferidas_por_campana(campana: str) -> Dict[str, list]:
+    if campana == "Campaña Escolar":
+        return {
+            "Escolar y Oficina": ["Cuadernos", "Mochilas", "Lapiceros", "Útiles Escolares"],
+            "Tecnología y Cómputo": ["Laptops", "Tablets"],
+            "Calzado": ["Zapatillas", "Calzado Deportivo"],
+            "Moda": ["Polos", "Ropa Deportiva"],
+        }
+
+    if campana == "Día de la Madre":
+        return {
+            "Cuidado Personal": ["Perfumería", "Bloqueador Solar"],
+            "Moda": ["Vestidos", "Ropa de Verano"],
+            "Calzado": ["Zapatos Casuales", "Sandalias"],
+            "Hogar": ["Decoración", "Sábanas", "Vajilla"],
+            "Electrohogar": ["Freidora de Aire", "Licuadora"],
+            "Tecnología y Cómputo": ["Smartphones", "Audífonos"],
+        }
+
+    if campana == "Día del Padre":
+        return {
+            "Tecnología y Cómputo": ["Smartphones", "Audífonos", "Teclados", "Mouse"],
+            "Moda": ["Camisas", "Jeans"],
+            "Calzado": ["Zapatillas", "Zapatos Casuales"],
+            "Electrohogar": ["Televisor", "Freidora de Aire"],
+            "Hogar": ["Parrillas", "Ollas"],
+        }
+
+    if campana == "Fiestas Patrias":
+        return {
+            "Abarrotes": ["Arroz", "Aceite", "Fideos", "Conservas"],
+            "Bebidas": ["Gaseosas", "Jugos", "Agua"],
+            "Hogar": ["Ollas", "Vajilla", "Parrillas"],
+            "Moda": ["Polos", "Casacas"],
+            "Calzado": ["Zapatillas", "Zapatos Casuales"],
+        }
+
+    if campana in ["Cyber Wow Abril", "Cyber Wow Julio", "Cyber Wow Noviembre", "Black Friday"]:
+        return {
+            "Tecnología y Cómputo": ["Laptops", "Smartphones", "Tablets", "Monitores", "Audífonos"],
+            "Electrohogar": ["Televisor", "Lavadora", "Refrigeradora", "Freidora de Aire"],
+            "Hogar": ["Organizadores", "Decoración"],
+            "Moda": ["Casacas", "Jeans", "Ropa Deportiva"],
+            "Calzado": ["Zapatillas", "Calzado Deportivo"],
+        }
+
+    if campana == "Navidad":
+        return {
+            "Juguetería": ["Juegos de Mesa", "Muñecos", "Peluches", "Bloques", "Juguetes Educativos"],
+            "Tecnología y Cómputo": ["Smartphones", "Tablets", "Audífonos", "Laptops"],
+            "Electrohogar": ["Televisor", "Freidora de Aire", "Microondas"],
+            "Moda": ["Vestidos", "Camisas", "Polos"],
+            "Calzado": ["Zapatillas", "Sandalias"],
+            "Hogar": ["Decoración", "Vajilla"],
+            "Bebidas": ["Gaseosas", "Jugos"],
+            "Abarrotes": ["Conservas", "Harinas", "Aceite"],
+        }
+
+    return {}
+
+
+def elegir_categoria(campana: str) -> str:
+    pesos = pesos_categoria_por_campana(campana)
+    categorias, probabilidades = normalizar_pesos(pesos)
+    return str(np.random.choice(categorias, p=probabilidades))
+
+
+def elegir_producto(
+    campana: str,
+    categoria: str,
+    productos_por_categoria: Dict[str, np.ndarray],
+    productos_lookup: pd.DataFrame,
+    productos_usados: set
+) -> int:
+    posibles = productos_por_categoria[categoria]
+    preferidas = subcategorias_preferidas_por_campana(campana).get(categoria, [])
+
+    if preferidas and np.random.random() < 0.70:
+        candidatos = productos_lookup[
+            (productos_lookup["categoria"] == categoria)
+            & (productos_lookup["subcategoria"].isin(preferidas))
+        ]["id_producto"].to_numpy()
+
+        if len(candidatos) > 0:
+            posibles = candidatos
+
+    producto_elegido = int(np.random.choice(posibles))
+
+    intentos = 0
+
+    while producto_elegido in productos_usados and intentos < 15:
+        producto_elegido = int(np.random.choice(posibles))
+        intentos += 1
+
+    return producto_elegido
+
+
+def calcular_descuento(
+    canal: str,
+    categoria: str,
+    campana: str,
+    fecha: pd.Timestamp,
+    ciudad_tienda: str
+) -> float:
+    descuento = np.random.beta(a=2.2, b=14) * 0.35
+
+    if canal == "Web":
+        descuento += 0.015
+    elif canal == "App":
+        descuento += 0.025
+
+    if categoria in ["Electrohogar", "Tecnología y Cómputo"]:
+        descuento += 0.020
+    elif categoria in ["Moda", "Calzado", "Hogar"]:
+        descuento += 0.014
+
+    if campana == "Campaña Escolar":
+        descuento += 0.020
+    elif campana in ["Día de la Madre", "Día del Padre", "Fiestas Patrias"]:
+        descuento += 0.025
+    elif campana in ["Cyber Wow Abril", "Cyber Wow Julio", "Cyber Wow Noviembre"]:
+        descuento += 0.085
+
+        if canal in ["Web", "App"]:
+            descuento += 0.035
+    elif campana == "Black Friday":
+        descuento += 0.095
+
+        if canal in ["Web", "App"]:
+            descuento += 0.030
+    elif campana == "Navidad":
+        descuento += 0.040
+
+    if ciudad_tienda == "Trujillo" and fecha >= pd.Timestamp("2025-04-01") and canal == "Tienda":
+        descuento += np.random.uniform(0.08, 0.14)
+
+    descuento = np.clip(descuento, 0.00, 0.35)
+
+    return round(float(descuento), 4)
+
+
+def calcular_cantidad(categoria: str, campana: str, canal: str, descuento: float) -> int:
+    cantidad_base = np.random.choice(
+        np.arange(1, 9),
+        p=[0.43, 0.27, 0.12, 0.07, 0.04, 0.03, 0.025, 0.015]
+    )
+
+    factor_categoria = {
+        "Abarrotes": 1.18,
+        "Bebidas": 1.15,
+        "Limpieza": 1.00,
+        "Cuidado Personal": 0.95,
+        "Electrohogar": 0.52,
+        "Hogar": 0.85,
+        "Tecnología y Cómputo": 0.46,
+        "Moda": 0.90,
+        "Calzado": 0.78,
+        "Escolar y Oficina": 1.25,
+        "Juguetería": 0.95,
+    }[categoria]
+
+    factor_campana = {
+        "Normal": 1.00,
+        "Campaña Escolar": 1.18,
+        "Día de la Madre": 1.12,
+        "Día del Padre": 1.10,
+        "Fiestas Patrias": 1.22,
+        "Cyber Wow Abril": 1.15,
+        "Cyber Wow Julio": 1.16,
+        "Cyber Wow Noviembre": 1.17,
+        "Black Friday": 1.15,
+        "Navidad": 1.28,
+    }[campana]
+
+    factor_canal = 1.0
+
+    if canal == "Web":
+        factor_canal = 1.05
+    elif canal == "App":
+        factor_canal = 1.08
+
+    factor_descuento = 1 + (descuento * 1.55)
+    ruido = np.random.normal(loc=0.0, scale=0.45)
+
+    cantidad = round(
+        cantidad_base
+        * factor_categoria
+        * factor_campana
+        * factor_canal
+        * factor_descuento
+        + ruido
+    )
+
+    cantidad = int(np.clip(cantidad, 1, 8))
+
+    if np.random.random() < 0.004:
+        cantidad = int(np.random.randint(9, 19))
+
+    return cantidad
+
+
+# ============================================================
+# GENERACIÓN DE VENTAS
+# ============================================================
+
+def generar_ventas(
+    tickets_base_df: pd.DataFrame,
+    tiendas_df: pd.DataFrame,
+    productos_df: pd.DataFrame
+) -> pd.DataFrame:
+    productos_por_categoria = {
+        categoria: productos_df[productos_df["categoria"] == categoria]["id_producto"].to_numpy()
+        for categoria in CATEGORIAS
+    }
+
+    productos_lookup = productos_df.set_index("id_producto")
+    productos_lookup_plano = productos_df.copy()
+    tiendas_lookup = tiendas_df.set_index("id_tienda")
+
+    registros = []
+    id_venta = 1
+
+    for ticket in tickets_base_df.itertuples(index=False):
+        fecha = pd.Timestamp(ticket.fecha)
+        canal = ticket.canal
+        campana = ticket.campaña
+        tipo_campana = ticket.tipo_campaña
+        ciudad_tienda = tiendas_lookup.loc[ticket.id_tienda, "ciudad"]
+
+        productos_usados = set()
+
+        for _ in range(int(ticket.cantidad_lineas_esperada)):
+            categoria = elegir_categoria(campana)
+
+            producto_elegido = elegir_producto(
+                campana=campana,
+                categoria=categoria,
+                productos_por_categoria=productos_por_categoria,
+                productos_lookup=productos_lookup_plano,
+                productos_usados=productos_usados
+            )
+
+            productos_usados.add(producto_elegido)
+
+            precio_lista = float(productos_lookup.loc[producto_elegido, "precio_lista"])
+            costo_unitario = float(productos_lookup.loc[producto_elegido, "costo_unitario"])
+
+            precio_unitario = precio_lista * np.random.normal(loc=1.0, scale=0.025)
+            precio_unitario = max(precio_unitario, costo_unitario * 1.05)
+            precio_unitario = round(float(precio_unitario), 2)
+
+            descuento_pct = calcular_descuento(
+                canal=canal,
+                categoria=categoria,
+                campana=campana,
+                fecha=fecha,
+                ciudad_tienda=ciudad_tienda
+            )
+
+            cantidad = calcular_cantidad(
+                categoria=categoria,
+                campana=campana,
+                canal=canal,
+                descuento=descuento_pct
+            )
+
+            monto_total = round(cantidad * precio_unitario * (1 - descuento_pct), 2)
+            margen_unitario = round(precio_unitario * (1 - descuento_pct) - costo_unitario, 2)
+            margen_total = round(monto_total - (cantidad * costo_unitario), 2)
+
+            registros.append(
+                {
+                    "id_venta": id_venta,
+                    "id_ticket": ticket.id_ticket,
+                    "fecha": fecha,
+                    "id_cliente": int(ticket.id_cliente),
+                    "id_tienda": int(ticket.id_tienda),
+                    "id_producto": producto_elegido,
+                    "cantidad": cantidad,
+                    "precio_unitario": precio_unitario,
+                    "descuento_pct": descuento_pct,
+                    "costo_unitario": round(costo_unitario, 2),
+                    "monto_total": monto_total,
+                    "margen_unitario": margen_unitario,
+                    "margen_total": margen_total,
+                    "canal": canal,
+                    "metodo_pago": ticket.metodo_pago,
+                    "campaña": campana,
+                    "es_campaña": int(ticket.es_campaña),
+                    "tipo_campaña": tipo_campana,
+                }
+            )
+
+            id_venta += 1
+
+    ventas_df = pd.DataFrame(registros)
     ventas_df["fecha"] = pd.to_datetime(ventas_df["fecha"])
 
     return ventas_df
 
 
 # ============================================================
+# CONSTRUCCIÓN DE TICKETS
+# ============================================================
+
+def construir_tickets(tickets_base_df: pd.DataFrame, ventas_df: pd.DataFrame) -> pd.DataFrame:
+    resumen = ventas_df.groupby("id_ticket", as_index=False).agg(
+        cantidad_lineas=("id_venta", "count"),
+        unidades_totales=("cantidad", "sum"),
+        monto_ticket=("monto_total", "sum"),
+        descuento_promedio_ticket=("descuento_pct", "mean"),
+        margen_ticket=("margen_total", "sum")
+    )
+
+    resumen["monto_ticket"] = resumen["monto_ticket"].round(2)
+    resumen["descuento_promedio_ticket"] = resumen["descuento_promedio_ticket"].round(4)
+    resumen["margen_ticket"] = resumen["margen_ticket"].round(2)
+
+    tickets_df = tickets_base_df.drop(columns=["cantidad_lineas_esperada"]).merge(
+        resumen,
+        on="id_ticket",
+        how="left"
+    )
+
+    tickets_df = tickets_df[
+        [
+            "id_ticket",
+            "fecha",
+            "id_cliente",
+            "id_tienda",
+            "canal",
+            "metodo_pago",
+            "campaña",
+            "es_campaña",
+            "tipo_campaña",
+            "cantidad_lineas",
+            "unidades_totales",
+            "monto_ticket",
+            "descuento_promedio_ticket",
+            "margen_ticket",
+        ]
+    ]
+
+    return tickets_df
+
+
+# ============================================================
 # ACTUALIZACIÓN DE CLIENTES CON CHURN
 # ============================================================
 
-def actualizar_clientes_con_churn(clientes_df: pd.DataFrame, ventas_df: pd.DataFrame) -> pd.DataFrame:
+def actualizar_clientes_con_churn(
+    clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
+    ventas_df: pd.DataFrame
+) -> pd.DataFrame:
     clientes = clientes_df.copy()
 
-    resumen = ventas_df.groupby("id_cliente").agg(
+    resumen_tickets = tickets_df.groupby("id_cliente").agg(
         fecha_primera_compra=("fecha", "min"),
         fecha_ultima_compra=("fecha", "max"),
-        frecuencia_compras=("id_venta", "count"),
-        valor_total=("monto_total", "sum")
+        frecuencia_tickets=("id_ticket", "count"),
+        valor_total=("monto_ticket", "sum")
     ).reset_index()
 
-    clientes = clientes.merge(resumen, on="id_cliente", how="left")
+    resumen_lineas = ventas_df.groupby("id_cliente").agg(
+        frecuencia_lineas=("id_venta", "count")
+    ).reset_index()
 
-    clientes["frecuencia_compras"] = clientes["frecuencia_compras"].fillna(0).astype(int)
-    clientes["valor_total"] = clientes["valor_total"].fillna(0.0)
+    clientes = clientes.merge(resumen_tickets, on="id_cliente", how="left")
+    clientes = clientes.merge(resumen_lineas, on="id_cliente", how="left")
+
+    clientes["frecuencia_tickets"] = clientes["frecuencia_tickets"].fillna(0).astype(int)
+    clientes["frecuencia_lineas"] = clientes["frecuencia_lineas"].fillna(0).astype(int)
+    clientes["valor_total"] = clientes["valor_total"].fillna(0.0).round(2)
 
     clientes["fecha_ultima_compra"] = pd.to_datetime(clientes["fecha_ultima_compra"])
     clientes["fecha_primera_compra"] = pd.to_datetime(clientes["fecha_primera_compra"])
@@ -707,10 +1198,9 @@ def actualizar_clientes_con_churn(clientes_df: pd.DataFrame, ventas_df: pd.DataF
         0
     )
 
-    # Ajustar fecha de registro para que no sea posterior a la primera compra.
     mascara_inconsistente = (
-        clientes["fecha_primera_compra"].notna() &
-        (clientes["fecha_registro"] > clientes["fecha_primera_compra"])
+        clientes["fecha_primera_compra"].notna()
+        & (clientes["fecha_registro"] > clientes["fecha_primera_compra"])
     )
 
     indices = clientes[mascara_inconsistente].index
@@ -728,15 +1218,15 @@ def actualizar_clientes_con_churn(clientes_df: pd.DataFrame, ventas_df: pd.DataF
 
         clientes.loc[idx, "fecha_registro"] = nueva_fecha
 
-    q25_freq = clientes["frecuencia_compras"].quantile(0.25)
-    q75_freq = clientes["frecuencia_compras"].quantile(0.75)
+    q25_freq = clientes["frecuencia_tickets"].quantile(0.25)
+    q75_freq = clientes["frecuencia_tickets"].quantile(0.75)
     q75_valor = clientes["valor_total"].quantile(0.75)
 
     condiciones = [
         clientes["churn"] == 1,
-        (clientes["frecuencia_compras"] >= q75_freq) & (clientes["valor_total"] >= q75_valor),
-        clientes["frecuencia_compras"] >= q75_freq,
-        clientes["frecuencia_compras"] <= q25_freq,
+        (clientes["frecuencia_tickets"] >= q75_freq) & (clientes["valor_total"] >= q75_valor),
+        clientes["frecuencia_tickets"] >= q75_freq,
+        clientes["frecuencia_tickets"] <= q25_freq,
     ]
 
     segmentos = [
@@ -766,7 +1256,9 @@ def actualizar_clientes_con_churn(clientes_df: pd.DataFrame, ventas_df: pd.DataF
         "canal_preferido",
         "segmento",
         "fecha_ultima_compra",
-        "frecuencia_compras",
+        "frecuencia_tickets",
+        "frecuencia_lineas",
+        "valor_total",
         "dias_desde_ultima_compra",
         "churn",
     ]
@@ -783,7 +1275,6 @@ def generar_inventario(
     productos_df: pd.DataFrame,
     tiendas_df: pd.DataFrame
 ) -> pd.DataFrame:
-
     ventas_tmp = ventas_df.copy()
     ventas_tmp["periodo"] = ventas_tmp["fecha"].dt.to_period("M").astype(str)
 
@@ -823,6 +1314,11 @@ def generar_inventario(
         "Cuidado Personal": 0.10,
         "Electrohogar": 1.55,
         "Hogar": 0.35,
+        "Tecnología y Cómputo": 1.75,
+        "Moda": 0.20,
+        "Calzado": 0.22,
+        "Escolar y Oficina": 0.09,
+        "Juguetería": 0.16,
     }
 
     registros = []
@@ -835,10 +1331,10 @@ def generar_inventario(
 
         stock_actual = random.randint(40, 180)
 
-        if categoria == "Electrohogar":
+        if categoria in ["Electrohogar", "Tecnología y Cómputo"]:
             stock_actual = random.randint(8, 35)
-        elif categoria == "Hogar":
-            stock_actual = random.randint(20, 80)
+        elif categoria in ["Hogar", "Calzado", "Moda", "Juguetería"]:
+            stock_actual = random.randint(20, 85)
 
         for _, fila in grupo.iterrows():
             periodo = fila["periodo"]
@@ -848,7 +1344,7 @@ def generar_inventario(
 
             seguridad = random.randint(15, 60)
 
-            if categoria == "Electrohogar":
+            if categoria in ["Electrohogar", "Tecnología y Cómputo"]:
                 seguridad = random.randint(3, 15)
 
             punto_objetivo = max(
@@ -887,24 +1383,55 @@ def generar_inventario(
 
 
 # ============================================================
-# CALIDAD DE DATOS: FALTANTES CONTROLADOS
+# CALIDAD DE DATOS
 # ============================================================
 
 def aplicar_calidad_datos(
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-
+) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     clientes = clientes_df.copy()
+    tickets = tickets_df.copy()
     ventas = ventas_df.copy()
 
     clientes = insertar_faltantes(clientes, "canal_preferido", 0.015)
     clientes = insertar_faltantes(clientes, "distrito", 0.012)
 
-    ventas = insertar_faltantes(ventas, "metodo_pago", 0.020)
-    ventas = insertar_faltantes(ventas, "descuento_pct", 0.010)
+    tickets = insertar_faltantes(tickets, "metodo_pago", 0.015)
 
-    return clientes, ventas
+    ventas = ventas.drop(columns=["metodo_pago"]).merge(
+        tickets[["id_ticket", "metodo_pago"]],
+        on="id_ticket",
+        how="left"
+    )
+
+    ventas = insertar_faltantes(ventas, "descuento_pct", 0.012)
+
+    ventas = ventas[
+        [
+            "id_venta",
+            "id_ticket",
+            "fecha",
+            "id_cliente",
+            "id_tienda",
+            "id_producto",
+            "cantidad",
+            "precio_unitario",
+            "descuento_pct",
+            "costo_unitario",
+            "monto_total",
+            "margen_unitario",
+            "margen_total",
+            "canal",
+            "metodo_pago",
+            "campaña",
+            "es_campaña",
+            "tipo_campaña",
+        ]
+    ]
+
+    return clientes, tickets, ventas
 
 
 # ============================================================
@@ -915,16 +1442,17 @@ def validar_volumenes(
     tiendas_df: pd.DataFrame,
     productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
-
     assert len(tiendas_df) == 12, "Error: tiendas.csv debe tener 12 registros."
-    assert len(productos_df) == 800, "Error: productos.csv debe tener 800 registros."
+    assert len(productos_df) == 1000, "Error: productos.csv debe tener 1000 registros."
     assert len(clientes_df) == 15_000, "Error: clientes.csv debe tener 15 000 registros."
+    assert 95_000 <= len(tickets_df) <= 105_000, "Error: tickets.csv debe tener aproximadamente 100 000 tickets."
     assert 150_000 <= len(ventas_df) <= 300_000, "Error: ventas.csv debe estar entre 150 000 y 300 000 líneas."
 
-    inventario_esperado = 800 * 12 * 36
+    inventario_esperado = 1000 * 12 * 36
     assert len(inventario_df) == inventario_esperado, "Error: inventario.csv no tiene el número esperado de snapshots."
 
 
@@ -932,9 +1460,18 @@ def validar_claves_foraneas(
     tiendas_df: pd.DataFrame,
     productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
+    assert set(tickets_df["id_cliente"]).issubset(set(clientes_df["id_cliente"])), \
+        "Error: tickets.csv contiene id_cliente inválidos."
+
+    assert set(tickets_df["id_tienda"]).issubset(set(tiendas_df["id_tienda"])), \
+        "Error: tickets.csv contiene id_tienda inválidos."
+
+    assert set(ventas_df["id_ticket"]).issubset(set(tickets_df["id_ticket"])), \
+        "Error: ventas.csv contiene id_ticket inválidos."
 
     assert set(ventas_df["id_cliente"]).issubset(set(clientes_df["id_cliente"])), \
         "Error: ventas.csv contiene id_cliente inválidos."
@@ -985,14 +1522,55 @@ def validar_calculos_ventas(ventas_df: pd.DataFrame) -> None:
         "Error: margen_total no es coherente."
 
 
+def validar_totales_tickets(tickets_df: pd.DataFrame, ventas_df: pd.DataFrame) -> None:
+    resumen = ventas_df.groupby("id_ticket", as_index=False).agg(
+        cantidad_lineas=("id_venta", "count"),
+        unidades_totales=("cantidad", "sum"),
+        monto_ticket=("monto_total", "sum"),
+        margen_ticket=("margen_total", "sum")
+    )
+
+    comparacion = tickets_df.merge(
+        resumen,
+        on="id_ticket",
+        how="left",
+        suffixes=("_ticket", "_calc")
+    )
+
+    assert np.array_equal(
+        comparacion["cantidad_lineas_ticket"].to_numpy(),
+        comparacion["cantidad_lineas_calc"].to_numpy()
+    ), "Error: cantidad_lineas no coincide con ventas.csv."
+
+    assert np.array_equal(
+        comparacion["unidades_totales_ticket"].to_numpy(),
+        comparacion["unidades_totales_calc"].to_numpy()
+    ), "Error: unidades_totales no coincide con ventas.csv."
+
+    assert np.allclose(
+        comparacion["monto_ticket_ticket"],
+        comparacion["monto_ticket_calc"],
+        atol=0.03
+    ), "Error: monto_ticket no coincide con la suma de ventas.csv."
+
+    assert np.allclose(
+        comparacion["margen_ticket_ticket"],
+        comparacion["margen_ticket_calc"],
+        atol=0.03
+    ), "Error: margen_ticket no coincide con la suma de ventas.csv."
+
+    assert (tickets_df["cantidad_lineas"] == 1).any(), "Error: no existen tickets con una línea."
+    assert (tickets_df["cantidad_lineas"] == 2).any(), "Error: no existen tickets con dos líneas."
+    assert (tickets_df["cantidad_lineas"] == 3).any(), "Error: no existen tickets con tres líneas."
+    assert (tickets_df["cantidad_lineas"] > 3).any(), "Error: no existen tickets con más de tres líneas."
+
+
 def validar_calculos_inventario(inventario_df: pd.DataFrame) -> None:
     calc_stock_final = (
         inventario_df["stock_inicial"]
         + inventario_df["reabastecimiento"]
         - inventario_df["unidades_vendidas"]
-    )
-
-    calc_stock_final = calc_stock_final.clip(lower=0)
+    ).clip(lower=0)
 
     calc_costo_total = np.round(
         inventario_df["stock_final"]
@@ -1009,12 +1587,15 @@ def validar_calculos_inventario(inventario_df: pd.DataFrame) -> None:
 
 def validar_patrones(
     tiendas_df: pd.DataFrame,
+    productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
-
     ventas = ventas_df.copy()
+    tickets = tickets_df.copy()
+
     ventas["fecha"] = pd.to_datetime(ventas["fecha"])
     ventas["mes"] = ventas["fecha"].dt.month
     ventas["anio"] = ventas["fecha"].dt.year
@@ -1028,13 +1609,95 @@ def validar_patrones(
     assert ventas_por_mes.loc[12] > promedio_mensual * 1.10, \
         "Error: no se observa pico de ventas en diciembre."
 
-    ventas["es_digital"] = ventas["canal"].isin(["Web", "App"]).astype(int)
+    campanas_requeridas = [
+        "Campaña Escolar",
+        "Día de la Madre",
+        "Día del Padre",
+        "Fiestas Patrias",
+        "Cyber Wow Abril",
+        "Cyber Wow Julio",
+        "Cyber Wow Noviembre",
+        "Black Friday",
+        "Navidad",
+    ]
 
-    digital_2023 = ventas.loc[ventas["anio"] == 2023, "es_digital"].mean()
-    digital_2025 = ventas.loc[ventas["anio"] == 2025, "es_digital"].mean()
+    for campana in campanas_requeridas:
+        assert (tickets["campaña"] == campana).any(), f"Error: no existen tickets de {campana}."
+
+    tickets["fecha"] = pd.to_datetime(tickets["fecha"])
+    tickets["anio"] = tickets["fecha"].dt.year
+    tickets["es_digital"] = tickets["canal"].isin(["Web", "App"]).astype(int)
+
+    digital_2023 = tickets.loc[tickets["anio"] == 2023, "es_digital"].mean()
+    digital_2025 = tickets.loc[tickets["anio"] == 2025, "es_digital"].mean()
 
     assert digital_2025 > digital_2023, \
         "Error: el canal digital no crece entre 2023 y 2025."
+
+    cyber = tickets[tickets["campaña"].str.contains("Cyber Wow", na=False)]
+    normal = tickets[tickets["campaña"] == "Normal"]
+
+    assert cyber["es_digital"].mean() > normal["es_digital"].mean(), \
+        "Error: Cyber Wow no tiene mayor participación digital que periodos normales."
+
+    assert cyber["descuento_promedio_ticket"].mean() > normal["descuento_promedio_ticket"].mean(), \
+        "Error: Cyber Wow no tiene mayor descuento promedio que periodos normales."
+
+    ventas_cat = ventas.merge(
+        productos_df[["id_producto", "categoria"]],
+        on="id_producto",
+        how="left"
+    )
+
+    def participacion_categoria(campana: str, categorias: list) -> float:
+        df_campana = ventas_cat[ventas_cat["campaña"] == campana]
+
+        if len(df_campana) == 0:
+            return 0.0
+
+        return df_campana["categoria"].isin(categorias).mean()
+
+    normal_share_escolar = participacion_categoria("Normal", ["Escolar y Oficina"])
+    escolar_share = participacion_categoria("Campaña Escolar", ["Escolar y Oficina"])
+
+    assert escolar_share > normal_share_escolar, \
+        "Error: Campaña Escolar no aumenta Escolar y Oficina."
+
+    madre_share = participacion_categoria(
+        "Día de la Madre",
+        ["Cuidado Personal", "Moda", "Hogar", "Electrohogar"]
+    )
+    normal_share_madre = participacion_categoria(
+        "Normal",
+        ["Cuidado Personal", "Moda", "Hogar", "Electrohogar"]
+    )
+
+    assert madre_share > normal_share_madre, \
+        "Error: Día de la Madre no aumenta categorías esperadas."
+
+    padre_share = participacion_categoria(
+        "Día del Padre",
+        ["Tecnología y Cómputo", "Moda", "Calzado", "Electrohogar"]
+    )
+    normal_share_padre = participacion_categoria(
+        "Normal",
+        ["Tecnología y Cómputo", "Moda", "Calzado", "Electrohogar"]
+    )
+
+    assert padre_share > normal_share_padre, \
+        "Error: Día del Padre no aumenta categorías esperadas."
+
+    navidad_share = participacion_categoria(
+        "Navidad",
+        ["Juguetería", "Tecnología y Cómputo", "Electrohogar", "Moda", "Hogar"]
+    )
+    normal_share_navidad = participacion_categoria(
+        "Normal",
+        ["Juguetería", "Tecnología y Cómputo", "Electrohogar", "Moda", "Hogar"]
+    )
+
+    assert navidad_share > normal_share_navidad, \
+        "Error: Navidad no aumenta categorías esperadas."
 
     ventas_tienda = ventas.merge(
         tiendas_df[["id_tienda", "ciudad"]],
@@ -1045,8 +1708,8 @@ def validar_patrones(
     trujillo = ventas_tienda[ventas_tienda["ciudad"] == "Trujillo"].copy()
 
     pre_q2 = trujillo[
-        (trujillo["fecha"] >= pd.Timestamp("2024-04-01")) &
-        (trujillo["fecha"] < pd.Timestamp("2025-04-01"))
+        (trujillo["fecha"] >= pd.Timestamp("2024-04-01"))
+        & (trujillo["fecha"] < pd.Timestamp("2025-04-01"))
     ]
 
     post_q2 = trujillo[
@@ -1056,8 +1719,14 @@ def validar_patrones(
     margen_pre = margen_porcentual(pre_q2)
     margen_post = margen_porcentual(post_q2)
 
+    descuento_pre = pre_q2["descuento_pct"].mean()
+    descuento_post = post_q2["descuento_pct"].mean()
+
     assert margen_post < margen_pre, \
         "Error: no se observa caída de margen en Trujillo desde 2025-Q2."
+
+    assert descuento_post > descuento_pre, \
+        "Error: no se observa mayor descuento promedio en Trujillo desde 2025-Q2."
 
     inventario_tienda = inventario_df.merge(
         tiendas_df[["id_tienda", "ciudad"]],
@@ -1066,37 +1735,38 @@ def validar_patrones(
     )
 
     costo_trujillo_pre = inventario_tienda[
-        (inventario_tienda["ciudad"] == "Trujillo") &
-        (inventario_tienda["periodo"] < "2025-04")
+        (inventario_tienda["ciudad"] == "Trujillo")
+        & (inventario_tienda["periodo"] < "2025-04")
     ]["costo_almacenamiento_unitario"].mean()
 
     costo_trujillo_post = inventario_tienda[
-        (inventario_tienda["ciudad"] == "Trujillo") &
-        (inventario_tienda["periodo"] >= "2025-04")
+        (inventario_tienda["ciudad"] == "Trujillo")
+        & (inventario_tienda["periodo"] >= "2025-04")
     ]["costo_almacenamiento_unitario"].mean()
 
     assert costo_trujillo_post > costo_trujillo_pre, \
         "Error: no se observa aumento del costo de almacenamiento en Trujillo."
 
-    q25 = clientes_df["frecuencia_compras"].quantile(0.25)
-    q75 = clientes_df["frecuencia_compras"].quantile(0.75)
+    q25 = clientes_df["frecuencia_tickets"].quantile(0.25)
+    q75 = clientes_df["frecuencia_tickets"].quantile(0.75)
 
     churn_baja_frecuencia = clientes_df[
-        clientes_df["frecuencia_compras"] <= q25
+        clientes_df["frecuencia_tickets"] <= q25
     ]["churn"].mean()
 
     churn_alta_frecuencia = clientes_df[
-        clientes_df["frecuencia_compras"] >= q75
+        clientes_df["frecuencia_tickets"] >= q75
     ]["churn"].mean()
 
     assert churn_baja_frecuencia >= churn_alta_frecuencia, \
         "Error: el churn no es mayor en clientes de baja frecuencia."
 
 
-def validar_faltantes(clientes_df: pd.DataFrame, ventas_df: pd.DataFrame) -> None:
+def validar_faltantes(clientes_df: pd.DataFrame, tickets_df: pd.DataFrame, ventas_df: pd.DataFrame) -> None:
     campos = [
         ("clientes.canal_preferido", clientes_df["canal_preferido"].isna().mean()),
         ("clientes.distrito", clientes_df["distrito"].isna().mean()),
+        ("tickets.metodo_pago", tickets_df["metodo_pago"].isna().mean()),
         ("ventas.metodo_pago", ventas_df["metodo_pago"].isna().mean()),
         ("ventas.descuento_pct", ventas_df["descuento_pct"].isna().mean()),
     ]
@@ -1106,20 +1776,36 @@ def validar_faltantes(clientes_df: pd.DataFrame, ventas_df: pd.DataFrame) -> Non
             f"Error: el campo {campo} tiene {pct:.2%} de faltantes y debe estar entre 1% y 3%."
 
 
-def ejecutar_validaciones(
+def ejecutar_validaciones_limpias(
     tiendas_df: pd.DataFrame,
     productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
-
-    validar_volumenes(tiendas_df, productos_df, clientes_df, ventas_df, inventario_df)
-    validar_claves_foraneas(tiendas_df, productos_df, clientes_df, ventas_df, inventario_df)
+    validar_volumenes(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
+    validar_claves_foraneas(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
     validar_calculos_ventas(ventas_df)
+    validar_totales_tickets(tickets_df, ventas_df)
     validar_calculos_inventario(inventario_df)
-    validar_patrones(tiendas_df, clientes_df, ventas_df, inventario_df)
-    validar_faltantes(clientes_df, ventas_df)
+    validar_patrones(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
+
+
+def ejecutar_validaciones_finales(
+    tiendas_df: pd.DataFrame,
+    productos_df: pd.DataFrame,
+    clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
+    ventas_df: pd.DataFrame,
+    inventario_df: pd.DataFrame
+) -> None:
+    validar_volumenes(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
+    validar_claves_foraneas(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
+    validar_totales_tickets(tickets_df, ventas_df)
+    validar_calculos_inventario(inventario_df)
+    validar_patrones(tiendas_df, productos_df, clientes_df, tickets_df, ventas_df, inventario_df)
+    validar_faltantes(clientes_df, tickets_df, ventas_df)
 
 
 # ============================================================
@@ -1133,7 +1819,8 @@ def generar_diccionario_datos() -> str:
 ## Descripción general
 
 Los datos corresponden a una empresa ficticia peruana de retail omnicanal llamada AndinaRetail S.A.C.
-Todos los registros son sintéticos y fueron generados mediante un script reproducible en Python usando semillas fijas.
+
+Todos los registros son sintéticos y fueron generados mediante un script reproducible en Python con semillas fijas.
 
 El conjunto de datos permite desarrollar análisis estadístico, descriptivo, diagnóstico, predictivo, prescriptivo y tableros de control.
 
@@ -1141,95 +1828,124 @@ El conjunto de datos permite desarrollar análisis estadístico, descriptivo, di
 
 ## Tabla: tiendas.csv
 
-Descripción: contiene información maestra de las tiendas físicas y del canal virtual de AndinaRetail.
+Descripción: contiene información maestra de las tiendas físicas y del canal virtual.
 
 | Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
 |---|---|---|---|---|
 | id_tienda | entero | Identificador único de tienda | 1 a 12 | Clave primaria |
-| nombre | texto | Nombre ficticio de la tienda | Texto | No corresponde a una empresa real |
-| ciudad | texto | Ciudad donde opera la tienda | Lima, Arequipa, Trujillo, Cusco, Piura | Incluye cobertura nacional para el canal virtual |
-| region | texto | Región comercial asociada | Costa Centro, Norte, Sur, Sur Andino, Nacional | Variable descriptiva |
-| tipo | texto | Tipo de tienda | Física, Virtual | El canal Web/App se asocia a tienda virtual |
-| area_m2 | entero | Área aproximada de la tienda | 0 o valores positivos | La tienda virtual tiene área 0 |
-| fecha_apertura | fecha | Fecha de apertura de la tienda | YYYY-MM-DD | Valor sintético |
+| nombre | texto | Nombre ficticio de tienda | Texto | No corresponde a una empresa real |
+| ciudad | texto | Ciudad de operación | Lima, Arequipa, Trujillo, Cusco, Piura | La tienda virtual figura con ciudad Lima y región Nacional |
+| region | texto | Región comercial | Costa Centro, Norte, Sur, Sur Andino, Nacional | Variable descriptiva |
+| tipo | texto | Tipo de tienda | Física, Virtual | Web/App se asocian a tienda virtual |
+| area_m2 | entero | Área aproximada | 0 o positivo | Tienda virtual tiene área 0 |
+| fecha_apertura | fecha | Fecha de apertura | YYYY-MM-DD | Valor sintético |
 
 ---
 
 ## Tabla: productos.csv
 
-Descripción: contiene el catálogo sintético de productos.
+Descripción: catálogo sintético de productos.
 
 | Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
 |---|---|---|---|---|
-| id_producto | entero | Identificador único del producto | 1 a 800 | Clave primaria |
-| nombre | texto | Nombre ficticio del producto | Texto | Compuesto por subcategoría, marca ficticia y código |
-| categoria | texto | Categoría comercial | Abarrotes, Bebidas, Limpieza, Cuidado Personal, Electrohogar, Hogar | Usada para análisis de ventas y demanda |
-| subcategoria | texto | Subgrupo de producto | Depende de la categoría | Variable de detalle |
+| id_producto | entero | Identificador único de producto | 1 a 1000 | Clave primaria |
+| nombre | texto | Nombre ficticio de producto | Texto | Construido con subcategoría, marca ficticia y código |
+| categoria | texto | Categoría comercial | 11 categorías | Usada para análisis de demanda |
+| subcategoria | texto | Subcategoría | Depende de la categoría | Variable de detalle |
 | marca | texto | Marca ficticia | Lista de marcas sintéticas | No representa marcas reales |
-| precio_lista | decimal | Precio base del producto | Valores positivos | Varía por categoría |
-| costo_unitario | decimal | Costo unitario del producto | 60% a 80% del precio_lista | Usado para calcular margen |
-| fecha_alta | fecha | Fecha de alta del producto | 2021 a 2025 | Valor sintético |
+| precio_lista | decimal | Precio base | Positivo | Varía por categoría |
+| costo_unitario | decimal | Costo unitario | 60% a 80% del precio_lista | Usado para cálculo de margen |
+| fecha_alta | fecha | Fecha de alta | 2021 a 2025 | Valor sintético |
 
 ---
 
 ## Tabla: clientes.csv
 
-Descripción: contiene información sintética de clientes y variables derivadas para análisis de churn.
+Descripción: clientes ficticios y variables derivadas para churn.
 
 | Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
 |---|---|---|---|---|
-| id_cliente | entero | Identificador único del cliente | 1 a 15000 | Clave primaria |
-| nombre | texto | Nombre ficticio del cliente | Texto generado con Faker | No corresponde a personas reales |
-| edad | entero | Edad del cliente | 18 a 80 | Distribución normal truncada |
+| id_cliente | entero | Identificador único de cliente | 1 a 15000 | Clave primaria |
+| nombre | texto | Nombre ficticio | Texto generado con Faker | No corresponde a personas reales |
+| edad | entero | Edad | 18 a 80 | Distribución normal truncada |
 | genero | texto | Género sintético | Femenino, Masculino, Otro | Variable demográfica |
 | ciudad | texto | Ciudad de residencia | Lima, Arequipa, Trujillo, Cusco, Piura | Usada para análisis territorial |
-| distrito | texto | Distrito de residencia | Distritos sintéticos por ciudad | Incluye faltantes controlados |
-| fecha_registro | fecha | Fecha de registro del cliente | 2022 a 2025 | Coherente con la primera compra |
-| canal_preferido | texto | Canal preferido del cliente | Tienda, Web, App | Incluye faltantes controlados |
-| segmento | texto | Segmento comercial derivado | Inactivo, Alto Valor, Frecuente, Ocasional, Regular | Derivado de frecuencia, valor y churn |
-| fecha_ultima_compra | fecha | Última fecha de compra del cliente | Fecha o vacío | Derivada de ventas.csv |
-| frecuencia_compras | entero | Número de líneas de venta asociadas al cliente | 0 o mayor | Usada en churn |
-| dias_desde_ultima_compra | entero | Días desde la última compra al 2025-12-31 | 0 o mayor | Si no compró, toma valor 999 |
-| churn | entero | Indicador de inactividad | 1 = inactivo, 0 = activo | Churn = 1 si no compró en los últimos 90 días |
+| distrito | texto | Distrito de residencia | Distritos por ciudad | Incluye faltantes controlados |
+| fecha_registro | fecha | Fecha de registro | 2022 a 2025 | Ajustada para no ser posterior a primera compra |
+| canal_preferido | texto | Canal preferido | Tienda, Web, App | Incluye faltantes controlados |
+| segmento | texto | Segmento comercial | Inactivo, Alto Valor, Frecuente, Ocasional, Regular | Derivado de frecuencia, valor y churn |
+| fecha_ultima_compra | fecha | Última compra | Fecha o vacío | Derivada de tickets.csv |
+| frecuencia_tickets | entero | Cantidad de tickets del cliente | 0 o mayor | Usada para churn y segmentación |
+| frecuencia_lineas | entero | Cantidad de líneas compradas | 0 o mayor | Derivada de ventas.csv |
+| valor_total | decimal | Valor total comprado | 0 o mayor | Suma de monto_ticket |
+| dias_desde_ultima_compra | entero | Días desde última compra | 0 o mayor | Respecto al 2025-12-31 |
+| churn | entero | Indicador de inactividad | 1 = inactivo, 0 = activo | Churn = 1 si no compró en últimos 90 días |
+
+---
+
+## Tabla: tickets.csv
+
+Descripción: cabecera de compra. Cada ticket representa una compra completa y puede tener una o varias líneas en ventas.csv.
+
+| Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
+|---|---|---|---|---|
+| id_ticket | texto | Identificador único del ticket | T000001 en adelante | Clave primaria |
+| fecha | fecha | Fecha de compra | 2023-01-01 a 2025-12-31 | Incluye estacionalidad y campañas |
+| id_cliente | entero | Cliente comprador | Debe existir en clientes.csv | Clave foránea |
+| id_tienda | entero | Tienda asociada | Debe existir en tiendas.csv | Clave foránea |
+| canal | texto | Canal de compra | Tienda, Web, App | Web/App crecen entre 2023 y 2025 |
+| metodo_pago | texto | Método de pago | Efectivo, tarjetas, Yape, Plin, Transferencia | Incluye faltantes controlados |
+| campaña | texto | Campaña comercial asociada | Normal, Campaña Escolar, Día de la Madre, Día del Padre, Fiestas Patrias, Cyber Wow Abril, Cyber Wow Julio, Cyber Wow Noviembre, Black Friday, Navidad | Derivada de la fecha |
+| es_campaña | entero | Indicador de campaña | 1 = campaña, 0 = normal | Derivada de campaña |
+| tipo_campaña | texto | Agrupación de campaña | Regular, Escolar, Familiar, Digital, Festiva | Variable analítica |
+| cantidad_lineas | entero | Cantidad de líneas del ticket | 1 a 6 | Variable realista |
+| unidades_totales | entero | Total de unidades compradas | 1 o mayor | Suma de cantidad en ventas.csv |
+| monto_ticket | decimal | Monto total del ticket | Positivo | Suma de monto_total |
+| descuento_promedio_ticket | decimal | Descuento promedio del ticket | 0.00 a 0.35 | Promedio de descuentos de líneas |
+| margen_ticket | decimal | Margen total del ticket | Puede ser bajo o negativo | Suma de margen_total |
 
 ---
 
 ## Tabla: ventas.csv
 
-Descripción: contiene líneas sintéticas de venta entre 2023 y 2025.
+Descripción: detalle de productos comprados dentro de cada ticket.
 
 | Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
 |---|---|---|---|---|
-| id_venta | entero | Identificador único de línea de venta | 1 a 250000 | Clave primaria |
-| fecha | fecha | Fecha de venta | 2023-01-01 a 2025-12-31 | Incluye estacionalidad |
-| id_cliente | entero | Cliente que realiza la compra | Debe existir en clientes.csv | Clave foránea |
-| id_tienda | entero | Tienda asociada a la venta | Debe existir en tiendas.csv | Clave foránea |
+| id_venta | entero | Identificador único de línea | 1 en adelante | Clave primaria |
+| id_ticket | texto | Ticket asociado | Debe existir en tickets.csv | Clave foránea |
+| fecha | fecha | Fecha de venta | 2023-01-01 a 2025-12-31 | Heredada del ticket |
+| id_cliente | entero | Cliente comprador | Debe existir en clientes.csv | Heredado del ticket |
+| id_tienda | entero | Tienda asociada | Debe existir en tiendas.csv | Heredado del ticket |
 | id_producto | entero | Producto vendido | Debe existir en productos.csv | Clave foránea |
 | cantidad | entero | Unidades vendidas | Principalmente 1 a 8 | Incluye outliers controlados |
-| precio_unitario | decimal | Precio unitario aplicado | Positivo | Derivado del precio_lista |
+| precio_unitario | decimal | Precio aplicado | Positivo | Derivado del precio_lista |
 | descuento_pct | decimal | Descuento aplicado | 0.00 a 0.35 o faltante | 0.10 representa 10% |
-| costo_unitario | decimal | Costo unitario del producto vendido | Positivo | Proviene de productos.csv |
-| monto_total | decimal | Importe total de venta | Positivo | cantidad * precio_unitario * (1 - descuento_pct) |
-| margen_unitario | decimal | Margen unitario | Puede ser bajo o negativo | precio neto - costo unitario |
-| margen_total | decimal | Margen total de la línea | Puede ser bajo o negativo | monto_total - cantidad * costo_unitario |
-| canal | texto | Canal de venta | Tienda, Web, App | Web/App crecen entre 2023 y 2025 |
-| metodo_pago | texto | Método de pago | Efectivo, tarjetas, Yape, Plin, Transferencia | Incluye faltantes controlados |
+| costo_unitario | decimal | Costo del producto | Positivo | Proviene de productos.csv |
+| monto_total | decimal | Monto de la línea | Positivo | cantidad * precio_unitario * (1 - descuento_pct) |
+| margen_unitario | decimal | Margen unitario | Puede ser bajo o negativo | Precio neto - costo unitario |
+| margen_total | decimal | Margen total de línea | Puede ser bajo o negativo | monto_total - cantidad * costo_unitario |
+| canal | texto | Canal de venta | Tienda, Web, App | Heredado del ticket |
+| metodo_pago | texto | Método de pago | Según canal o faltante | Heredado del ticket |
+| campaña | texto | Campaña comercial | Valores definidos en tickets.csv | Heredado del ticket |
+| es_campaña | entero | Indicador de campaña | 1 o 0 | Heredado del ticket |
+| tipo_campaña | texto | Tipo de campaña | Regular, Escolar, Familiar, Digital, Festiva | Heredado del ticket |
 
 ---
 
 ## Tabla: inventario.csv
 
-Descripción: contiene snapshots mensuales de inventario por producto y tienda.
+Descripción: snapshots mensuales de inventario por producto y tienda.
 
 | Campo | Tipo de dato | Descripción | Dominio / valores permitidos | Observaciones |
 |---|---|---|---|---|
 | id_producto | entero | Producto inventariado | Debe existir en productos.csv | Clave foránea |
 | id_tienda | entero | Tienda inventariada | Debe existir en tiendas.csv | Clave foránea |
-| periodo | texto | Periodo mensual | Formato AAAA-MM | Desde 2023-01 hasta 2025-12 |
-| stock_inicial | entero | Stock inicial del periodo | 0 o mayor | Snapshot mensual |
-| unidades_vendidas | entero | Unidades vendidas en el periodo | 0 o mayor | Derivado de ventas.csv |
+| periodo | texto | Periodo mensual | AAAA-MM | Desde 2023-01 hasta 2025-12 |
+| stock_inicial | entero | Stock inicial | 0 o mayor | Snapshot mensual |
+| unidades_vendidas | entero | Unidades vendidas | 0 o mayor | Derivado de ventas.csv |
 | reabastecimiento | entero | Unidades repuestas | 0 o mayor | Generado para cubrir demanda |
-| stock_final | entero | Stock final del periodo | 0 o mayor | stock_inicial + reabastecimiento - unidades_vendidas |
+| stock_final | entero | Stock final | 0 o mayor | stock_inicial + reabastecimiento - unidades_vendidas |
 | costo_almacenamiento_unitario | decimal | Costo unitario de almacenamiento | Positivo | Aumenta en Trujillo desde 2025-Q2 |
 | costo_almacenamiento_total | decimal | Costo total de almacenamiento | Positivo | stock_final * costo_almacenamiento_unitario |
 
@@ -1237,26 +1953,35 @@ Descripción: contiene snapshots mensuales de inventario por producto y tienda.
 
 ## Patrones sintéticos incorporados
 
-1. Estacionalidad:
-   - Picos de ventas en julio por Fiestas Patrias.
-   - Picos de ventas en diciembre por Navidad.
-   - Mayor crecimiento del canal digital entre 2023 y 2025.
+1. Estacionalidad y campañas:
+   - Campaña Escolar en febrero y marzo.
+   - Día de la Madre en el segundo domingo de mayo, con ventana comercial.
+   - Día del Padre en el tercer domingo de junio, con ventana comercial.
+   - Fiestas Patrias en julio.
+   - Cyber Wow en abril, julio y noviembre.
+   - Black Friday en la última semana de noviembre.
+   - Navidad en diciembre.
 
-2. Patrón diagnóstico:
-   - Desde el segundo trimestre de 2025, Trujillo presenta caída de margen.
-   - La caída se explica por descuentos más altos y mayor costo de almacenamiento.
+2. Relación campaña-categoría:
+   - Cyber Wow favorece Tecnología y Cómputo, Electrohogar, Hogar, Moda y Calzado.
+   - Campaña Escolar favorece Escolar y Oficina, Tecnología y Cómputo, Calzado y Moda.
+   - Día de la Madre favorece Cuidado Personal, Moda, Calzado, Hogar y Electrohogar.
+   - Día del Padre favorece Tecnología y Cómputo, Moda, Calzado, Electrohogar y Hogar.
+   - Navidad favorece Juguetería, Tecnología y Cómputo, Electrohogar, Moda y Hogar.
 
-3. Churn:
-   - Un cliente es inactivo si no compró en los últimos 90 días respecto al 2025-12-31.
-   - La inactividad aumenta en clientes con baja frecuencia histórica.
+3. Patrón diagnóstico:
+   - Desde 2025-Q2, Trujillo presenta mayor descuento, menor margen y mayor costo de almacenamiento.
 
-4. Demanda predecible:
-   - La cantidad vendida depende de categoría, mes, canal y descuento.
-   - Se añade ruido aleatorio moderado.
+4. Churn:
+   - Cliente inactivo si no compró en los últimos 90 días respecto al 2025-12-31.
+   - El churn aumenta en clientes con baja frecuencia histórica.
 
-5. Calidad de datos:
-   - Se incorporan faltantes controlados entre 1% y 3%.
-   - Se incorporan outliers controlados en cantidad y monto total.
+5. Demanda predecible:
+   - La cantidad vendida depende de categoría, subcategoría, mes, canal, ciudad, campaña, tipo de campaña y descuento.
+
+6. Calidad de datos:
+   - Faltantes controlados entre 1% y 3%.
+   - Outliers controlados en cantidad y montos.
 """
 
 
@@ -1268,13 +1993,14 @@ def exportar_archivos(
     tiendas_df: pd.DataFrame,
     productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
-
     tiendas_df.to_csv(OUTPUT_DIR / "tiendas.csv", index=False, encoding="utf-8")
     productos_df.to_csv(OUTPUT_DIR / "productos.csv", index=False, encoding="utf-8")
     clientes_df.to_csv(OUTPUT_DIR / "clientes.csv", index=False, encoding="utf-8")
+    tickets_df.to_csv(OUTPUT_DIR / "tickets.csv", index=False, encoding="utf-8")
     ventas_df.to_csv(OUTPUT_DIR / "ventas.csv", index=False, encoding="utf-8")
     inventario_df.to_csv(OUTPUT_DIR / "inventario.csv", index=False, encoding="utf-8")
 
@@ -1290,19 +2016,27 @@ def imprimir_resumen(
     tiendas_df: pd.DataFrame,
     productos_df: pd.DataFrame,
     clientes_df: pd.DataFrame,
+    tickets_df: pd.DataFrame,
     ventas_df: pd.DataFrame,
     inventario_df: pd.DataFrame
 ) -> None:
-
     ventas_tmp = ventas_df.copy()
     ventas_tmp["fecha"] = pd.to_datetime(ventas_tmp["fecha"])
     ventas_tmp["anio"] = ventas_tmp["fecha"].dt.year
     ventas_tmp["mes"] = ventas_tmp["fecha"].dt.month
 
+    tickets_tmp = tickets_df.copy()
+    tickets_tmp["fecha"] = pd.to_datetime(tickets_tmp["fecha"])
+    tickets_tmp["anio"] = tickets_tmp["fecha"].dt.year
+
     ventas_mes = ventas_tmp.groupby("mes")["id_venta"].count()
-    digital = ventas_tmp.assign(
-        es_digital=ventas_tmp["canal"].isin(["Web", "App"]).astype(int)
+
+    digital = tickets_tmp.assign(
+        es_digital=tickets_tmp["canal"].isin(["Web", "App"]).astype(int)
     ).groupby("anio")["es_digital"].mean()
+
+    distribucion_lineas = tickets_df["cantidad_lineas"].value_counts().sort_index()
+    distribucion_campanas = tickets_df["campaña"].value_counts().sort_index()
 
     print("\n==============================================")
     print("GENERACIÓN FINALIZADA CORRECTAMENTE")
@@ -1310,17 +2044,16 @@ def imprimir_resumen(
     print(f"tiendas.csv:     {len(tiendas_df):,} registros")
     print(f"productos.csv:   {len(productos_df):,} registros")
     print(f"clientes.csv:    {len(clientes_df):,} registros")
+    print(f"tickets.csv:     {len(tickets_df):,} registros")
     print(f"ventas.csv:      {len(ventas_df):,} registros")
     print(f"inventario.csv:  {len(inventario_df):,} registros")
     print("\nArchivos generados en la carpeta: datos/")
 
-    print("\nValidaciones principales:")
-    print("- Claves foráneas: OK")
-    print("- Cálculos de monto, margen e inventario: OK")
-    print("- Estacionalidad julio/diciembre: OK")
-    print("- Crecimiento digital 2023-2025: OK")
-    print("- Caída de margen en Trujillo desde 2025-Q2: OK")
-    print("- Faltantes controlados 1%-3%: OK")
+    print("\nDistribución de líneas por ticket:")
+    print(distribucion_lineas.to_string())
+
+    print("\nTickets por campaña:")
+    print(distribucion_campanas.to_string())
 
     print("\nVentas por mes:")
     print(ventas_mes.to_string())
@@ -1330,6 +2063,17 @@ def imprimir_resumen(
 
     print("\nTasa de churn:")
     print(f"{clientes_df['churn'].mean() * 100:.2f}%")
+
+    print("\nValidaciones principales:")
+    print("- Volúmenes: OK")
+    print("- Claves foráneas: OK")
+    print("- Totales de tickets contra ventas: OK")
+    print("- Cálculos de monto, margen e inventario: OK")
+    print("- Campañas comerciales: OK")
+    print("- Relación campaña-categoría: OK")
+    print("- Crecimiento digital 2023-2025: OK")
+    print("- Caída de margen en Trujillo desde 2025-Q2: OK")
+    print("- Faltantes controlados 1%-3%: OK")
 
 
 # ============================================================
@@ -1348,46 +2092,72 @@ def main() -> None:
     print("Generando clientes base...")
     clientes_base_df = generar_clientes_base()
 
-    print("Generando ventas...")
-    ventas_df = generar_ventas(
+    print("Generando tickets base...")
+    tickets_base_df = generar_tickets_base(
         tiendas_df=tiendas_df,
-        productos_df=productos_df,
         clientes_df=clientes_base_df
     )
 
-    print("Calculando variables de clientes y churn...")
-    clientes_df = actualizar_clientes_con_churn(
+    print("Generando líneas de venta...")
+    ventas_limpias_df = generar_ventas(
+        tickets_base_df=tickets_base_df,
+        tiendas_df=tiendas_df,
+        productos_df=productos_df
+    )
+
+    print("Construyendo tickets finales...")
+    tickets_limpios_df = construir_tickets(
+        tickets_base_df=tickets_base_df,
+        ventas_df=ventas_limpias_df
+    )
+
+    print("Actualizando clientes con variables de churn...")
+    clientes_limpios_df = actualizar_clientes_con_churn(
         clientes_df=clientes_base_df,
-        ventas_df=ventas_df
+        tickets_df=tickets_limpios_df,
+        ventas_df=ventas_limpias_df
     )
 
     print("Generando inventario mensual...")
     inventario_df = generar_inventario(
-        ventas_df=ventas_df,
+        ventas_df=ventas_limpias_df,
         productos_df=productos_df,
         tiendas_df=tiendas_df
     )
 
-    print("Aplicando faltantes controlados...")
-    clientes_df, ventas_df = aplicar_calidad_datos(
-        clientes_df=clientes_df,
-        ventas_df=ventas_df
+    print("Ejecutando validaciones sobre datos limpios...")
+    ejecutar_validaciones_limpias(
+        tiendas_df=tiendas_df,
+        productos_df=productos_df,
+        clientes_df=clientes_limpios_df,
+        tickets_df=tickets_limpios_df,
+        ventas_df=ventas_limpias_df,
+        inventario_df=inventario_df
     )
 
-    print("Ejecutando validaciones...")
-    ejecutar_validaciones(
+    print("Aplicando faltantes controlados...")
+    clientes_df, tickets_df, ventas_df = aplicar_calidad_datos(
+        clientes_df=clientes_limpios_df,
+        tickets_df=tickets_limpios_df,
+        ventas_df=ventas_limpias_df
+    )
+
+    print("Ejecutando validaciones finales...")
+    ejecutar_validaciones_finales(
         tiendas_df=tiendas_df,
         productos_df=productos_df,
         clientes_df=clientes_df,
+        tickets_df=tickets_df,
         ventas_df=ventas_df,
         inventario_df=inventario_df
     )
 
-    print("Exportando archivos CSV y diccionario de datos...")
+    print("Exportando archivos...")
     exportar_archivos(
         tiendas_df=tiendas_df,
         productos_df=productos_df,
         clientes_df=clientes_df,
+        tickets_df=tickets_df,
         ventas_df=ventas_df,
         inventario_df=inventario_df
     )
@@ -1396,6 +2166,7 @@ def main() -> None:
         tiendas_df=tiendas_df,
         productos_df=productos_df,
         clientes_df=clientes_df,
+        tickets_df=tickets_df,
         ventas_df=ventas_df,
         inventario_df=inventario_df
     )
@@ -1403,4 +2174,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
