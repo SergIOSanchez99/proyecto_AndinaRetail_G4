@@ -1,0 +1,37 @@
+﻿variable_transformada,variable_original,importancia_shap
+tipo_campaña_Festiva,tipo_campaña,0.028666160883357047
+mes_Diciembre,mes,0.02549702182780885
+tickets_previos_totales,tickets_previos_totales,0.023888080114979175
+campañas_anteriores_con_compra,campañas_anteriores_con_compra,0.02321434738603543
+tipo_campaña_Digital,tipo_campaña,0.022253677450303235
+campaña_Navidad,campaña,0.021071736901771897
+recencia_dias,recencia_dias,0.015589014544321477
+tipo_campaña_Familiar,tipo_campaña,0.011316289478855993
+ciudad_Lima,ciudad,0.011194179098245436
+campaña_Cyber Wow Noviembre,campaña,0.009982793886727955
+mes_Abril,mes,0.009436596482395929
+campaña_Cyber Wow Abril,campaña,0.008931274556420515
+campaña_Cyber Wow Julio,campaña,0.006719137983203973
+mes_Febrero,mes,0.006404970869154387
+mes_Noviembre,mes,0.0063888774537197626
+tickets_mismo_tipo_campaña_previos,tickets_mismo_tipo_campaña_previos,0.005390603476970749
+mes_Julio,mes,0.005311968838523632
+tipo_campaña_Escolar,tipo_campaña,0.004963356601387116
+genero_Femenino,genero,0.004746568465510989
+campaña_Campaña Escolar,campaña,0.0047242170311632675
+antiguedad_cliente_dias,antiguedad_cliente_dias,0.004568742076628679
+genero_Masculino,genero,0.004512191728136379
+campaña_Día del Padre,campaña,0.004101929293684034
+campaña_Black Friday,campaña,0.004047803283289168
+mes_Junio,mes,0.004010202456955021
+mes_Mayo,mes,0.0031896365753972004
+mes_Marzo,mes,0.002603640359345967
+edad,edad,0.0025543160821481516
+ciudad_Piura,ciudad,0.002376635010015802
+campaña_Día de la Madre,campaña,0.0023009502568247862
+ciudad_Arequipa,ciudad,0.002116928221131991
+ciudad_Trujillo,ciudad,0.0019825724969238473
+tickets_misma_campaña_anterior,tickets_misma_campaña_anterior,0.0019452465846865345
+campaña_Fiestas Patrias,campaña,0.0018921573845749951
+ciudad_Cusco,ciudad,0.0016229365560850827
+genero_Otro,genero,0.0010988381832304141
