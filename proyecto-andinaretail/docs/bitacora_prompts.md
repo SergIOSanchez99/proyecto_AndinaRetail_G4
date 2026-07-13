@@ -1,4 +1,4 @@
-# Bitácora de Prompts
+
 
 | ID | Parte | Objetivo del prompt | Prompt utilizado | Herramienta IA | Salida y validación |
 |----|-------|----------------------|-------------------|-----------------|------------------------|
