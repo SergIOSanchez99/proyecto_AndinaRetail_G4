@@ -201,3 +201,22 @@ Requisitos adicionales del script:
 python generar_datos.py
 
 Entrega únicamente el código completo del archivo generar_datos.py. El script debe encargarse de crear los CSV y el archivo data_dictionary.md automáticamente.
+
+**Prompt Notebook?Estadistica**
+Actúa como analista estadístico senior apoyando un proyecto de analítica de datos en Python (Jupyter). Tengo 5 datasets sintéticos de una empresa de retail (tiendas, productos, clientes, ventas, inventario) y necesito construir el notebook 01_estadistica.ipynb. 
+Ayúdame a: 
+(1) cargar y explorar la estructura de los datos, cuantificando valores faltantes y determinando si son aleatorios o informativos; 
+(2) detectar outliers con el método IQR en variables clave (monto, cantidad, precio, edad) y determinar si corresponden a comportamiento legítimo del negocio o errores de generación, cruzando con variables categóricas como apoyo; 
+(3) calcular estadística descriptiva completa (tendencia central, dispersión, asimetría, curtosis); 
+(4) construir tablas de frecuencia y visualizaciones univariadas/bivariadas, incluyendo una matriz de correlación; 
+(5) formular y contrastar al menos 3 hipótesis de negocio con las pruebas adecuadas (t-test, ANOVA, chi-cuadrado), verificando explícitamente sus supuestos (normalidad, homogeneidad de varianzas, frecuencias esperadas) e interpretando los resultados aunque los supuestos no se cumplan perfectamente; 
+(6) calcular intervalos de confianza de 95% para los indicadores más relevantes. Documenta cada sección con celdas Markdown de objetivo, método, resultado e interpretación de negocio, y cierra con conclusiones accionables para la Gerencia.
+
+**Prompt Notebook descriptivo_diagnostico**
+Actúa como analista de datos senior apoyando el mismo proyecto de retail. Necesito construir el notebook 02_descriptivo_diagnostico.ipynb a partir de las mismas 5 tablas sintéticas (ya sé que hay una tabla de ventas con costo y margen ya calculados). 
+Ayúdame a: 
+(1) construir series de tiempo mensuales de ventas, identificar estacionalidad por mes del calendario, y analizar la evolución de la participación del canal digital frente al físico a lo largo de los años; 
+(2) hacer un análisis de Pareto 80/20 para productos, clientes y categorías, e interpretar qué tan concentrado o disperso está cada uno; 
+(3) construir una segmentación RFM (Recencia, Frecuencia, Valor Monetario) con scores por quintiles y segmentos de negocio interpretables (Campeones, En riesgo, Hibernando, etc.), usando como fecha de referencia el último día del dataset; complementarla con un clustering K-Means sobre las mismas variables estandarizadas, usando el método del codo para elegir k, y comparar ambos enfoques; 
+(4) hacer un diagnóstico de causa raíz de la caída de margen reportada en una de las ciudades: identificar en qué plaza y periodo se concentra, comparar cohortes antes/después mediante drill-down, y descomponer la variación evaluando descuento aplicado y costo de almacenamiento como posibles causas, cruzando ventas con inventario. Documenta cada sección con celdas Markdown de objetivo/método/resultado, y cierra con conclusiones de negocio accionables que conecten con el resto del proyecto (churn para la Parte 3, recomendaciones para la Parte 4).
+
