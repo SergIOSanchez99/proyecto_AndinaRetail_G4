@@ -1,0 +1,37 @@
+﻿variable_transformada,variable_original,importancia
+mes_Diciembre,mes,0.16311117961912672
+campaña_Navidad,campaña,0.1297520374801589
+tipo_campaña_Festiva,tipo_campaña,0.10179277590866774
+tickets_previos_totales,tickets_previos_totales,0.09662182334298314
+campañas_anteriores_con_compra,campañas_anteriores_con_compra,0.08752420659080899
+tipo_campaña_Digital,tipo_campaña,0.04045821739398049
+recencia_dias,recencia_dias,0.03754661175045323
+ciudad_Lima,ciudad,0.02482503908110194
+antiguedad_cliente_dias,antiguedad_cliente_dias,0.024486361697971176
+campaña_Fiestas Patrias,campaña,0.019319780451288328
+tickets_mismo_tipo_campaña_previos,tickets_mismo_tipo_campaña_previos,0.018750620378013665
+edad,edad,0.016550846165299015
+ciudad_Trujillo,ciudad,0.016148554112855214
+ciudad_Cusco,ciudad,0.0152382856580651
+ciudad_Arequipa,ciudad,0.014851345992739531
+ciudad_Piura,ciudad,0.0142167918811057
+tipo_campaña_Escolar,tipo_campaña,0.014183403597890889
+genero_Masculino,genero,0.013079828586937466
+campaña_Cyber Wow Noviembre,campaña,0.012637388919506175
+genero_Femenino,genero,0.012508632502458664
+tickets_misma_campaña_anterior,tickets_misma_campaña_anterior,0.011750410651908783
+mes_Abril,mes,0.011416467103188754
+mes_Noviembre,mes,0.010581469598990367
+tipo_campaña_Familiar,tipo_campaña,0.010349787428868995
+campaña_Campaña Escolar,campaña,0.0097266268168814
+mes_Marzo,mes,0.009621742257084929
+campaña_Cyber Wow Abril,campaña,0.009570386997307978
+campaña_Black Friday,campaña,0.009349947645394272
+mes_Julio,mes,0.009342270970219748
+genero_Otro,genero,0.007522607661097414
+campaña_Cyber Wow Julio,campaña,0.00582515553321388
+mes_Junio,mes,0.00541967566811247
+mes_Febrero,mes,0.00493958238021687
+campaña_Día de la Madre,campaña,0.004764338752721169
+campaña_Día del Padre,campaña,0.0036025718872029298
+mes_Mayo,mes,0.002613227536177788
