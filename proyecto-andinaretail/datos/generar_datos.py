@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1oLayTdgBCN_zdCJMBNL75lRFMDTnhPh0
 """
 
-!pip install faker
 #@title Dataset2
 
 # generar_datos.py
