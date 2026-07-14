@@ -26,6 +26,7 @@ Todos los datos utilizados son sintéticos y fueron generados exclusivamente con
 | HUERTA FIRMA, FREDDY ANTHONY | Analista de Optimización / BI |
 | JUSTINO OCMIN, JHAMIR VALERI | Científico de Datos |
 | MENDOZA MEZA, PABLO ANDRES | Ingeniero de Datos |
+| RODAS PANAIFO, JORDAN ANDRÉ | Analista de Optimización / BI |
 | SANCHEZ SALDAÑA, SERGIO ANTONIO | Líder del Proyecto / Data PM |
 
 La asignación de roles establece una responsabilidad principal, pero todos los integrantes participaron en la revisión e integración del proyecto.
