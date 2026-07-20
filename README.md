@@ -59,6 +59,7 @@ proyecto_AndinaRetail_G4/
     ├── docs/
     ├── powerbi/
     ├── presentacion/
+    ├── exposicion/
     └── requirements.txt
 ```
 
